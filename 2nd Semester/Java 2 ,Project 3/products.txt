@@ -1,0 +1,190 @@
+ITEM_LIST
+{
+     ITEM
+	 {
+	     ITEM_TYPE monitor
+		 MODEL_NAME Ls27F350
+		 MODEL_YEAR 2016
+		 MANUFACTURER Samsung 
+		 Price 220
+		PORTS "HDMI Display-Port USB"
+		 displaY LED
+		 size 27
+		 RESOLUTION 1920x1080
+		 PIECES 2	
+	 }
+	 ITEM
+	 {
+	     ITEM_TYPE motherboard 
+		 MODEL_NAME Z370-HD3
+		 MODEL_YEAR 2017 
+		 MANUFACTURER Gigabyte
+		 PRICE 80
+		 PIECES 4
+		 CPU_TYPE INTEL
+		 PORTS 4
+		 MEMORY 128
+	 }
+	 ITEM
+	 {
+	     ITEM_TYPE CPU 
+		 MODEL_NAME I7
+		 MODEL_YEAR 2018
+		 MANUFACTURER INTEL 
+		 PRICE 270.50
+		 PIECES 5
+	     CORE_SPEED 3.2
+		 CORES 8
+		 INTEGRATED_GRAPHICS TRUE 
+	 }
+	 ITEM
+	 {
+	     ITEM_TYPE GPU
+		 MODEL_NAME 1080TI
+		 MODEL_YEAR 2016
+		 MANUFACTURER NVIDIA
+		 PRICE 300
+		 PIECES 5
+		 TYPE NVIDIA 
+		 MEMORY 8
+	 }
+	 ITEM
+	 {
+	     ITEM_TYPE RAM
+		 MODEL_NAME GLX150
+		 MODEL_YEAR 2017
+		 MANUFACTURER TRANSCEND
+		 PRICE 300
+		 capacity 128
+		 FREQUENCY 2.400
+		 TYPE DDR5
+		 PIECES 0 
+	 }
+	 ITEM
+	 {
+	     
+		 MANUFACTURER WD
+		 MEMORY 500
+		MODEL_NAME BLACK SERIES
+		 SIZE 2.5
+		 ITEM_TYPE HARDDRIVE 
+		 MODEL_YEAR 2018
+		 PIECES 6
+		 TYPE HDD
+		 PRICE 75
+		 
+	 }
+	 ITEM
+     {
+         ITEM_TYPE MOUSE 
+         MODEL_NAME TDI
+         MODEL_YEAR 2018
+         MANUFACTURER LOGITECH
+         PRICE 90
+         TECHNOLOGY LASER 		 
+		 TYPE WIRELESS 
+	     PIECES 10
+	 }
+	 ITEM
+	 {
+	     ITEM_TYPE KEYBOARD 
+		 MODEL_NAME BlackWidow
+		 MODEL_YEAR 2018
+		 MANUFACTURER RAZER 
+		 PRICE 100
+		 TYPE WIRED
+		 PIECES 5
+	 }
+	 ITEM
+	 {
+	     ITEM_TYPE PRINTER 
+		 MODEL_NAME 5575
+		 MODEL_YEAR 2018
+		 MANUFACTURER HP
+         PRICE 70
+		 TYPE INKJET  
+		 TECHNOLOGY RGB
+		 PIECES 7
+	 }
+	ITEM
+	{
+		item_type cpu
+		Model_name i5 4200M
+		Model_Year 2015
+		Manufacturer INTEL
+		Price 120
+		Cores 4
+		Clock_speed 3.2
+		Integrated_graphics true
+		pieces 0
+	}
+	item
+	{	
+                model_name R8
+		item_type GPU
+		model_year 2017
+		manufacturer AMD
+		TYPE AMD
+		Memory 4
+		pieces 8
+		Price 200
+	}
+ITEM
+	{
+		Item_type HardDrive
+		price 200
+		model_year 2016
+		model_name EVO
+		Manufacturer Samsung
+		TYPE SSD
+		MEMORY 240
+		SIZE 2.5"
+		pieces 2
+	}
+		ITEM
+	{
+		Model_NAME G40-18
+		Item_Type MotherBoard
+		model_year 2018
+		Manufacturer MSI
+		Ports 5
+		price 170.5
+		CPU_type INTEL
+		pieces 1
+		MEMORY 128
+	}
+ITEM
+	{
+		ITEM_TYPE RAM
+		MODEL_NAME R2-D2
+		MODEL_YEAR 2013
+		PRICE 20
+		MANUFACTURER CORSAIR
+		CAPACITY 8
+		FREQUENCY 3200
+		TYPE DDR4
+		PIECES 5
+	}
+	ITEM 
+	{
+		ITEM_TYPE MONITOR
+		MODEL_NAME HT55X
+		model_year 2017
+		price 	840
+		pieces  3
+		
+
+}
+	 
+		 
+		 
+		 
+		 
+	 
+	 
+	 
+		 
+		 
+		 
+		 
+		 

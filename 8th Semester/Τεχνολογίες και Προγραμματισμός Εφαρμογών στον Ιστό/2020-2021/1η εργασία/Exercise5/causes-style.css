@@ -1,0 +1,193 @@
+﻿@media screen and (max-width:540px) {
+    body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    background-color: #222;
+    }
+
+    p{
+        font-family: 'Merriweather', serif;
+        font-size: 12px;
+        margin: 3px 10px 3px 10px;
+    }
+    
+    h2{
+        font-size: 20px;
+    }
+    
+    .parheader{
+        margin: 0 8px 0 8px;
+        font-size: 18px;
+        color: rgb(255, 171, 92);
+    }
+}
+
+@media screen and (min-width:540px) and (max-width:780px) {
+    body{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    background-color: #222;
+    }
+
+    p{
+        font-family: 'Merriweather', serif;
+        font-size: 15px;
+        margin: 6px 15px 6px 15px;
+    }
+    
+    h2{
+        font-size: 25px;
+    }
+    
+    .parheader{
+        margin: 0 12px 0 12px;
+        font-size: 22px;
+        color: rgb(255, 171, 92);
+    }
+
+}
+
+@media screen and (min-width:780px) {
+    body{
+    display: grid;
+    grid-template-columns: 1fr 3fr 0.5fr;
+    grid-template-rows: auto;
+    background-color: #222;
+    }
+
+    p{
+        font-family: 'Merriweather', serif;
+        font-size: 20px;
+        margin: 10px 20px 10px 20px;
+    }
+    
+    h2{
+        font-size: 30px;
+    }
+    
+    .parheader{
+        margin: 0 20px 0 20px;
+        font-size: 25px;
+        color: rgb(255, 171, 92);
+    }
+}
+
+#header-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'nexa-bold', sans-serif;
+    src: url('/fonts/NexaDemo-Bold.woff');
+}
+
+header{
+    font-family: 'nexa-bold', sans-serif;
+    color: white;
+    text-align: center;
+    grid-column: 1/4;
+}
+
+aside{
+    grid-column: 1/2;
+    grid-row-start: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;  
+    height: 600px;
+    margin-left: 20px;
+    margin-top: 60px;
+    width: 85%;
+    border: 5px solid rgb(134, 134, 134);
+    border-radius: 20px;
+    background-color: rgb(37, 37, 37);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main{
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+figure{
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    margin: auto;
+}
+
+figcaption {
+    background-color: white;
+    color: #222;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+#supply-chain-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+section{
+    padding: 30px 5px 30px 5px;
+    color: rgb(51, 51, 51);
+    background-color: white;
+    margin: 20px 0 20px 0;
+    text-align:unset;
+    border-radius: 30px;
+}
+
+.navitem{
+    color: rgb(255, 171, 92);
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.subnavitem{
+    color: white;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+p{
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    margin: 10px 20px 10px 20px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    margin: 0 20px 0 20px;
+    font-size: 25px;
+    color: rgb(255, 171, 92);
+}
+
+li a{
+    text-decoration: none;
+}
+
+li a:visited{
+    color: rgb(123, 185, 255);
+}
+
+li a:hover{
+    color: rgb(255, 103, 92);;
+}
+
+.scrumb{
+    padding: 15px;
+    margin-left: 40px;
+    font-size: 20px;
+}

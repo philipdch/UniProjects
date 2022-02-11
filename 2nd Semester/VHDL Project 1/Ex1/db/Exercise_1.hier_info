@@ -1,0 +1,79 @@
+|Exercise_1
+X1 => myOR4:gpos3.inX1
+X1 => myOR2:fpos2.inX1
+X1 => myOR2:gpos1.inX1
+X1 => myOR3:gpos2.inX1
+X2 => myOR2:fpos2.inX2
+X2 => myOR3:comPos1.inX1
+X2 => myOR4:gpos3.inX2
+X2 => myOR3:comPos2.inX1
+X3 => myOR2:fpos1.inX1
+X3 => myOR2:fpos3.inX1
+X3 => myOR3:gpos2.inX2
+X3 => myOR4:gpos3.inX3
+X4 => myOR3:comPos2.inX2
+X4 => myOR2:fpos3.inX2
+X4 => myOR3:comPos1.inX2
+X4 => myOR3:gpos2.inX3
+X4 => myOR4:gpos3.inX4
+X5 => myOR2:fpos1.inX2
+X5 => myOR3:comPos1.inX3
+X5 => myOR3:comPos2.inX3
+X5 => myOR2:gpos1.inX2
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercise_1|myOR2:fpos1
+inX1 => outF.IN0
+inX2 => outF.IN1
+outF <= outF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercise_1|myOR2:fpos2
+inX1 => outF.IN0
+inX2 => outF.IN1
+outF <= outF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercise_1|myOR2:fpos3
+inX1 => outF.IN0
+inX2 => outF.IN1
+outF <= outF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercise_1|myOR3:comPos1
+inX1 => outF.IN0
+inX2 => outF.IN1
+inX3 => outF.IN1
+outF <= outF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercise_1|myOR3:comPos2
+inX1 => outF.IN0
+inX2 => outF.IN1
+inX3 => outF.IN1
+outF <= outF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercise_1|myOR2:gpos1
+inX1 => outF.IN0
+inX2 => outF.IN1
+outF <= outF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercise_1|myOR3:gpos2
+inX1 => outF.IN0
+inX2 => outF.IN1
+inX3 => outF.IN1
+outF <= outF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercise_1|myOR4:gpos3
+inX1 => outF.IN0
+inX2 => outF.IN1
+inX3 => outF.IN1
+inX4 => outF.IN1
+outF <= outF.DB_MAX_OUTPUT_PORT_TYPE
+
+

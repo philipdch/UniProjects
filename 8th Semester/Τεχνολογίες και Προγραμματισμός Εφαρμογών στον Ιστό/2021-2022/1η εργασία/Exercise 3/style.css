@@ -1,0 +1,626 @@
+/*
+CSS for exercise 3. 
+All layouts use either grid or flexbox to align their items
+and space them on the screen. No floats are used to position images
+or other content.
+*/
+
+/* Define various custom fonts for use in the site */
+@font-face {
+    font-family: CenturyGothic;
+    src: local("Montserrat Medium"), local("Montserrat-Medium"), url(fonts/Montserrat/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: CenturyGothic;
+    src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url(fonts/Montserrat/Montserrat-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: CenturyGothic;
+    src: local("Montserrat Bold"), local("Montserrat-Bold"), url(fonts/Montserrat/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: CenturyGothic;
+    src: local("Montserrat Black"), local("Montserrat-Black"), url(fonts/Montserrat/Montserrat-Black.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-ExtraBold.ttf);
+    font-weight: 800;
+}
+
+/* set general style for all pages. Display body as a grid of two columns. Rows are set automatically.
+Header and footer will cover both of these columns so that main content will be displayed
+between them */
+body {
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+    column-gap: 3vw;
+    row-gap: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-size: cover;
+    background-color: #f0f0f0;
+    margin: 0;
+    width: 100%;
+    overflow: visible;
+}
+
+
+/* general style of top navigation bar 
+header covers both columns */
+header {
+    grid-column: 1/3;
+    overflow: hidden;
+    top: 0;
+    background: #1f1f1f;
+    padding: 0 0 10px 0;
+    text-align: center;
+    border-bottom: 3px solid #cda34f;
+}
+
+
+/* set overflow to show content that goes beyond set height
+ (also used to make scrolling possible on sidebar */
+
+main {
+    grid-column: 2/3;
+    overflow: hidden;
+}
+
+
+/***** top navigation bar styling *****/
+
+
+/* use all available screen width */
+
+#topnav {
+    width: 100%;
+}
+
+
+/* set style of each navigation list item */
+
+/* style links inside top navigation bar.
+This includes text style as well as transition animation
+ */
+#topnav a {
+    color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 3px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.25s ease-in 0s;
+}
+
+
+/* display navigation list as table in order to align items inside */
+
+/* display items inside top navigation bar as flexbox. 
+This allows them to be evenly spaced and aligned on the same height without adding individual margins/displays 
+*/
+#topnav ol {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+/* 
+set style of <a> element in the navigation bar 
+when hovering over it
+*/
+#topnav .navitem a:hover {
+    color: #bb5a4b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 0 3px;
+}
+
+/* style top logo name */
+#logo-name {
+    color: #ffffff;
+    font-size: 160%;
+    font-weight: bolder;
+}
+
+/* set margin for top image in order to be as close to logo name as possible */
+#logo-image {
+    margin-top: 0%;
+    height: 80%;
+    width: 80%;
+}
+
+
+/***** end top navigation bar styling *****/
+
+/* set font style for the header of each page */
+.top-header {
+    font-weight: 800;
+    font-size: 32px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #cda34f;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+/* set general style for h elements */
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #eaecdd;
+}
+
+h4 {
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+    color: #bb5a4b;
+}
+
+/* set general style for link hover */
+a:hover {
+    color: #af4076;
+}
+
+
+/***** index main content styling *****/
+
+/* display main content (index page) as column
+all sections will have equal space between them
+*/
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* set text paragraph style */
+#intro p {
+    font-family: 'Vollkorn';
+    font-weight: 400;
+    font-size: 13pt;
+}
+
+/***** end index main content styling *****/
+
+/***** start of sidebar styling *****/
+
+/* display aside nav bar on the left side of the page (first column), set its height and color
+as well as overflow behaviour (auto). This acts as a container for the scroll list
+so that borders appear rounded when scrollbar appears */
+#themes-info {
+    grid-column: 1/2;
+    left: 20px;
+    height: 60vh;
+    overflow: auto;
+    background: linear-gradient(to bottom, #272727 0%, #1b1b1b 90%);
+    color: azure;
+    border-radius: 25px;
+    margin-left: 2vw;
+    margin-top: 2.5em;
+    margin-bottom: 3vh
+}
+
+/* set style of container inside side navigation bar.
+Uses a scrollbar to show content that has overflown (exceeded
+bar height). */
+#themes-info .sidebar-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* style side nav bar header */
+.sidebar-scroll h4 {
+    font-family: OpenSans, sans-serif;
+    font-weight: 800;
+    font-size: 120%;
+    color: #d3e3fc;
+}
+
+/* set display of items inside each unit list inside side bar 
+as column */
+.sidebar-scroll h4 + ol{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* style each unit list header */
+#themes-info .side-unit-header {
+    color: lightyellow;
+    text-align: left;
+    font-family: OpenSans;
+    font-weight: 700;
+    font-size: 120%;
+}
+
+/* style unit lists inside side nav bar */
+.inner-nav-list {
+    list-style: none; /* removes default list style */
+    padding-bottom: 25px;
+}
+
+/* set font style for each list item inside side bar */
+.unit-overview li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 110%;
+}
+
+/* style items inside each course list in sidebar */
+aside li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* end sidebar styling */
+
+.intro blockquote {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.intro-section p {
+    color: rgb(29, 29, 29);
+}
+
+/*start contact us styling */
+
+/* 
+style fields inside contact form. set display as flexbox and align them to 
+the center of the form. Margin is set to auto as to automatically 
+align the form at the center of the page.
+*/
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    background-color: #d1d7e0;
+    border-radius: 20px;
+}
+
+/*style legend appearing above fieldset */
+legend {
+    background-color: #ce4148;
+    color: whitesmoke;
+    padding: 8px 35px 8px 35px;
+    font-size: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/*set margin and font size for labels appearing above input fields */
+label {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    border: none;
+}
+
+/* style general input fields */
+input {
+    width: 60%;
+    padding-left: 10px;
+}
+
+/* style submit button */
+input[type=submit] {
+    text-align: center;
+    position: relative;
+    background: #ce4148;
+    border-radius: 25px;
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 30%;
+}
+
+/* set submit button color when hovering over it */
+input[type=submit]:hover {
+    background-color: #d6000b;
+}
+
+/* set style for email and simple text fields */
+input[type=text], input[type=email] {
+    border-radius: 40px;
+    font-size: 20px;
+    height: 5vh;
+}
+
+/* set style of textarea input */
+textarea {
+    padding-left: 15px;
+    border-radius: 25px;
+    width: 60%;
+    font-size: 20px;
+}
+
+/* end contact us style */
+
+/* start about us styling */
+
+/*wrap cv articles in a single div so that they both appear on the same row */ 
+.main-divider{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* style each cv article. Width is set to 100% so that both cvs occupy the same horizontal space regardless of content.
+Appropriate margins are set */
+.cv {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    background-color: #e4e4e4;
+    border-radius: 5%;
+    margin-bottom: 30px;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    width: 100%;
+}
+
+/* 
+Display image and name as a single row and align them on the vertical axis.
+Text will appear below this row
+*/
+.cv-image-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* set cv image dimensions and round it */
+.cv-image-wrapper img {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+/* select every item after the div tag inside each cv section in order to set text alignment */
+.cv div ~ *{
+    margin-right: 10vw;
+    text-align: justify;
+    margin-left: 2vw;
+}
+
+/* end about us styling */
+
+/* start styling for thematic units */
+ 
+/*
+Override main grid display in order to display main content on every page
+besides index.html on the entirety of screen width
+*/
+#full-main {
+    grid-column: 1/3;
+}
+
+/* 
+Set display as flexbox in order to put each item in the same row. If there is an overflow,
+the next unit section is displayed in a new row. The items in each row are equally distributed 
+(space-evenly) 
+*/
+#units-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* main unit section (wrapper) style */
+.unit {
+    text-align: center;
+    border-radius: 5vh;
+    min-width: 20vw;
+    margin: 30px;
+    background-color: #d1d7e0;
+    padding: 20px 50px 0px 50px;
+}
+
+/* apply uniform size for unit images */
+.unit-image {
+    width: 60px;
+    height: 60px;
+}
+
+/* display unit course-lists as table. 
+This enables each unit to be contained inside a 
+"cell" of the table and align itself on the same height
+as other lists */
+.unit ul {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+/* style each unit header */
+.unit-header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 120%;
+    text-decoration: underline;
+    color: #802bb1;
+}
+
+/* style each individual course list inside the unit section */
+.unit li {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 105%;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #2d283e;
+    text-align: left;
+}
+
+/* apply color to course links inside unit section */
+.unit li a {
+    text-decoration: none;
+    color: #cda34f;
+}
+
+/* set color of visited course links */
+.unit li a:visited {
+    color: #9c23ff;
+}
+
+/* set color on course link hover */
+.unit li a:hover {
+    color: #af4076;
+}
+
+/* end of unit styling */
+
+/*start of courses styling */
+
+/* set general styling for each course (margins, max width and color) */
+.course {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3em;
+    margin-right: 2em;
+    border-radius: 10vh;
+    background-color: #d1d7e0;
+    padding: 2rem;
+}
+
+/* container for course image and title in order for 
+them to be displayed aligned and on the same row */
+.title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* set bottom margin only for the last section */
+.course:last-of-type {
+    margin-bottom: 25px;
+}
+
+/* set uniform dimensions for course images. Using em the images dimensions appear correct regardless of screen size*/
+.course img {
+    width: 4em;
+    height: 4em;
+}
+
+/* align course titles */
+.course-title {
+    margin-top: 2vh;
+    margin-left: 2vw;
+    color: #d14949;
+}
+
+/* set color for course description header */
+.course h4 {
+    color: #2d2d2d;
+}
+
+.course-section {
+    margin-top: 20px;
+}
+
+/* end of courses styling */
+
+/* start of footer styling */
+
+/* set color and top border to be displayed - same as header */
+footer {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 3fr 4fr 3fr;
+    width: 100%;
+    background-color: #1f1f1f;
+    border-top: 4px solid #cda34f;
+}
+
+footer h4 {
+    grid-column: 1/4;
+    margin-left: 2em;
+}
+
+/* position follow-us section on the left of the footer */
+.footer-follow {
+    justify-self: center;
+    grid-column: 1/2;
+    margin-left: 2em;
+}
+
+/* position contact-us section on the right of the footer */
+.contact-footer {
+    justify-self: center;
+    grid-column: 3/4;
+}
+
+/* style headers of each footer section */
+footer section h5 {
+    font-size: 100%;
+    color: #cda34f;
+    font-weight: 700;
+    font-family: "OpenSans", sans-serif;
+}
+
+footer section.footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* make text after above sections be displayed at the bottom */
+footer section+p {
+    grid-column: 1/4;
+    color: whitesmoke;
+    padding: 8px;
+    margin-left: 2em;
+}
+
+footer img {
+    margin-right: 8px;
+    width: 25px;
+    height: 25px;
+}
+
+footer li {
+    margin-bottom: 20px;
+    color: whitesmoke;
+}

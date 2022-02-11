@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Satellite/Documents/Ex 2/Exercise_2.bdf
+source_file = 1, C:/Users/Satellite/Documents/Ex 2/Waveform.vwf
+source_file = 1, C:/Users/Satellite/Documents/Ex 2/db/Exercise_2.cbx.xml
+design_name = Exercise_2
+instance = comp, \x4~I , x4, Exercise_2, 1
+instance = comp, \x3~I , x3, Exercise_2, 1
+instance = comp, \x2~I , x2, Exercise_2, 1
+instance = comp, \X1~I , X1, Exercise_2, 1
+instance = comp, \inst7~0 , inst7~0, Exercise_2, 1
+instance = comp, \F~I , F, Exercise_2, 1

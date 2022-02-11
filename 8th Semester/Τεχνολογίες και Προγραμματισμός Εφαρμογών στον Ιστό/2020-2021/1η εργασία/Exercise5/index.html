@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="SolarWinds cyberattack">
+    <meta name="author" content="Filippos Dourachalis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarWinds Cyberattack - A brief explanation</title>
+    <link rel="stylesheet" href="index-style.css">
+</head>
+
+<body>
+    <header>
+        <div id="header-images">
+            <img class="headimg" src="resources/GettyImages-1185282377.jpg" width="400" height="250"
+                alt="Cyberattack first header image">
+            <img class="headimg"src="resources/im-329508.jpg" width="400" height="250" alt="SolarWinds second header image">
+            <img class="headimg" src="resources/solarwinds9e44d136.png" width="400" height="250" alt="Cyberattack thrid banner image">
+        </div>
+        <h1>The SolarWinds Incident</h1>
+        <h2>Causes & Consequences of one of the most severe cyber attacks in recent years</h2>
+    </header>
+    <aside id="sidenav">
+        <nav>
+            <ol>
+                <li class="navitem">Introduction</li>
+                <li class="navitem">Overview
+                    <ol>
+                        <li class="subnavitem"><a href="index.html#swsection">What is SolarWinds?</a></li>
+                        <li class="subnavitem"><a href="index.html#scsection">What is a supply chain attack?</a></li>
+                    </ol>
+                </li>
+                <li class="navitem"><a href="causes.html">Causes & Solutions</a>
+                    <ol>
+                        <li class="subnavitem"><a href="causes.html#causessec">Orion Vulnerabilities & SUNBURST</a></li>
+                        <li class="subnavitem"><a href="causes.html#solutionsec">Mitigation measures</a></li>
+                    </ol>
+                </li>
+                <li class="navitem"><a href="impact.html">Attack Impact</a>
+                    <ol>
+                        <li class="subnavitem"><a href="impact.html#swimpact">On SolarWinds</a></li>
+                        <li class="subnavitem"><a href="impact.html#usimpact">On the U.S. Government & Infastructure</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </nav>
+    </aside>
+    <main>
+        <article>
+            <section id="introsection">
+                <div>
+                    <h2 class="parheader">Introduction</h2>
+                    <p>In this article we are going to take a look at the cyber attack that hit SolarWinds and
+                        every major corporation, organisation and government agency that it affected.<br>
+                        The attack became known at 13th of December, 2020, although it has been latent and active for
+                        months
+                        before that date.<br>
+                        The attackers exploited a vulnerability in one of SolarWind's system in order to isnert their
+                        own
+                        malicious code.<br>
+                        The same code was rolled out as part of routine software updates the company sent to its
+                        clients,
+                        which in turn made each and every one of them vulnerable to the same exploit.<br>
+                        The impact of the attack was not only financial, as major concerns were raised as to which
+                        systems
+                        have been compromised and what kind of data was leaked.<br>
+                    </p>
+                </div>
+            </section>
+            <section id="swsection">
+                <img id="swlgimg" src="resources/solarwinds-inc-logo835x396.png" width="500" height="320"
+                    alt="Solarwinds logo">
+                <div id="swpar">
+                    <h3 class="parheader">What is SolarWinds?</h3>
+                    <p><dfn>SolarWinds</dfn> is the name of a major IT software company.<br>
+                        They provide softare for Network, System as well as Database Management, being more well-known
+                        for
+                        the former of the three.<br>
+                        The company was founded in 1999 by the brothers Donald and David Yonce. Its customer base
+                        includes
+                        many U.S. agencies as well more than 400 companies in the Fortune 500 list. The most famous of
+                        SolarWinds' products is Orion.<br>
+                    <figure>
+                        <blockquote><p>They’re not a household name the same way that Microsoft is. That’s because their
+                            software sits in the back office. [...]Workers could have spent their whole career without
+                            hearing about
+                            SolarWinds. But I guarantee your IT department will know about it.</p>
+                        </blockquote>
+                        <figcaption>-Rob Oliver, research analyst at Baird</figcaption>
+                    </figure>
+                    </p>
+                </div>
+            </section>
+            <section id="scsection">
+                <div id="supchainpar">
+                    <h3 class="parheader">What is a supply chain attack?</h3>
+                    <p>A <dfn>supply chain attack</dfn> aims to gain access to a system by exploiting a vulnerability in
+                        third-party
+                        software that the system uses.<br>
+                        Every system is a collection of communicating sub-systems. By finding a weak link in this chain
+                        of
+                        dependencies an attacker can potentially infiltrate all other systems that depend on it. <br>
+                    </p>
+                </div>
+                <img id="scimg" src="resources/SCS-02.png" width="500" height="250"
+                    alt="Supply chain attack visualisation">
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

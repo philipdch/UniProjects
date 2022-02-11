@@ -1,0 +1,9 @@
+ENTITY Exercise_3 IS
+	PORT (X1,X2,X3   :  IN BIT;
+			F          :  OUT BIT);
+END Exercise_3
+
+ARCHITECTURE Arch_Exercise_3 OF Exercise_3 IS
+	BEGIN 
+		F <= (NOT X3) OR (X1 AND (NOT X2));
+END Arch_Exercise_3;

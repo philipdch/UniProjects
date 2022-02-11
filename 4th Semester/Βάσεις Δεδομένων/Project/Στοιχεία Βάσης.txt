@@ -1,0 +1,4 @@
+Endpoint: p3170045db.c1iuxvisia1z.us-east-1.rds.amazonaws.com
+Username: examiner
+Password: dbexaminer
+Database: p3170045db (Σημείωση: στο δικό μας cmd ως όνομα βάσης δίνουμε 'postgres')

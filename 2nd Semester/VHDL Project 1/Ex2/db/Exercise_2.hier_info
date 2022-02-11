@@ -1,0 +1,10 @@
+|Exercise_2
+F <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+x2 => inst.IN0
+X1 => inst.IN1
+x4 => inst1.IN0
+x4 => inst6.IN0
+x3 => inst5.IN0
+x3 => inst2.IN1
+
+

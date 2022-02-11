@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <title>Sign up</title>
+    <meta charset="utf-8">
+    <meta name="description" content="MOOC register page, where users can register for our service and make payments">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Filippos Dourachalis, Spyridoula Koutsoukou">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="topnav">
+            <ol>
+                <li>
+                    <div id="logo-image">
+                        <h3 id="logo-name">MOOC</h3>
+                        <img src="resources/logo.png" width="100" height="80" alt="Site logo">
+                    </div>
+                </li>
+                <li class="navitem"><a href="units.html">Thematic Units</a></li>
+                <li class="navitem"><a href="index.html">Home</a></li>
+                <li class="navitem"><a href="aboutus.html">About Us</a></li>
+                <li class="navitem"><a href="contact.html">Contact</a></li>
+            </ol>
+            <a id="register-link" href="register.html">Sign Up!</a>
+            <!-- Warning! If this <a> is declared before <ol>, the list will overlap with it, making it unclickable-->
+        </nav>
+    </header>
+    <aside id="themes-info">
+        <div class="sidebar-scroll">
+            <h4>Γρήγορη πλοήγηση</h4>
+            <nav>
+                <ol>
+                    <li class="inner-nav-list">
+                        <section class="unit-overview">
+                            <h4 class="side-unit-header">Φυσικές Επιστήμες</h4>
+                            <ol>
+                                <li>Χημεία</li>
+                                <li><a href="physics.html" class="course-link">Φυσική</a></li>
+                                <li>Αστρονομία</li>
+                            </ol>
+                        </section>
+                    </li>
+                    <li class="inner-nav-list">
+                        <section class="unit-overview">
+                            <h4 class="side-unit-header">Μαθηματικά</h4>
+                            <ol>
+                                <li>Γραμμική Άλγεβρα</li>
+                                <li>Λογισμός</li>
+                                <li>Πιθανότητες</li>
+                                <li>Θεωρία Παιγνίων</li>
+                            </ol>
+                        </section>
+                    </li>
+                    <li class="inner-nav-list">
+                        <section class="unit-overview">
+                            <h4 class="side-unit-header">Πληροφορική</h4>
+                            <ol>
+                                <li><a href="programming.html" class="course-link">Προγραμματισμός Υπολογιστών</a></li>
+                                <li>Ανάπτυξη Εφαρμογών</li>
+                                <li><a href="cybersecurity.html" class="course-link">Ασφάλεια Πληροφοριακών
+                                        Συστημάτων</a></li>
+                                <li>Δίκτυα</li>
+                            </ol>
+                        </section>
+                    </li>
+                    <li class="inner-nav-list">
+                        <section class="unit-overview">
+                            <h4 class="side-unit-header">Διοίκηση Επιχειρήσεων</h4>
+                            <ol>
+                                <li>Λογιστική</li>
+                                <li>Οργάνωση Επιχειρήσεων</li>
+                                <li>Στρατηγικές Ανάπτυξης</li>
+                                <li>Διαχείριση Ποιότητας</li>
+                            </ol>
+                        </section>
+                    </li>
+                    <li class="inner-nav-list">
+                        <section class="unit-overview">
+                            <h4 class="side-unit-header">Φιλοσοφία</h4>
+                            <ol>
+                                <li>Ηθική</li>
+                                <li>Λογική</li>
+                                <li>Γνωσιολογία</li>
+                                <li>Μεταφυσική</li>
+                                <li>Επιστημολογία</li>
+                            </ol>
+                        </section>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </aside>
+    <main>
+        <section id="register-section">
+            <h2 class="top-header">Εγγραφή</h2>
+            <p class="form-paragraph"><em>Εισάγετε τα στοιχεία σας για να αποκτήσετε πρόσβαση σε ολόκληρο το περιεχόμενο
+                    του
+                    MOOC!</em></p>
+            <p class="form-paragraph">Τα πεδία με &nbsp;<strong><abbr title="required">*</abbr></strong>&nbsp; είναι
+                υποχρεωτικά.</p>
+            <form action="http://www.hypotheticalserver.aueb.gr" method="POST">
+                <fieldset>
+                    <legend>Προσωπικά Στοιχεία:</legend>
+                    <label for="fname"><strong>*</strong> Όνομα:</label>
+                    <input class="fullname" type="text" id="fname" name="fname" required pattern="[-A-Za-z]+"
+                        autocomplete="given-name">
+                    <label for="lname"><strong>*</strong> Επώνυμο:</label>
+                    <input class="fullname" type="text" id="lname" name="lname" required pattern="[-A-Za-z]+"
+                        autocomplete="family-name">
+                    <label for="birthdate"><strong>*</strong> Ημερομηνία Γέννησης:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                    <label for="mail"><strong>*</strong> E-Mail:</label>
+                    <input type="email" id="mail" name="mail" required placeholder="username@example.com">
+                    <span class="error"></span>
+                    <label for="phone">Τηλέφωνο:</label>
+                    <div class="inner-fields">
+                        <input type="tel" id="phone" name="phone" pattern="^(\+\d\d)?([0-9]+)$">
+                        <select id="tel-code">
+                            <option value="gr">+30</option>
+                            <option value="uk">+44</option>
+                            <option value="de">+49</option>
+                            <option value="fr">+33</option>
+                            <option value="it">+39</option>
+                            <option value="at">+43</option>
+                            <option value="au">+61</option>
+                            <option value="sz">+41</option>
+                            <option value="us">+1</option>
+                            <option value="sp">+34</option>
+                            <option value="se">+46</option>
+                            <option value="dk">+45</option>
+                        </select>
+                    </div>
+                    <div class="inline-field">
+                        <label for="street"><strong>*</strong> Οδός:</label>
+                        <input type="text" id="street" name="street" pattern="[A-Za-z]+" required
+                            autocomplete="address-line1">
+                        <label for="st-number"><strong>*</strong> Αριθμός:</label>
+                        <input type="number" id="st-number" required name="st-number" min="1" max="999">
+                    </div>
+                    <div class="inline-field">
+                        <label for="country"><strong>*</strong> Χώρα:</label>
+                        <input type="text" list="country-list" id="country" name="country" required />
+                        <datalist id="country-list">
+                            <option value="Austria">Αυστρία</option>
+                            <option value="France">Γαλλία</option>
+                            <option value="Germany">Γερμανία</option>
+                            <option value="Denmark">Δανία</option>
+                            <option value="Switzerland">Ελβετία</option>
+                            <option value="Greece">Ελλάδα</option>
+                            <option value="United Kingdom">Ηνωμένο Βασίλειο</option>
+                            <option value="United States of America">Ηνωμένες Πολιτείες Αμερικής</option>
+                            <option value="Spain">Ισπανία</option>
+                            <option value="Italy">Ιταλία</option>
+                            <option value="Cyprus">Κύπρος</option>
+                            <option value="Norway">Νορβηγία</option>
+                            <option value="Sweden">Σουηδία</option>
+                        </datalist>
+                        <label for="zip"><strong>*</strong> Τ.Κ.</label>
+                        <input type="text" id="zip" name="zip" required pattern="^\d{5}$" autocomplete="postal-code">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Στοιχεία Πληρωμής:</legend>
+                    <label for="card-number"><strong>*</strong> Αριθμός Κάρτας:</label>
+                    <div id="cc-icon-wrapper">
+                        <input type="tel" id="card-number" name="card-number" required
+                            pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$|^4[0-9]{12}(?:[0-9]{3})?$|^(5018|5020|5038|6304|6759|6761|6763)[0-9]{8,15}$|^3(?:0[0-5]|[68][0-9])[0-9]{11}$">
+                        <img id="cc-icon" src="resources/mastercard.png" width="60" height="35" alt="credit card icon"
+                            hidden>
+                    </div>
+                    <label for="card-exp"><strong>*</strong> Ημ/νια Λήξης:</label>
+                    <input type="month" id="card-exp" name="card-exp" required>
+                    <details>
+                        <summary><strong>*</strong><strong>CVV</strong></summary> The Card Verification Value is located at the back of
+                        the card
+                    </details>
+                    <input type="text" id="cvv" name="cvv" required pattern="^\d{3,4}$" autocomplete="cc-csc">
+                    <label for="cname"><strong>*</strong> Όνομα κατόχου:</label>
+                    <input type="text" id="cname" name="cname" required pattern="[A-Za-z]+\s[A-Za-z]+">
+                    <div class="inline-field">
+                        <label for="caddr"><strong>*</strong> Διεύθυνση χρέωσης:</label>
+                        <input type="text" id="caddr" name="caddr" required>
+                        <label for="is-same-address">Ίδια με την διεύθυνση κατοικίας?</label>
+                        <input type="checkbox" id="is-same-address" name="is-same-address">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Στοιχεία Χρήστη:</legend>
+                    <label for="username"><strong>*</strong> Username:</label>
+                    <input type="text" id="username" name="username" required pattern="[A-Za-z\d_]+">
+                    <label for="password"><strong>*</strong> Κωδικός Πρόσβασης:</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error"></span>
+                    <label for="repeat-password"><strong>*</strong> Επανάληψη Κωδικού:</label>
+                    <input type="password" id="repeat-password" name="repeat-password" required>
+                    <span class="error"></span>
+                </fieldset>
+                <fieldset>
+                    <legend>Σχεδόν τελειώσαμε!</legend>
+                    <label>Ποιά είναι τα ενδιαφέροντά σας?</label>
+                    <div class="multiple-selection">
+                        <input type="checkbox" id="programming" name="selected-interests">
+                        <label for="programming">Προγραμματισμός</label>
+                        <input type="checkbox" id="physics" name="selected-interests">
+                        <label for="physics">Φυσική</label>
+                        <input type="checkbox" id="maths" name="selected-interests">
+                        <label for="maths">Μαθηματικά</label>
+                        <input type="checkbox" id="lit" name="selected-interests">
+                        <label for="lit">Λογοτεχνία</label>
+                        <input type="checkbox" id="astronomy" name="selected-interests">
+                        <label for="astronomy">Αστρονομία</label>
+                        <input type="checkbox" id="networks" name="selected-interests">
+                        <label for="networks">Δίκτυα</label>
+                        <input type="checkbox" id="econ" name="selected-interests">
+                        <label for="econ">Οικονομικά</label>
+                        <input type="checkbox" id="history" name="selected-interests">
+                        <label for="history">Ιστορία</label>
+                        <input type="checkbox" id="ancgreek" name="selected-interests">
+                        <label for="ancgreek">Αρχαία Ελληνικά</label>
+                        <input type="checkbox" id="latin" name="selected-interests">
+                        <label for="latin">Λατινικά</label>
+                        <input type="checkbox" id="geography" name="selected-interests">
+                        <label for="geography">Γεωγραφία</label>
+                        <input type="checkbox" id="philosophy" name="selected-interests">
+                        <label for="philosophy">Φιλοσοφία</label>
+                        <input type="checkbox" id="arts" name="selected-interests">
+                        <label for="arts">Τέχνη</label>
+                    </div>
+                    <label for="degree"><strong>*</strong> Επίπεδο Σπουδών:</label>
+                    <select id="degree" name="degree" required>
+                        <option value="">Choose</option>
+                        <option value="first" selected="selected">Απολυτήριο Δημοτικού</option>
+                        <option value="second">Απολυτήριο Γυμνασίου</option>
+                        <option value="third">Απολυτήριο Λυκείου</option>
+                        <option value="iek">Πιστοποιητικό Επαγγελματικής Κατάρτισης</option>
+                        <option value="uni">Πτυχίο ΑΕΙ/ΤΕΙ</option>
+                        <option value="msc">M.Sc</option>
+                        <option value="phd">P.H.D</option>
+                        <option value="null">Κανένα</option>
+                    </select>
+                    <label for="university-choice">Αποφοίτηση από:</label>
+                    <input type="text" list="universities" id="university-choice" name="university-choice" />
+                    <datalist id="universities">
+                        <option value="Οικονομικό Πανεπιστήμιο Αθηνών">
+                        <option value="Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών">
+                        <option value="Πανεπιστήμιο Πειραιά">
+                        <option value="Πάντειον Πανεπιστήμιο">
+                        <option value="Εθνικό Μετσόβιο Πολυτεχνείο">
+                        <option value="Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης">
+                        <option value="Πανεπιστήμιο Αιγαίου">
+                        <option value="Πανεπιστήμιο Κρήτης">
+                        <option value="Ιόνιο Πανεπιστήμιο">
+                        <option value="Πανεπιστήμιο Δυτικής Αττικής">
+                        <option value="Πανεπιστήμιο Μακεδονίας">
+                        <option value="Ανώτατη Σχολή Καλών Τεχνών">
+                    </datalist>
+                    <label for="grad-year">Έτος Αποφοίτησης:</label>
+                    <input type="number" id="grad-year" name="grad-year" min="1920" max="2022" step="1" value="2021">
+                    <label for="direction">Κατεύθυνση Σπουδών:</label>
+                    <textarea id="direction" name="direction" maxlength="100"></textarea>
+                    <label>Με τι ασχολείστε στον ελεύθερο σας χρόνο?</label>
+                    <div id="hobbies" class="multiple-selection">
+                        <input type="checkbox" id="gym" name="selected-interests">
+                        <label for="gym">Γυμναστική</label>
+                        <input type="checkbox" id="music" name="selected-interests">
+                        <label for="music">Μουσική</label>
+                        <input type="checkbox" id="reading" name="selected-interests">
+                        <label for="reading">Ανάγνωση βιβλίων</label>
+                        <input type="checkbox" id="games" name="selected-interests">
+                        <label for="games">Βιντεοπαιχνίδια</label>
+                        <input type="checkbox" id="marts" name="selected-interests">
+                        <label for="marts">Πολεμικές Τέχνες</label>
+                        <input type="checkbox" id="movies" name="selected-interests">
+                        <label for="movies">Ταινίες/Σειρές</label>
+                        <input type="checkbox" id="travel" name="selected-interests">
+                        <label for="travel">Ταξίδια</label>
+                        <input type="checkbox" id="other" name="selected-interests">
+                        <label for="other">Άλλο</label>
+                    </div>
+                    <label for="ads"><strong>*</strong> Πως μάθατε για εμάς?</label>
+                    <select id="ads" name="ads" required>
+                        <option value="">Choose</option>
+                        <option value="social" selected="selected">Από τα Social Media</option>
+                        <option value="person">Από κάποιο άλλο άτομο</option>
+                        <option value="tv">Διαφημίσεις στην τηλεόραση</option>
+                        <option value="flyer">Διαφημιστικό φυλλάδιο</option>
+                        <option value="other">Άλλο</option>
+                    </select>
+                    <label for="about">Πείτε μας λίγα λόγια για εσάς:</label>
+                    <textarea id="about" name="about" maxlength="500"></textarea>
+                    <div class="inline-field">
+                        <label for="cv-file">Προαιρετικά, επισυνάψτε το βιογραφικό σας:</label>
+                        <input type="file" id="cv-file" name="cv-file">
+                    </div>
+                    <label for="icecream-choice">Τέλος, πείτε μας ποιά είναι η αγαπημένη σας γεύση παγωτού:</label>
+                    <input type="text" list="flavours" id="icecream-choice" name="icecream-choice" />
+                    <datalist id="flavours">
+                        <option value="Σοκολάτα">
+                        <option value="Pistaccio">
+                        <option value="Βανίλια">
+                        <option value="Φράουλα">
+                        <option value="Μπανάνα">
+                        <option value="Φουντούκι">
+                        <option value="Μπουένο">
+                        <option value="Στρατσιατέλα">
+                        <option value="Μάνγκο">
+                        <option value="Καρύδα">
+                        <option value="Όρεο">
+                        <option value="Καρπούζι">
+                    </datalist>
+                    <div id="tos-wrapper" class="inline-field">
+                        <label for="tos">Επιβεβαιώνω πως έχω διαβάσει τους Όρους Χρήσης και είμαι άνω των 13
+                            ετών</label>
+                        <input required type="checkbox" id="tos" name="tos">
+                    </div>
+                    <input type="submit" value="Υποβολή">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h4>Περισσότερες Πληροφορίες</h4>
+        <section class="footer-follow">
+            <h5>Ακολουθήστε μας στα social media</h5>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com"><img
+                            src="https://i1.wp.com/www.gvenergy.eu/wp-content/uploads/2021/03/logo-facebook.png?ssl=1"
+                            width="20" height="20" alt="facebook logo">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com"><img
+                            src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png    "
+                            width="20" height="20" alt="twitter logo">Twitter</a>
+                </li>
+            </ul>
+        </section>
+        <section class="contact-footer">
+            <h5>Επικοινωνήστε μαζί μας</h5>
+            <ul>
+                <li><img src="resources/phone-png.png" width="20" height="20" alt="phone icon"> Τηλέφωνο
+                    επικοινωνίας: 2102102105
+                </li>
+                <li><img src="resources/gmail-icon.png" width="20" height="20" alt="mail icon"> Email:
+                    <a href="mailto:mooc.lessons@gmail.com"> mooc.lessons@gmail.com </a>
+                </li>
+            </ul>
+        </section>
+        <p>Τα σήματα και οι επωνυμίες που αναφέρονται σε αυτή την ιστοσελίδα ανήκουν στους νόμιμους κατόχους τους.</p>
+    </footer>
+    <script src="form_validation.js"></script>
+</body>
+
+</html>

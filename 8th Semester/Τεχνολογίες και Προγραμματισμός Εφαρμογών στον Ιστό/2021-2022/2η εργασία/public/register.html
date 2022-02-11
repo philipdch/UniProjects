@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <title>Sign up</title>
+    <meta charset="utf-8">
+    <meta name="description" content="MOOC register page, where users can register for our service and make payments">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Filippos Dourachalis, Spyridoula Koutsoukou">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="topnav">
+            <ol>
+                <li>
+                    <div id="logo-image">
+                        <h3 id="logo-name">MOOC</h3>
+                        <img src="resources/logo.png" width="100" height="80" alt="Site logo">
+                    </div>
+                </li>
+                <li class="navitem"><a href="index.html">Home</a></li>
+                <li class="navitem"><a href="profile.html">Profile</a></li>
+                <li class="navitem"><a id="register-link" href="register.html">Sign Up!</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <section id="register-section" class="main-section">
+            <h2 class="top-header">Εγγραφή</h2>
+            <p class="form-paragraph">Τα πεδία με &nbsp;<strong><abbr title="required">*</abbr></strong>&nbsp; είναι
+                υποχρεωτικά.</p>
+            <a id="home-button" href="index.html"><button>Επιστροφή</button></a>
+            <form>
+                <fieldset>
+                    <legend>Προσωπικά Στοιχεία:</legend>
+                    <label for="fname"><strong>*</strong> Όνομα:</label>
+                    <input class="fullname" type="text" id="fname" name="fname" required pattern="[-A-Za-z]+"
+                        autocomplete="given-name">
+                    <label for="lname"><strong>*</strong> Επώνυμο:</label>
+                    <input class="fullname" type="text" id="lname" name="lname" required pattern="[-A-Za-z]+"
+                        autocomplete="family-name">
+                    <label for="birthdate"><strong>*</strong> Ημερομηνία Γέννησης:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                    <label for="phone">Τηλέφωνο:</label>
+                    <div class="inner-fields">
+                        <input type="tel" id="phone" name="phone" required pattern="^(\+\d\d)?([0-9]+)$">
+                        <select id="tel-code" required>
+                            <option selected="selected" value="gr">+30</option>
+                            <option value="uk">+44</option>
+                            <option value="de">+49</option>
+                            <option value="fr">+33</option>
+                            <option value="it">+39</option>
+                            <option value="at">+43</option>
+                            <option value="au">+61</option>
+                            <option value="sz">+41</option>
+                            <option value="us">+1</option>
+                            <option value="sp">+34</option>
+                            <option value="se">+46</option>
+                            <option value="dk">+45</option>
+                        </select>
+                    </div>
+                    <div class="inline-field">
+                        <label for="street"><strong>*</strong> Οδός:</label>
+                        <input type="text" id="street" name="street" pattern="[A-Za-z]+" required
+                            autocomplete="address-line1">
+                        <label for="st-number"><strong>*</strong> Αριθμός:</label>
+                        <input type="number" id="st-number" required name="st-number" min="1" max="999">
+                    </div>
+                    <div class="inline-field">
+                        <label for="country"><strong>*</strong> Χώρα:</label>
+                        <input type="text" list="country-list" id="country" name="country" required />
+                        <datalist id="country-list">
+                            <option value="Austria">Αυστρία</option>
+                            <option value="France">Γαλλία</option>
+                            <option value="Germany">Γερμανία</option>
+                            <option value="Denmark">Δανία</option>
+                            <option value="Switzerland">Ελβετία</option>
+                            <option value="Greece">Ελλάδα</option>
+                            <option value="United Kingdom">Ηνωμένο Βασίλειο</option>
+                            <option value="United States of America">Ηνωμένες Πολιτείες Αμερικής</option>
+                            <option value="Spain">Ισπανία</option>
+                            <option value="Italy">Ιταλία</option>
+                            <option value="Cyprus">Κύπρος</option>
+                            <option value="Norway">Νορβηγία</option>
+                            <option value="Sweden">Σουηδία</option>
+                        </datalist>
+                        <label for="zip"><strong>*</strong> Τ.Κ.</label>
+                        <input type="text" id="zip" name="zip" required pattern="^\d{5}$" autocomplete="postal-code">
+                    </div>
+                    <label for="degree"><strong>*</strong> Επίπεδο Σπουδών:</label>
+                    <select id="degree" name="degree" required>
+                        <option value="">Choose</option>
+                        <option value="first" selected="selected">Απολυτήριο Δημοτικού</option>
+                        <option value="second">Απολυτήριο Γυμνασίου</option>
+                        <option value="third">Απολυτήριο Λυκείου</option>
+                        <option value="iek">Πιστοποιητικό Επαγγελματικής Κατάρτισης</option>
+                        <option value="uni">Πτυχίο ΑΕΙ/ΤΕΙ</option>
+                        <option value="msc">M.Sc</option>
+                        <option value="phd">P.H.D</option>
+                        <option value="null">Κανένα</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Στοιχεία Χρήστη:</legend>
+                    <label for="mail"><strong>*</strong> E-Mail:</label>
+                    <input type="email" id="mail" name="mail" required placeholder="username@example.com">
+                    <span class="error"></span>
+                    <label for="password"><strong>*</strong> Κωδικός Πρόσβασης:</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error"></span>
+                    <label for="repeat-password"><strong>*</strong> Επανάληψη Κωδικού:</label>
+                    <input type="password" id="repeat-password" name="repeat-password" required>
+                    <span class="error"></span>
+                    <input class="submit" type="submit" value="Υποβολή">
+                </fieldset>
+            </form>
+            <div id="response-field"></div>
+        </section>
+    </main>
+
+    <footer>
+        <h4>Περισσότερες Πληροφορίες</h4>
+        <section class="footer-follow">
+            <h5>Ακολουθήστε μας στα social media</h5>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com"><img
+                            src="https://i1.wp.com/www.gvenergy.eu/wp-content/uploads/2021/03/logo-facebook.png?ssl=1"
+                            width="20" height="20" alt="facebook logo">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com"><img
+                            src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png    "
+                            width="20" height="20" alt="twitter logo">Twitter</a>
+                </li>
+            </ul>
+        </section>
+        <section class="contact-footer">
+            <h5>Επικοινωνήστε μαζί μας</h5>
+            <ul>
+                <li><img src="resources/phone-png.png" width="20" height="20" alt="phone icon"> Τηλέφωνο
+                    επικοινωνίας: 2102102105
+                </li>
+                <li><img src="resources/gmail-icon.png" width="20" height="20" alt="mail icon"> Email:
+                    <a href="mailto:mooc.lessons@gmail.com"> mooc.lessons@gmail.com </a>
+                </li>
+            </ul>
+        </section>
+        <p>Τα σήματα και οι επωνυμίες που αναφέρονται σε αυτή την ιστοσελίδα ανήκουν στους νόμιμους κατόχους τους.</p>
+    </footer>
+    <script src="form_validation.js"></script>
+</body>
+
+</html>

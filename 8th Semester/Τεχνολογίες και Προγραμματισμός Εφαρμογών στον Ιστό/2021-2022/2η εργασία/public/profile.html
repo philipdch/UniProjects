@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="MOOC frontpage">
+    <meta name="author" content="Filippos Dourachalis, Spyridoula Koutsoukou">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Καλωσήρθατε!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="login.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="topnav">
+            <ol>
+                <li>
+                    <div id="logo-image">
+                        <h3 id="logo-name">MOOC</h3>
+                        <img src="resources/logo.png" width="100" height="80" alt="Site logo">
+                    </div>
+                </li>
+                <li class="navitem"><a href="index.html">Home</a></li>
+                <li class="navitem"><a href="profile.html">Profile</a></li>
+                <li class="navitem"><a id="register-link" href="register.html">Sign Up!</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <section class="main-section">
+            <h2 class="top-header">Login</h2>
+            <span class="error"></span>
+            <form id="login-form">
+                <span class="error"></span>
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email">
+                <label for="password">Κωδικός Πρόσβασης</label>
+                <input id="password" name="password" type="password">
+                <input class="submit" type="submit" value="Υποβολή">
+            </form>
+            <p>Δεν έχετε λογαριασμό? <u><a href="register.html">Εγγραφή</a></u>.</p>
+        </section>
+        <div id="search-result" class="divided-view">
+            <script id="profile-template" type="text/x-handlebars-template">
+            <article id="personal-info" class="cv">
+                    <h3 class="author-header">Προσωπικά Στοιχεία</h3>
+                    <h3 class="profile-name">{{fname}} {{lname}}</h3>
+                    <div class="inline-field">
+                        <h5>Ημ/νια γέννησης: &nbsp;</h5>
+                        <p> {{dob}}</p>
+                    </div>
+                    <div class="inline-field">
+                        <h5>Διεύθυνση κατοικίας:&nbsp;</h5>
+                        <p> {{street}}, {{zip}}, {{country}}</p>
+                    </div>
+                    <div class="inline-field">
+                        <h5>Επίπεδο σπουδών: &nbsp;</h5>
+                        <p> {{degree}}</p>
+                    </div>
+            </article>
+            <article id="contact-info" class="cv">
+                <h3 class="author-header">Στοιχεία Επικοινωνίας</h3>
+                <div class="inline-field">
+                    <h5>E-mail: &nbsp;</h5>
+                    <p> {{email}}</p>
+                </div>
+                <div class="inline-field">
+                    <h5>Τηλέφωνο: &nbsp;</h5>
+                    <p> {{phonenumber}}</p>
+                </div>
+            </section>
+        </article>
+            </script>
+        </div>
+    </main>
+    <footer>
+        <h4>Περισσότερες Πληροφορίες</h4>
+        <section class="footer-follow">
+            <h5>Ακολουθήστε μας στα social media</h5>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com"><img
+                            src="https://i1.wp.com/www.gvenergy.eu/wp-content/uploads/2021/03/logo-facebook.png?ssl=1"
+                            width="20" height="20" alt="facebook logo">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com"><img
+                            src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png    "
+                            width="20" height="20" alt="twitter logo">Twitter</a>
+                </li>
+            </ul>
+        </section>
+        <section class="contact-footer">
+            <h5>Επικοινωνήστε μαζί μας</h5>
+            <ul>
+                <li><img src="resources/phone-png.png" width="20" height="20" alt="phone icon"> Τηλέφωνο
+                    επικοινωνίας:<br> 2102102105
+                </li>
+                <li><img src="resources/gmail-icon.png" width="20" height="20" alt="mail icon"> Email:
+                    <br><a href="mailto:mooc.lessons@gmail.com"> mooc.lessons@gmail.com </a>
+                </li>
+            </ul>
+        </section>
+        <p>Τα σήματα και οι επωνυμίες που αναφέρονται σε αυτή την ιστοσελίδα ανήκουν στους νόμιμους κατόχους τους.</p>
+    </footer>
+</body>
+
+</html>

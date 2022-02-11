@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="SolarWinds cyberattack">
+    <meta name="author" content="Filippos Dourachalis">
+    <title>SolarWinds Cyberattack - Causes and Solutions</title>
+    <link rel="stylesheet" href="causes-style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <img src="resources/cyberattack.jpg" width="600" height="350" alt="header image">
+        <h1>The SolarWinds Incident</h1>
+        <h2>Causes and Solutions of the cyberattack</h2>
+    </header>
+    <aside id="sidenav">
+        <nav>
+            <ol>
+                <li class="navitem"><a href="index.html">Introduction</a></li>
+                <li class="navitem"><a href="index.html">Overview</a>
+                    <ol>
+                        <li class="subnavitem"><a href="index.html">What is SolarWinds?</a></li>
+                        <li class="subnavitem"><a href="index.html">What is a supply chain attack?</a></li>
+                    </ol>
+                </li>
+                <li class="navitem">Causes & Solutions
+                    <ol>
+                        <li class="subnavitem"><a href="causes.html#causessec">Orion Vulnerabilities & SUNBURST</a></li>
+                        <li class="subnavitem"><a href="causes.html#measuressec">Mitigation measures</a></li>
+                    </ol>
+                </li>
+                <li class="navitem"><a href="impact.html">Attack Impact</a>
+                    <ol>
+                        <li class="subnavitem"><a href="impact.html#swimpact">On SolarWinds</a></li>
+                        <li class="subnavitem"><a href="impact.html#usimpact">On the U.S. Government & Infastructure</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </nav>
+    </aside>
+    <main>
+        <section id="causessec">
+            <h3>Orion Vulnerabilities & SUNBURST</h3>
+            <p>The attack named <cite><a
+                        href="https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html"
+                        target="_blank">SUNBURST</a></cite>
+                began around March, 2020 and it went undetected for nearly nine months.
+                SUBURST takes advantage of the supply chain attack concept to infiltrate a system via SolarWind's
+                Orion IT Management software.<br>
+                The actors behind the attack managed to "hijack" Orion updates by introducing a malicious dll
+                library file in the update itself which was then rolled out to clients of the software.<br>
+                What made the attack go unoticed for so long was the fact that the package containing the trojan was
+                digitally signed by SolarWinds, therefore attesting to its authenticity. Another tactic used to avoid
+                detection was a controlled shutdown each time the exploit found out a specific threat-detection
+                process was running on the background. The trojan constantly scanned the host machine to determine not
+                only when those
+                intrusion detection and prevention processes were running but also where the machine was located, who
+                the user was and whether or not the
+                infected machine was part of a specific subnet<br>
+                An in-depth analysis on how SUNBURST behaved after being installed on a machine can be found <cite><a
+                        href="https://www.cynet.com/attack-techniques-hands-on/sunburst-backdoor-c2-communication-protocol/"
+                        target="_blank">here</a></cite><br>
+            </p>
+            <div id="supply-chain-images">
+                <figure>
+                    <img src="resources/fig2a.png" width="500" height="500" alt="Supply Chain attack">
+                    <figcaption>Measures taken by SUNBURST to avoid detection</figcaption>
+                </figure>
+                <figure>
+                    <img id="certimg" src="resources/orion-fake-cert.png" width="500" height="500"
+                        alt="Orion's digitally-signed certificate">
+                    <figcaption>Orion's fake digitally-signed certificate</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="measuressec">
+            <h3>Mitigation measures</h3>
+            <p>In order to mitigate the effects of the SolarWinds attack, the American <a
+                    href="https://www.cisa.gov">CISA</a>
+                issued an emergency warning recommending the following security measures to be taken:</p>
+            <ol>
+                <li class="scrumb">Install all the latest security updates provided by SolarWinds for all the systems
+                    affected.</li>
+                <li class="scrumb">Run programs without administrator priviledges.</li>
+                <li class="scrumb">Limit web traffic to trusted websites only.</li>
+            </ol>
+            <p>
+                Futhermore, the company Fireeye, which provides cyber-security solutions, advised all potential users to
+                block all inbound and outbound traffic to SolarWinds servers, to change user account passwords and
+                thoroughly review network devices' configuration. <br>
+                It was also advised that affected SolarWinds software be uninstalled altogether and re-installed again
+                to
+                further reduce the risk of traces of the malware being left behind. However this in many cases wasn't
+                possible as
+                it was very difficult for large companies to all identify the products that needed to be removed. In
+                addition said software was impossible to be uninstalled immediately as it was crucial to the operation
+                of the
+                company. Mind you, Orion is SolarWinds most widely used Network Management software and many of these
+                companies
+                couldn't stay without it even for a short period of time. <br>
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Spotίφυ</string>
+    <string name="welcomeText">Welcome to ...</string>
+    <!--<string name="switchText">Offline</string>-->
+    <string name="offlineMode">Offline</string>
+    <string name="onlineMode">Online</string>
+    <string name="startButton">Let\'s start</string>
+    <string name="searchArtist">Search Artist name:</string>
+    <string name="searchButton">Go</string>
+    <string name="stopButton"></string>
+    <string name="unavailable">Unavailable Artist. Try Again :)</string>
+
+</resources>

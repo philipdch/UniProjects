@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS "Users"(
+	email TEXT PRIMARY KEY,
+	fname TEXT NOT NULL,
+	lname TEXT NOT NULL,
+	dob DATE NOT NULL,
+	street TEXT NOT NULL,
+	zip VARCHAR(20) NOT NULL,
+	country VARCHAR(50) NOT NULL,
+	phoneNumber TEXT NOT NULL,
+	degree TEXT NOT NULL,
+	password TEXT NOT NULL,
+    isAUthenticated BOOLEAN DEFAULT FALSE
+);

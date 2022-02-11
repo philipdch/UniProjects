@@ -1,0 +1,58 @@
+html{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background-image: url("bg.jpg");
+    background-size: cover;
+    color: #747474;
+    margin: 0;
+    height: 100%
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+label{
+    text-align: start;
+    color: rgb(99, 99, 99);
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    font-size: 1.5vw;
+    font-weight: 600;
+    margin-bottom: 2vh;
+    margin-left: 0.5vw;
+    padding-top: 2vh;
+}
+
+.form-field{
+    padding: 8px 20px 8px 15px;
+    border-radius: 50px;
+    border: 2px solid rgb(165, 165, 165);
+    margin-bottom: 10px;
+    width: 20vw;
+    height: 3vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4vw;
+    text-align: center;
+}
+
+#send-button{
+    background: linear-gradient(-150deg, #4FD5EE 10%, #6F59FE 90%);
+    font-weight: 500;
+    border-radius: 50px;
+    border: none;
+    margin: 20px;
+    padding: 12px 20px 12px 20px;
+    color: white;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-size: 2vw;
+}

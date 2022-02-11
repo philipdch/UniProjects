@@ -1,0 +1,1343 @@
+1)	nmap 83.212.105.142
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-22 17:00 Eanei? ?na GTB
+Nmap scan report for snf-879958.vm.okeanos.grnet.gr (83.212.105.142)
+Host is up (0.042s latency).
+Not shown: 997 filtered ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 12.35 seconds
+
+2) nmap 195.251.232.68-126 -PN -O
+Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times will be slower.
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-22 17:05 Eanei? ?na GTB
+Stats: 0:09:19 elapsed; 0 hosts completed (59 up), 59 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 50.09% done; ETC: 17:23 (0:09:16 remaining)
+Nmap scan report for 195.251.232.68
+Host is up (0.063s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused69.eltrun.aueb.gr (195.251.232.69)
+Host is up (0.084s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for 195.251.232.70
+Host is up (0.050s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for 195.251.232.71
+Host is up (0.049s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for executivemba.eltrun.aueb.gr (195.251.232.72)
+Host is up (0.051s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for itv.eltrun.aueb.gr (195.251.232.73)
+Host is up (0.049s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for efactors.eltrun.gr (195.251.232.74)
+Host is up (0.039s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused75.eltrun.aueb.gr (195.251.232.75)
+Host is up (0.085s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused76.eltrun.aueb.gr (195.251.232.76)
+Host is up (0.043s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for 195.251.232.77
+Host is up (0.048s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused78.eltrun.aueb.gr (195.251.232.78)
+Host is up (0.068s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for asp.eltrun.gr (195.251.232.79)
+Host is up (0.047s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for cosmos.eltrun.aueb.gr (195.251.232.80)
+Host is up (0.050s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused81.eltrun.aueb.gr (195.251.232.81)
+Host is up (0.054s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for e-services.eltrun.aueb.gr (195.251.232.82)
+Host is up (0.061s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused83.eltrun.aueb.gr (195.251.232.83)
+Host is up (0.067s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for atlas.eltrun.aueb.gr (195.251.232.84)
+Host is up (0.060s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused85.eltrun.aueb.gr (195.251.232.85)
+Host is up (0.080s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused86.eltrun.aueb.gr (195.251.232.86)
+Host is up (0.056s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused87.eltrun.aueb.gr (195.251.232.87)
+Host is up (0.054s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused88.eltrun.aueb.gr (195.251.232.88)
+Host is up (0.081s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused89.eltrun.aueb.gr (195.251.232.89)
+Host is up (0.079s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused90.eltrun.aueb.gr (195.251.232.90)
+Host is up (0.053s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for shopper.eltrun.gr (195.251.232.91)
+Host is up (0.049s latency).
+Not shown: 995 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+135/tcp  open   msrpc
+2000/tcp open   cisco-sccp
+2179/tcp open   vmrdp
+5060/tcp open   sip
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2016|10|2012 (91%), FreeBSD 6.X (89%)
+OS CPE: cpe:/o:microsoft:windows_server_2016 cpe:/o:freebsd:freebsd:6.2 cpe:/o:microsoft:windows_10:1607 cpe:/o:microsoft:windows_server_2012
+Aggressive OS guesses: Microsoft Windows Server 2016 (91%), FreeBSD 6.2-RELEASE (89%), Microsoft Windows 10 1607 (87%), Microsoft Windows Server 2012 (85%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (85%), Microsoft Windows Server 2012 R2 (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for vero.eltrun.gr (195.251.232.92)
+Host is up (0.044s latency).
+Not shown: 997 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+Device type: VoIP phone|general purpose
+Running (JUST GUESSING): Grandstream embedded (86%), Linux 3.X (86%)
+OS CPE: cpe:/h:grandstream:gxv3275 cpe:/o:linux:linux_kernel:3
+Aggressive OS guesses: Grandstream GXV3275 video phone (86%), Linux 3.2 - 3.8 (86%), Linux 3.3 (85%), Linux 3.6 (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 195.251.232.93
+Host is up (0.047s latency).
+Not shown: 997 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+Device type: VoIP phone|general purpose
+Running (JUST GUESSING): Grandstream embedded (86%), Linux 3.X (86%)
+OS CPE: cpe:/h:grandstream:gxv3275 cpe:/o:linux:linux_kernel:3
+Aggressive OS guesses: Grandstream GXV3275 video phone (86%), Linux 3.2 - 3.8 (86%), Linux 3.3 (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for asgard.eltrun.gr (195.251.232.94)
+Host is up (0.053s latency).
+Not shown: 997 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+Device type: VoIP phone|general purpose
+Running (JUST GUESSING): Grandstream embedded (86%), Linux 3.X (86%)
+OS CPE: cpe:/h:grandstream:gxv3275 cpe:/o:linux:linux_kernel:3
+Aggressive OS guesses: Grandstream GXV3275 video phone (86%), Linux 3.2 - 3.8 (86%), Linux 3.3 (85%), Linux 3.6 (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for ba.eltrun.gr (195.251.232.95)
+Host is up (0.041s latency).
+Not shown: 994 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+135/tcp  open   msrpc
+139/tcp  open   netbios-ssn
+445/tcp  open   microsoft-ds
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2016|2012|10 (91%), FreeBSD 6.X (89%)
+OS CPE: cpe:/o:microsoft:windows_server_2016 cpe:/o:freebsd:freebsd:6.2 cpe:/o:microsoft:windows_server_2012 cpe:/o:microsoft:windows_10:1607
+Aggressive OS guesses: Microsoft Windows Server 2016 (91%), FreeBSD 6.2-RELEASE (89%), Microsoft Windows Server 2012 (85%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (85%), Microsoft Windows Server 2012 R2 (85%), Microsoft Windows 10 1607 (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for osa.eltrun.gr (195.251.232.96)
+Host is up (0.048s latency).
+Not shown: 997 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+Device type: general purpose|VoIP phone
+Running (JUST GUESSING): Linux 3.X (86%), Grandstream embedded (85%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/h:grandstream:gxv3275
+Aggressive OS guesses: Linux 3.2 - 3.8 (86%), Grandstream GXV3275 video phone (85%), Linux 3.3 (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for flash.eltrun.gr (195.251.232.97)
+Host is up (0.048s latency).
+Not shown: 997 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+Device type: VoIP phone|general purpose
+Running (JUST GUESSING): Grandstream embedded (86%), Linux 3.X (86%)
+OS CPE: cpe:/h:grandstream:gxv3275 cpe:/o:linux:linux_kernel:3
+Aggressive OS guesses: Grandstream GXV3275 video phone (86%), Linux 3.2 - 3.8 (86%), Linux 3.3 (85%), Linux 3.6 (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for unused98.eltrun.aueb.gr (195.251.232.98)
+Host is up (0.043s latency).
+Not shown: 997 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+Device type: VoIP phone|general purpose
+Running (JUST GUESSING): Grandstream embedded (86%), Linux 3.X (86%)
+OS CPE: cpe:/h:grandstream:gxv3275 cpe:/o:linux:linux_kernel:3
+Aggressive OS guesses: Grandstream GXV3275 video phone (86%), Linux 3.2 - 3.8 (86%), Linux 3.3 (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for unused99.eltrun.aueb.gr (195.251.232.99)
+Host is up (0.052s latency).
+Not shown: 997 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+Device type: VoIP phone|general purpose
+Running (JUST GUESSING): Grandstream embedded (86%), Linux 3.X (86%)
+OS CPE: cpe:/h:grandstream:gxv3275 cpe:/o:linux:linux_kernel:3
+Aggressive OS guesses: Grandstream GXV3275 video phone (86%), Linux 3.2 - 3.8 (86%), Linux 3.3 (85%), Linux 3.6 (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for unused100.eltrun.aueb.gr (195.251.232.100)
+Host is up (0.050s latency).
+Not shown: 997 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+Device type: general purpose|VoIP phone
+Running (JUST GUESSING): Linux 3.X (86%), Grandstream embedded (85%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/h:grandstream:gxv3275
+Aggressive OS guesses: Linux 3.2 - 3.8 (86%), Grandstream GXV3275 video phone (85%), Linux 3.3 (85%), Linux 3.6 (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for unused101.eltrun.aueb.gr (195.251.232.101)
+Host is up (0.053s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused102.eltrun.aueb.gr (195.251.232.102)
+Host is up (0.061s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused103.eltrun.aueb.gr (195.251.232.103)
+Host is up (0.065s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused104.eltrun.aueb.gr (195.251.232.104)
+Host is up (0.095s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused105.eltrun.aueb.gr (195.251.232.105)
+Host is up (0.052s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused106.eltrun.aueb.gr (195.251.232.106)
+Host is up (0.052s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused107.eltrun.aueb.gr (195.251.232.107)
+Host is up (0.067s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused108.eltrun.aueb.gr (195.251.232.108)
+Host is up (0.076s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused109.eltrun.aueb.gr (195.251.232.109)
+Host is up (0.040s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused110.eltrun.aueb.gr (195.251.232.110)
+Host is up (0.040s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused111.eltrun.aueb.gr (195.251.232.111)
+Host is up (0.062s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused112.eltrun.aueb.gr (195.251.232.112)
+Host is up (0.060s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused113.eltrun.aueb.gr (195.251.232.113)
+Host is up (0.068s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused114.eltrun.aueb.gr (195.251.232.114)
+Host is up (0.056s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused115.eltrun.aueb.gr (195.251.232.115)
+Host is up (0.086s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused116.eltrun.aueb.gr (195.251.232.116)
+Host is up (0.063s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused117.eltrun.aueb.gr (195.251.232.117)
+Host is up (0.076s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for poseidon.eltrun.gr (195.251.232.118)
+Host is up (0.079s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused119.eltrun.aueb.gr (195.251.232.119)
+Host is up (0.075s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for adopt.eltrun.aueb.gr (195.251.232.120)
+Host is up (0.041s latency).
+Not shown: 997 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+Device type: general purpose|VoIP phone
+Running (JUST GUESSING): Linux 3.X (86%), OpenBSD 4.X (85%), Grandstream embedded (85%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:openbsd:openbsd:4.0 cpe:/h:grandstream:gxv3275
+Aggressive OS guesses: Linux 3.2 - 3.8 (86%), OpenBSD 4.0 (85%), Grandstream GXV3275 video phone (85%), Linux 3.3 (85%), Linux 3.6 (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for unused121.eltrun.aueb.gr (195.251.232.121)
+Host is up (0.052s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused122.eltrun.aueb.gr (195.251.232.122)
+Host is up (0.045s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused123.eltrun.aueb.gr (195.251.232.123)
+Host is up (0.054s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused124.eltrun.aueb.gr (195.251.232.124)
+Host is up (0.068s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused125.eltrun.aueb.gr (195.251.232.125)
+Host is up (0.067s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for unused126.eltrun.aueb.gr (195.251.232.126)
+Host is up (0.057s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+Too many fingerprints match this host to give specific OS details
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 59 IP addresses (59 hosts up) scanned in 807.70 seconds
+
+3)	nmap 195.251.248.128/25 -p 80
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-22 17:14 Eanei? ?na GTB
+Nmap scan report for cslab.aueb.gr (195.251.248.140)
+Host is up (0.13s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for moniteur.aueb.gr (195.251.248.143)
+Host is up (0.082s latency).
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab178.cs.aueb.gr (195.251.248.178)
+Host is up (0.14s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for cslab247.cs.aueb.gr (195.251.248.247)
+Host is up (0.092s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for cslab252.cs.aueb.gr (195.251.248.252)
+Host is up (0.094s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap done: 128 IP addresses (5 hosts up) scanned in 68.75 seconds
+	
+4)	nmap 195.251.248.128/25 -p 80 -Pn
+Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times will be slower.
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-22 17:15 Eanei? ?na GTB
+Nmap scan report for cslab128.cs.aueb.gr (195.251.248.128)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab129.cs.aueb.gr (195.251.248.129)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab130.cs.aueb.gr (195.251.248.130)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab131.cs.aueb.gr (195.251.248.131)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab132.cs.aueb.gr (195.251.248.132)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab133.cs.aueb.gr (195.251.248.133)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab134.cs.aueb.gr (195.251.248.134)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab135.cs.aueb.gr (195.251.248.135)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab136.cs.aueb.gr (195.251.248.136)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab137.cs.aueb.gr (195.251.248.137)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab138.cs.aueb.gr (195.251.248.138)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab139.cs.aueb.gr (195.251.248.139)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab.aueb.gr (195.251.248.140)
+Host is up (0.11s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for admin.cslab.aueb.gr (195.251.248.141)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for phabricator.cslab.aueb.gr (195.251.248.142)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for moniteur.aueb.gr (195.251.248.143)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab144.cs.aueb.gr (195.251.248.144)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab145.cs.aueb.gr (195.251.248.145)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab146.cs.aueb.gr (195.251.248.146)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab147.cs.aueb.gr (195.251.248.147)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab148.cs.aueb.gr (195.251.248.148)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab149.cs.aueb.gr (195.251.248.149)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab150.cs.aueb.gr (195.251.248.150)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab151.cs.aueb.gr (195.251.248.151)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab152.cs.aueb.gr (195.251.248.152)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab153.cs.aueb.gr (195.251.248.153)
+Host is up (0.11s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for cslab154.cs.aueb.gr (195.251.248.154)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab155.cs.aueb.gr (195.251.248.155)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab156.cs.aueb.gr (195.251.248.156)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab157.cs.aueb.gr (195.251.248.157)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab158.cs.aueb.gr (195.251.248.158)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab159.cs.aueb.gr (195.251.248.159)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for panoptis.aueb.gr (195.251.248.160)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab161.cs.aueb.gr (195.251.248.161)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab162.cs.aueb.gr (195.251.248.162)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab163.cs.aueb.gr (195.251.248.163)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab164.cs.aueb.gr (195.251.248.164)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab165.cs.aueb.gr (195.251.248.165)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab166.cs.aueb.gr (195.251.248.166)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab167.cs.aueb.gr (195.251.248.167)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab168.cs.aueb.gr (195.251.248.168)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab169.cs.aueb.gr (195.251.248.169)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab170.cs.aueb.gr (195.251.248.170)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab171.cs.aueb.gr (195.251.248.171)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab172.cs.aueb.gr (195.251.248.172)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab173.cs.aueb.gr (195.251.248.173)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab174.cs.aueb.gr (195.251.248.174)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab175.cs.aueb.gr (195.251.248.175)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab176.cs.aueb.gr (195.251.248.176)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab177.cs.aueb.gr (195.251.248.177)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab178.cs.aueb.gr (195.251.248.178)
+Host is up (0.034s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for cslab179.cs.aueb.gr (195.251.248.179)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab180.cs.aueb.gr (195.251.248.180)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab181.cs.aueb.gr (195.251.248.181)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab182.cs.aueb.gr (195.251.248.182)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab183.cs.aueb.gr (195.251.248.183)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab184.cs.aueb.gr (195.251.248.184)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab185.cs.aueb.gr (195.251.248.185)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab186.cs.aueb.gr (195.251.248.186)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab187.cs.aueb.gr (195.251.248.187)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab188.cs.aueb.gr (195.251.248.188)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab189.cs.aueb.gr (195.251.248.189)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab190.cs.aueb.gr (195.251.248.190)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab191.cs.aueb.gr (195.251.248.191)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab192.cs.aueb.gr (195.251.248.192)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab193.cs.aueb.gr (195.251.248.193)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab194.cs.aueb.gr (195.251.248.194)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab195.cs.aueb.gr (195.251.248.195)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab196.cs.aueb.gr (195.251.248.196)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab197.cs.aueb.gr (195.251.248.197)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab198.cs.aueb.gr (195.251.248.198)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab199.cs.aueb.gr (195.251.248.199)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab200.cs.aueb.gr (195.251.248.200)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab201.cs.aueb.gr (195.251.248.201)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab202.cs.aueb.gr (195.251.248.202)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab203.cs.aueb.gr (195.251.248.203)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab204.cs.aueb.gr (195.251.248.204)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab205.cs.aueb.gr (195.251.248.205)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab206.cs.aueb.gr (195.251.248.206)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab207.cs.aueb.gr (195.251.248.207)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab208.cs.aueb.gr (195.251.248.208)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab209.cs.aueb.gr (195.251.248.209)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab210.cs.aueb.gr (195.251.248.210)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab211.cs.aueb.gr (195.251.248.211)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab212.cs.aueb.gr (195.251.248.212)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab213.cs.aueb.gr (195.251.248.213)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab214.cs.aueb.gr (195.251.248.214)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab215.cs.aueb.gr (195.251.248.215)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab216.cs.aueb.gr (195.251.248.216)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab217.cs.aueb.gr (195.251.248.217)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab218.cs.aueb.gr (195.251.248.218)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab219.cs.aueb.gr (195.251.248.219)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab220.cs.aueb.gr (195.251.248.220)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab221.cs.aueb.gr (195.251.248.221)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab222.cs.aueb.gr (195.251.248.222)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab223.cs.aueb.gr (195.251.248.223)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab224.cs.aueb.gr (195.251.248.224)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab225.cs.aueb.gr (195.251.248.225)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab226.cs.aueb.gr (195.251.248.226)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab227.cs.aueb.gr (195.251.248.227)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab228.cs.aueb.gr (195.251.248.228)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab229.cs.aueb.gr (195.251.248.229)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab230.cs.aueb.gr (195.251.248.230)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab231.cs.aueb.gr (195.251.248.231)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab232.cs.aueb.gr (195.251.248.232)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab233.cs.aueb.gr (195.251.248.233)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab234.cs.aueb.gr (195.251.248.234)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab235.cs.aueb.gr (195.251.248.235)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab236.cs.aueb.gr (195.251.248.236)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab237.cs.aueb.gr (195.251.248.237)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab238.cs.aueb.gr (195.251.248.238)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab239.cs.aueb.gr (195.251.248.239)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab240.cs.aueb.gr (195.251.248.240)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab241.cs.aueb.gr (195.251.248.241)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab242.cs.aueb.gr (195.251.248.242)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab243.cs.aueb.gr (195.251.248.243)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab244.cs.aueb.gr (195.251.248.244)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab245.cs.aueb.gr (195.251.248.245)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab246.cs.aueb.gr (195.251.248.246)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab247.cs.aueb.gr (195.251.248.247)
+Host is up (0.15s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for venus.cs.aueb.gr (195.251.248.248)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab249.cs.aueb.gr (195.251.248.249)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab250.cs.aueb.gr (195.251.248.250)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab251.cs.aueb.gr (195.251.248.251)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab252.cs.aueb.gr (195.251.248.252)
+Host is up (0.15s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for cslab253.cs.aueb.gr (195.251.248.253)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for cslab254.cs.aueb.gr (195.251.248.254)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for 195.251.248.255
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap done: 128 IP addresses (128 hosts up) scanned in 13.62 seconds
+
+5)	nmap 83.212.105.142 --spoof-mac 0
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-22 17:22 Eanei? ?na GTB
+Spoofing MAC address 83:EF:B6:8C:34:64 (No registered vendor)
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 3.95 seconds
+
+6) nmap www.aueb.gr
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-22 17:26 Eanei? ?na GTB
+Nmap scan report for www.aueb.gr (195.251.255.156)
+Host is up (0.060s latency).
+rDNS record for 195.251.255.156: www-cl.aueb.gr
+Not shown: 997 filtered ports
+PORT    STATE  SERVICE
+80/tcp  open   http
+113/tcp closed ident
+443/tcp open   https
+
+Nmap done: 1 IP address (1 host up) scanned in 8.60 seconds
+
+7) nmap www.aueb.gr -R
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-22 17:28 Eanei? ?na GTB
+Nmap scan report for www.aueb.gr (195.251.255.156)
+Host is up (0.039s latency).
+rDNS record for 195.251.255.156: www-cl.aueb.gr
+Not shown: 997 filtered ports
+PORT    STATE  SERVICE
+80/tcp  open   http
+113/tcp closed ident
+443/tcp open   https
+
+Nmap done: 1 IP address (1 host up) scanned in 5.71 seconds
+	

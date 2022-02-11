@@ -1,0 +1,979 @@
+/*
+CSS for exercise 5. 
+All layouts use either grid or flexbox to align their items
+and space them on the screen. No floats are used to position images
+or other content. Extended to include register page.
+*/
+
+/* Define various custom fonts for use in the site */
+@font-face {
+    font-family: CenturyGothic;
+    src: local("Montserrat Medium"), local("Montserrat-Medium"), url(fonts/Montserrat/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: CenturyGothic;
+    src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url(fonts/Montserrat/Montserrat-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: CenturyGothic;
+    src: local("Montserrat Bold"), local("Montserrat-Bold"), url(fonts/Montserrat/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: CenturyGothic;
+    src: local("Montserrat Black"), local("Montserrat-Black"), url(fonts/Montserrat/Montserrat-Black.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-ExtraBold.ttf);
+    font-weight: 800;
+}
+
+/* set general style for all pages. Display body as a grid of two columns. Rows are set automatically.
+Header and footer will cover both of these columns so that main content will be displayed
+between them */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+    background-size: cover;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+
+/* general style of top navigation bar 
+header covers both columns */
+header {
+    width: 100%;
+    overflow: hidden;
+    background: #1f1f1f;
+    padding: 0 0 10px 0;
+    text-align: center;
+    border-bottom: 1vh solid #cda34f;
+    height: 50vh;
+}
+
+
+/* set overflow to show content that goes beyond set height
+ (also used to make scrolling possible on sidebar */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    width: 90%;
+    overflow: hidden;
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+
+/***** top navigation bar styling *****/
+
+
+/* use all available screen width */
+
+#topnav {
+    height: 100%;
+}
+
+
+/* set style of each navigation list item */
+
+/* style links inside top navigation bar.
+This includes text style as well as transition animation
+ */
+#topnav a {
+    color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 125%;
+    font-weight: bold;
+    padding: 0 3px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.25s ease-in 0s;
+}
+
+
+/* display navigation list as table in order to align items inside */
+
+/* display items inside top navigation bar as flexbox. 
+This allows them to be evenly spaced and aligned on the same height without adding individual margins/displays 
+*/
+#topnav ol {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    list-style-type: none;
+    height: 100%;
+    margin-right: 10vw;
+}
+
+#topnav #register-link {
+    text-decoration: underline;
+}
+
+/* 
+set style of <a> element in the navigation bar 
+when hovering over it
+*/
+#topnav .navitem a:hover {
+    color: #bb5a4b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 125%;
+    font-weight: bolder;
+    padding: 0 3px;
+}
+
+/* style top logo name */
+#logo-name {
+    color: #ffffff;
+    font-size: 160%;
+    font-weight: bolder;
+}
+
+/* set margin for top image in order to be as close to logo name as possible */
+#logo-image {
+    margin-top: 0%;
+}
+
+
+/***** end top navigation bar styling *****/
+
+/* set font style for the header of each page */
+.top-header {
+    font-weight: 800;
+    font-size: 180%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #cda34f;
+    text-align: center;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+.main-section{
+    text-align: center;
+}
+
+
+/* set general style for h elements */
+
+h2 {
+    font-size: 150%;
+    font-family: 'Montserrat', sans-serif;
+    color: #bb5a4b;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #eaecdd;
+}
+
+h4 {
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+    color: #bb5a4b;
+}
+
+/* set color of unvisited links*/
+a {
+    color: #cda34f;
+}
+
+/* set general style for link hover */
+a:hover {
+    color: #af4076;
+}
+
+
+/***** index main content styling *****/
+
+#search-result {
+    text-align: center;
+}
+
+/***** end index main content styling *****/
+
+/***** start of sidebar styling *****/
+
+/* display aside nav bar on the left side of the page (first column), set its height and color
+as well as overflow behaviour (hidden). This acts as a container for the scroll list
+so that borders appear rounded when scrollbar appears */
+#categories-sidebar {
+    width: 0;
+    /* will change via JS */
+    height: 60%;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #272727 0%, #1b1b1b 90%);
+    border-radius: 0 2.5vh 2.5vh 0;
+    color: azure;
+    position: absolute;
+    z-index: 1;
+    /* Should appear on top of other items*/
+    top: 30%;
+    left: 0;
+    transition: 0.5s;
+    /* Slide animation transition */
+}
+
+/* set style of container inside side navigation bar.
+Uses a scrollbar to show content that has overflown (exceeded
+bar height). */
+#categories-sidebar .sidebar-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* Position and style the close button (top right corner) */
+#categories-sidebar .close-btn {
+    background-color: gray;
+    border-radius: 100%;
+    position: absolute;
+    top: 1vh;
+    margin-top: 1vh;
+    right: 1vw;
+    font-size: 36px;
+    margin-left: 2vw;
+}
+
+/* The button used to open the sidebar */
+.open-btn {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    float: left;
+}
+
+/* style side nav bar header */
+.sidebar-scroll h4 {
+    font-family: OpenSans, sans-serif;
+    font-weight: 800;
+    font-size: 120%;
+    color: #d3e3fc;
+}
+
+/* set display of items inside each unit list inside side bar 
+as column */
+.sidebar-scroll ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+/* style each unit list header */
+#categories-sidebar .category-item {
+    color: lightyellow;
+    text-align: left;
+    font-family: OpenSans;
+    font-weight: 700;
+    font-size: 120%;
+    padding: 2vh 0 2vh 0;
+}
+
+/* end sidebar styling */
+
+.intro-section p {
+    color: rgb(29, 29, 29);
+}
+
+/*start login and register styling */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-paragraph {
+    font-size: 110%;
+    text-align: center;
+    margin: 5vh 0px 5vh 0px
+}
+
+#register-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%
+}
+
+#home-button{
+    justify-self: center;
+    align-self: center;
+}
+
+#home-button button{
+    text-align: center;
+    color: white;
+    background-color: lightskyblue;
+    width: 25vw;
+    height: 20vh;
+    border-radius: 50rem;
+    font-size: 200%;
+    border: solid 1vh lightcyan;
+}
+
+.active-success{
+    color: rgb(0, 185, 0);
+    font-size: 150%;
+    font-family: CenturyGothic;
+    font-weight: 600;
+}
+
+/* 
+style fields inside contact form. set display as flexbox and align them to 
+the center of the form. Margin is set to auto as to automatically 
+align the form at the center of the page.
+*/
+fieldset {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: #d1d7e0;
+    border-radius: 2vh;
+    margin-bottom: 5%;
+}
+
+/*style legend appearing above fieldset */
+legend {
+    background-color: #ce4148;
+    color: whitesmoke;
+    padding: 8px 35px 8px 35px;
+    font-size: 120%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/*set margin and font size for labels appearing above input fields */
+label {
+    font-weight: 600;
+    margin-right: 2%;
+    margin-left: 2%;
+    font-size: 100%;
+    border: none;
+}
+
+/* style general input fields */
+input {
+    border-radius: 20vw;
+    font-size: 100%;
+    margin-bottom: 3vh;
+    margin-top: 1%;
+    border: 2px solid rgb(170, 170, 170);
+    min-height: 6vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+input[type=text] {
+    width: 50%;
+}
+
+/*set style of invalid input fields */
+input:invalid {
+    border: 2px solid rgb(255, 55, 55);
+}
+
+/*display multiple choices for interests as grid
+where each checkbox and each option is displayed in 
+a single cell. Checkboxes are displayed in smaller cells
+in order to be sized relatively smaller */
+.multiple-selection {
+    margin-top: 3vh;
+    margin-bottom: 4vh;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    column-gap: 1vw;
+    align-items: center;
+}
+
+/* set margin for the above options in the grid */
+.multiple-selection input {
+    margin: 0;
+    margin-left: 1vw;
+}
+
+.multiple-selection label {
+    margin: 0;
+    font-weight: 500;
+    margin-left: 0.7vw;
+    margin-right: 1vw;
+}
+
+/* style submit button */
+input[type=submit] {
+    padding: 0 7vw 0 7vw;
+    text-align: center;
+    position: relative;
+    background: #ce4148;
+    color: whitesmoke;
+    font-size: 120%;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    border-radius: 5vh;
+}
+
+/* set submit button color when hovering over it */
+input[type=submit]:hover {
+    border: 2px solid rgb(255, 0, 0);
+    background-color: #d6000b;
+}
+
+/* general styling of select fields (setting color, margins and padding 
+so that text appears near the middle */
+select {
+    padding: 1vh 0 1vh 1vw;
+    min-height: 6vh;
+    background-color: #fdfdfd;
+    border-radius: 40px;
+    font-size: 20px;
+    margin-bottom: 3%;
+    margin-top: 0.5%;
+    border: 2px solid rgb(170, 170, 170);
+    width: 50%;
+}
+
+/*set distance from top of fieldset for the first label item */
+legend+label {
+    margin-top: 4%
+}
+
+/* general styling of number fields */
+input[type=number] {
+    min-width: 5%;
+    max-width: 20%;
+}
+
+input[type=file] {
+    border: none;
+    text-align: start;
+    padding-top: 1%;
+    font-size: 20px;
+}
+
+/* set specific style of textarea input */
+textarea {
+    padding-top: 1vh;
+    padding-left: 15px;
+    border-radius: 3vh;
+    width: 60%;
+    max-width: 70%;
+    min-height: 7vh;
+    font-size: 20px;
+    margin-bottom: 3vh;
+    margin-top: 1%;
+    border: 2px solid rgb(170, 170, 170);
+}
+
+/*style for error messages that appear below fields */
+.active-error {
+    color: rgb(238, 36, 36);
+    margin-bottom: 3%;
+}
+
+/* general style for fields that are supposed to be displayed in the same line.
+A flexbox is used to create a row of these fields */
+.inline-field {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    /* prevents text wrapping and justifies content correctly on the horizontal axis*/
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+.inline-field input:last-of-type {
+    margin-top: 2vh;
+}
+
+/* style for fields that overlap (e.g a country phone code select field inside a normal text field).
+Setting display as grid allows us to place the smaller field directly on top (same cell) of the other */
+.inner-fields {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.inner-fields input {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    margin: 0;
+    padding-left: 7vw;
+}
+
+.inner-fields select {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 0;
+    padding: 0 1vw 0 1vw;
+}
+
+/* limit zip code field width */
+.inline-field #zip {
+    max-width: 40%;
+    padding-left: 5vw;
+}
+
+/* style street number field (limit width) */
+.inline-field #st-number {
+    padding-left: 5vw;
+    max-width: 30%;
+}
+
+/* reset margins for fields that are supposed to be inline (using flex row) */
+.inline-field input, .inline-field label, .inline-field select {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 5px;
+}
+
+details {
+    margin-top: 3%;
+}
+
+/***** end form style *****/
+
+/* apply general color to links */
+a:visited {
+    text-decoration: none;
+    color: #9c23ff;
+}
+
+/* set color of visited links */
+li a {
+    color: #cda34f;
+}
+
+/* set color on link hover */
+li a:hover {
+    color: #af4076;
+}
+
+.divided-view{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5vw;
+}
+/* style each cv article. Width is set to 100% so that both cvs occupy the same horizontal space regardless of content.
+Appropriate margins are set */
+.cv {
+    padding: 4vh 0 2vh 0;
+    margin: 4vh 0 2vh 0;
+    padding-bottom: 20px;
+    font-size: 20px;
+    background-color: #e4e4e4;
+    border-radius: 10vh;
+    width: 100%;
+}
+
+.profile-name{
+    color: #cda34f;
+}
+
+.author-header {
+    color: #bb5a4b;
+    font-size: 120%;
+    margin-top: 5vh;
+}
+
+/***** start of courses styling *****/
+
+/* set general styling for each course (margins, max width and color) */
+.course {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3em;
+    border-radius: 5vh;
+    background-color: #d1d7e0;
+    padding: 2rem;
+}
+
+/* container for course image and title in order for 
+them to be displayed aligned and on the same row */
+.title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* set bottom margin only for the last section */
+.course:last-of-type {
+    margin-bottom: 25px;
+}
+
+/* set uniform dimensions for course images. */
+.course img {
+    width: 14rem;
+    height: 7rem;
+}
+
+/* align course titles */
+.course-title {
+    margin-top: 2vh;
+    margin-left: 2vw;
+    color: #d14949;
+}
+
+/* set color for course description header */
+.course h4 {
+    color: #2d2d2d;
+}
+
+.course-section {
+    margin-top: 20px;
+}
+
+/***** end of courses styling *****/
+
+/***** start of footer styling *****/
+
+/* set color and top border to be displayed - same as header */
+footer {
+    margin-top: 15%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+    background-color: #1f1f1f;
+    border-top: 1vh solid #cda34f;
+}
+
+footer h4 {
+    align-self: center;
+}
+
+/* position follow-us section on the left of the footer */
+.footer-follow {
+    justify-self: center;
+    margin-left: 3vw;
+}
+
+/* position contact-us section on the right of the footer */
+.contact-footer {
+    justify-self: center;
+    margin-left: 3vw;
+}
+
+/* style headers of each footer section */
+footer section h5 {
+    font-size: 100%;
+    color: #cda34f;
+    font-weight: 700;
+    font-family: "OpenSans", sans-serif;
+}
+
+/* make text after above sections be displayed at the bottom */
+footer section+p {
+    color: whitesmoke;
+    padding: 8px;
+    margin-left: 2em;
+}
+
+footer img {
+    margin-right: 8px;
+    width: 25px;
+    height: 25px;
+}
+
+footer li {
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+
+/**** end of footer styling *****/
+
+@media screen and (min-width:768px) {
+    header {
+        height: auto;
+    }
+
+    #topnav {
+        display: grid;
+        grid-template-rows: auto auto;
+        width: 100%;
+    }
+
+    #topnav ol {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        grid-row: 1/3;
+        grid-column: 1/3;
+        align-items: flex-end;
+        justify-content: space-around;
+        height: auto;
+        font-size: 100%;
+    }
+
+    #topnav #register-link {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        margin-top: 3vh;
+        margin-right: 5vw;
+        justify-self: end;
+        font-weight: 500;
+    }
+
+    #topnav #register-link:hover {
+        text-decoration: underline;
+    }
+
+    #topnav #register-link:hover {
+        text-decoration: underline;
+    }
+
+    .intro-section p {
+        font-size: 100%;
+        margin-right: 2vw;
+    }
+
+    .index p+h4 {
+        width: 70%;
+        margin-left: 20px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .multiple-selection {
+        margin-top: 3vh;
+        margin-bottom: 4vh;
+        width: 70%;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr;
+    }
+
+    input[type=text] {
+        width: auto;
+    }
+
+    select {
+        width: auto;
+    }
+
+    .inline-field {
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .inline-field input:last-of-type {
+        margin-top: 0;
+    }
+
+    .course-main {
+        display: grid;
+        grid-template-columns: 50%;
+        column-gap: 4%;
+    }
+}
+
+
+@media screen and (min-width:1224px) {
+
+    header {
+        height: auto;
+        grid-column: 1/3;
+        overflow: hidden;
+        background: #1f1f1f;
+        padding: 0 0 10px 0;
+        text-align: center;
+        border-bottom: 3px solid #cda34f;
+        align-self: center;
+    }
+
+    #topnav {
+        display: grid;
+        grid-template-rows: auto auto;
+        width: 100%;
+    }
+
+    #topnav ol {
+        grid-row: 1/3;
+        grid-column: 1/3;
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-direction: row;
+        list-style-type: none;
+        height: auto;
+        margin-right: 0;
+    }
+
+    #topnav #register-link {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        margin-top: 8%;
+        margin-right: 6%;
+        justify-self: end;
+        font-weight: 500;
+    }
+
+    #topnav #register-link:hover {
+        text-decoration: underline;
+    }
+
+    #topnav .navitem {
+        font-size: 120%;
+    }
+
+    #topnav #register-link {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        margin-top: 8%;
+        margin-right: 6%;
+        justify-self: end;
+        font-weight: 500;
+    }
+
+    #topnav #register-link:hover {
+        text-decoration: underline;
+    }
+
+    #full-main {
+        grid-column: 1/3;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 5vh;
+    }
+
+    #full-main .top-header {
+        grid-column: 1/4;
+    }
+
+    .intro-section p {
+        font-size: 110%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    legend {
+        font-size: 30px;
+    }
+
+    label {
+        margin-top: 30px;
+        font-size: 20px;
+        border: none;
+    }
+
+    input[type="submit"] {
+        padding: 1vh 2vw 1vh 2vw;
+    }
+
+    .inline-field #st-number {
+        margin-top: 0;
+        max-width: 5%;
+    }
+
+    .inline-field #zip {
+        margin-top: 0;
+        max-width: 10%;
+    }
+
+    footer {
+        grid-column: 1/3;
+        display: grid;
+        width: 100%;
+        background-color: #1f1f1f;
+        border-top: 1vh solid #cda34f;
+    }
+
+    footer p {
+        grid-column: 1/4;
+        margin-left: 2em;
+    }
+
+    .footer-follow {
+        justify-self: center;
+        grid-column: 1/2;
+        margin-left: 5vw;
+    }
+
+    .contact-footer {
+        justify-self: center;
+        grid-column: 4/5;
+        margin-right: 5vw;
+    }
+
+    footer h4 {
+        grid-column: 1/5;
+        justify-self: center;
+        justify-content: center;
+    }
+
+    footer p {
+        grid-row: 6/7;
+    }
+
+    footer {
+        display: grid;
+        grid-template-rows: 0.1fr 0.3fr 0.1fr;
+        width: 100%;
+        background-color: #1f1f1f;
+        border-top: 4px solid #cda34f;
+    }
+
+    .course-main {
+        display: grid;
+        grid-template-columns: 50%;
+        display: grid;
+        column-gap: 4%;
+    }
+
+    .title-container {
+        flex-wrap: nowrap;
+    }
+}

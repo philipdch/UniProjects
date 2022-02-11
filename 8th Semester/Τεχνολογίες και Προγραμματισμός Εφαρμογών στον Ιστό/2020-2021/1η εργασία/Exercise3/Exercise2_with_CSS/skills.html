@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="CV skills secttion">
+    <meta name="author" content="Filippos Dourachalis">
+    <title>My CV - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="topnav">
+            <ol>
+                <li class="navitem"><a href="index.html">Home</a></li>
+                <li class="navitem"><strong><a href="#">Portfolio</a></strong></li>
+                <li class="navitem"><a href="contact.html">Επικοινωνήστε μαζί μου!</a></li>
+            </ol>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <article>
+            <section id="projects">
+                <h3>Σημαντικά Projects</h3>
+                <p>Μερικά από τα <a href="https://github.com/filipposdour">project</a> που εκπόνησα ατομικά ή ομαδικά ως
+                    μέρος των σπουδών μου είναι τα ακόλουθα:</p>
+                <ul id="projects-list">
+                    <img class="img-group" src="resources/java-logo.png" width="25" height="25" alt="java icon">
+                    <li class="pcrumb"><em>Java/Android</em></li>
+                    <ul class="inner-plist">
+                        <li><strong>"Publisher/Subsciber Σύστημα αναζήτησης και αναπαραγωγής τραγουδιών"</strong>
+                            <p>Το συγκεκριμένο project αφορούσε ένα ολοκληρωμένο Pub/Sub σύστημα αναζήτησης
+                                τραγουδιών
+                                (παρόμοιο με
+                                το
+                                <a href="https://www.spotify.com/gr/">Spotify</a>) και υλοποιήθηκε σε δύο
+                                στάδια.<br>
+                                Σε πρώτη φάση υλοποιήθηκε σε Java η κύρια λειτουργικότητα της εφαρμογής με χρήση
+                                sockets.<br>
+                                Προσομοιώθηκε η λειτουργία πολλών publishers και clients, αλλά και των ενδιάμεσων
+                                brokers
+                                που
+                                επεξεργάζονταν τα
+                                αιτήματα που δέχονταν παράλληλα με χρήση νημάτων.<br>
+                                Για την κατανομή και την αναζήτηση των κλειδιών που αντιστοιχούν στους καλλιτέχνες
+                                μεταξύ
+                                των
+                                publishers
+                                αλλά και των brokers χρησιμοποιήθηκε consistent hashing.<br>
+                                Στην επόμενη φάση ξεκίνησε η υλοποίηση της Android εφαρμογής που θα χρησιμοποιούσαν
+                                οι
+                                πελάτες.<br>
+                                Αυτή
+                                περιείχε ολόκληρη τη λειτουργικότητα της μεριάς των clients καθώς και μια
+                                ολοκληρωμένη
+                                διεπαφή
+                                χρήστη.<br>
+                                Έτσι η λειτουργία των publishers και των ενδιάμεσων
+                                κόμβων του δικτύου (brokers) συνέχιζε να πραγματοποιείται μέσω της γραμμής εντολών,
+                                όμως
+                                οι
+                                πελάτες
+                                πλέον επικοινωνούσαν με αυτούς μέσω της εφαρμογής που διέθεταν.
+                            </p>
+                        </li>
+                        <li><strong>"Εφαρμογή χειρισμού φούρνου μικροκυμάτων"</strong>
+                            <p>Το project αφορά την βελτίωση μιας υπάρχουσας (φυσικής) διεπαφής ενός φούρνου
+                                μικροκυμάτων.<br>
+                                Η υλοποίηση του project χωρίστηκε σε 3 στάδια, χρησιμοποιώντας το Ελικοειδές Μοντέλο
+                                Ανάπτυξης.<br>
+                                Στο 1ο στάδιο αναπτύχθηκε ένα πρωτότυπο της εφαρμογής μετά από συνεντεύξεις που
+                                πήραμε
+                                από
+                                τους
+                                χρήστες
+                                της συσκευής και από ερωτηματολόγια που τέθηκαν στους εν δυνάμη χρήστες.<br>
+                                Στο 2ο στάδιο δημιουργήθηκε ένα βελτιωμένο ημι-λειτουργικό πρωτότυπο μετά από
+                                feedback
+                                που
+                                λάβαμε
+                                πάνω
+                                στο προηγούμενο.<br>
+                                Τέλος αναπτύχθηκε μια πλήρως λειτουργική Android εφαρμογή που υλοποιούσε και
+                                επέκτεινε
+                                την
+                                λειτουργικότητα του πρωτοτύπου του προηγούμενου σταδίου
+                                και ήταν σύμφωνη με τις αρχές σχεδίασης μιας εύχρηστης διεπαφής.
+                            </p>
+                        </li>
+                    </ul>
+                    <img class="img-group" src="resources/cpp-logo.png" width="25" height="25" alt="C++ icon">
+                    <li class="pcrumb"><em>C++</em></li>
+                    <ul class="inner-plist">
+                        <li><strong>"Command line εργαλείο ορισμού φίλτρων σε φωτογραφίες"</strong>
+                            <p>Το πρόγραμμα που αναπτύχθηκε σε αυτό το project αποτελούταν βιβλιοθήκες για την
+                                ανάγνωση,
+                                αποθήκευση
+                                και επεξεργασία οποιασδήποτε PPM εικόνας.<br>
+                                Ο χρήστης προσδιορίζει μέσω της γραμμής εντολής τα φίλτρα που επιθυμεί να
+                                εφαρμοστούν
+                                και το
+                                πρόγραμμα είναι υπεύθυνο για την επεξεργασία των pixel που αποτελούσαν την εικόνα με
+                                τρόπο
+                                που όριζε
+                                κάθε φίλτρο.
+                                Τα φίλτρα που μπορούσαν να εφαρμοστούν σε μια εικόνα ήταν:
+                            <ol>
+                                <li>Linear Filter (Επεξεργασία των χρωμάτων της εικόνας)</li>
+                                <li>Gamma Filter (Επεξεργασία της φωτεινότητας της εικόνας)</li>
+                                <li>Blur Filter (Θόλωση της εικόνας)</li>
+                            </ol>
+                            </p>
+                        </li>
+                    </ul>
+                    <img class="img-group" src="resources/c-logo.png" width="25" height="25" alt="C icon">
+                    <li class="pcrumb"><em>C</em></li>
+                    <ul class="inner-plist">
+                        <li><strong>"Πρόγραμμα command line για κλείσιμο εισητηρίων με χρήση νημάτων"</strong>
+                            <p>Το συγκεκριμένο πρόγραμμα προσωμείωνε τη λειτουργία ενός συστήματος διαχείρισης
+                                κρατήσεων
+                                και
+                                έκδοσης εισιτηρίων.<br>
+                                Για κάθε πελάτη δημιουργείτο ένα νέο νήμα το οποίο δέσμευε θέσεις σε έναν
+                                πίνακα.<br>
+                                Προκειμένου κάθε συναλλαγή να είναι ατομική χρησιμοποιήθηκαν κλειδαριές mutex ώστε η
+                                τροποποίηση του πίνακα να περιοριστεί σε ένα νήμα τη φορά
+                            </p>
+                        </li>
+                    </ul>
+                    <img class="img-group" src="resources/python-logo.png" width="25" height="25" alt="python icon">
+                    <li class="pcrumb"><em>Python</em></li>
+                    <ul class="inner-plist">
+                        <li><strong>"Μηχανική μάθηση με χρήση των αλγορίθμων ID3 και Naive Bayes"</strong></li>
+                    </ul>
+                    <img class="img-group" src="resources/sql-logo.png" width="25" height="25" alt="SQL icon">
+                    <li class="pcrumb"><em>SQL</em></li>
+                    <ul class="inner-plist">
+                        <li><strong>"Υλοποίηση και διαχείριση μιας AirBnB Βάσης Δεδομένων"</strong></li>
+                        <li><strong>"Υλοποίηση και διαχείριση μιας Βάσης Δεδομένων για ταινίες και
+                                κριτικές"</strong>
+                        </li>
+                    </ul>
+                    <img class="img-group" src="resources/processing-logo.png" width="25" height="25" alt="Processing3 icon">
+                    <li class="pcrumb"><em>Processing</em></li>
+                    <ul class="inner-plist">
+                        <li><strong>"Δημιουργία ενός 2D platformer παιχνιδιού"</strong></li>
+                    </ul>
+                    <li class="pcrumb"><em>VHDL</em></li>
+                    <ul class="inner-plist">
+                        <li><strong>"Σδεδίαση ενός 16-bit επεξεργαστή (MIPS)"</strong></li>
+                    </ul>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <hr>
+    <footer>
+        <h4>Περισσότερες Πληροφορίες</h4>
+        <p>Ακολουθήστε με στα social media</p>
+        <ul>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+        </ul>
+        <p>Τα σήματα και οι επωνυμίες που αναφέρονται σε αυτή την ιστοσελίδα ανήκουν στους νόμιμους κατόχους τους.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,610 @@
+/*define custom fonts */
+@font-face {
+    font-family: CenturyGothic;
+    src: local("Montserrat Medium"), local("Montserrat-Medium"), url(fonts/Montserrat/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: CenturyGothic;
+    src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url(fonts/Montserrat/Montserrat-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: CenturyGothic;
+    src: local("Montserrat Bold"), local("Montserrat-Bold"), url(fonts/Montserrat/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: CenturyGothic;
+    src: local("Montserrat Black"), local("Montserrat-Black"), url(fonts/Montserrat/Montserrat-Black.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-ExtraBold.ttf);
+    font-weight: 800;
+}
+
+/*set genral style for the body of each page */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-size: cover;
+    background-color: #f0f0f0;
+    margin: 0;
+    width: 100%;
+    overflow: visible;
+}
+
+
+/* general style of top navigation bar */
+
+header {
+    overflow: hidden;
+    top: 0;
+    background: #1f1f1f;
+    padding: 0 0 10px 0;
+    text-align: center;
+    border-bottom: 4px solid #cda34f;
+}
+
+
+/* set overflow to show content that goes beyond set height
+ (also used to make scrolling possible on sidebar */
+
+main {
+    overflow: hidden;
+}
+
+
+/* top navigation bar styling*/
+
+
+/* use all available screen width */
+
+#topnav {
+    width: 100%;
+}
+
+
+/* set style of each navigation list item */
+
+/* style links inside top navigation bar */
+#topnav a {
+    margin-right: 2em;
+    color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 3px;
+    text-decoration: none;
+}
+
+
+/* display navigation list as table in order to align items inside */
+
+#topnav ol {
+    list-style-type: none;
+    display: table;
+}
+
+
+/* 
+display each item as inline-block 
+in order to align them on the horizontal axis
+*/
+
+#topnav .navitem {
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+
+/* 
+set transition to use when hovering over 
+an <a> element in the navigation bar 
+*/
+
+#topnav .navitem a {
+    display: block;
+    transition: all 0.25s ease-in 0s;
+}
+
+
+/* 
+set style of <a> element in the navigation bar 
+when hovering over it
+*/
+
+#topnav .navitem a:hover {
+    color: #bb5a4b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 0 3px;
+}
+
+/* set margin of every item in top navigation bar except for logo */
+#topnav li.navitem {
+    margin-left: 4em;
+}
+
+/* style logo name inside top navigation bar */
+#logo-name {
+    color: #ffffff;
+    font-size: 160%;
+    font-weight: bolder;
+    margin-top: 0%;
+}
+
+/* style logo image by moving it closer to logo name and slightly left */
+#logo-image {
+    display: inline-block;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin: 0 0 0 4em;
+}
+
+
+/* end top navigation bar styling */
+
+
+/* Style title headers on top of each page */
+.top-header {
+    font-weight: 800;
+    font-size: 32px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #cda34f; 
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+/* set specific color for each h element */
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #eaecdd;
+}
+
+h4 {
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+    color: #bb5a4b;
+}
+
+/*change color of links when hovering over them */
+a:hover{
+    color: #af4076;
+}
+
+
+/* main content styling */
+
+/* style index page article */
+#intro {
+    margin-left: 3em;
+    margin-right: 5em;
+    margin-bottom: 5em;
+    overflow: visible;
+}
+
+#intro p {
+    font-family: 'Vollkorn';
+    font-weight: 400;
+    font-size: 13pt;
+}
+
+/* style each page header */
+#main-header {
+    font-size: 25px;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+
+/* sidebar styling */
+
+/* make sidebar sticky and set its position from the header. Sticky means that the element will
+stick to the same position in the screen when it's about to go outside the viewport. Also 
+set its height and color as well as overflow behaviour (auto). 
+This acts as a container for the scroll list
+so that borders appear rounded when scrollbar appears */
+#themes-info {
+    top: 5%;
+    left: 20px;
+    position: sticky;
+    background: linear-gradient(to bottom, #272727 0%, #1b1b1b 90%);
+    width: 25%;
+    float: left;
+    height: 60vh;
+    overflow: auto;
+    color: azure;
+    border-radius: 25px;
+    margin-top: 2.5em;
+    margin-bottom: 3vh;
+}
+
+/* set style of container inside side navigation bar.
+Uses a scrollbar to show content that has overflown (exceeded
+bar height). */
+#themes-info .sidebar-scroll {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* style side nav bar header */
+.sidebar-scroll h4 {
+    text-align: center;
+    font-family: OpenSans, sans-serif;
+    font-weight: 800;
+    font-size: 120%;
+    color: #d3e3fc
+}
+
+/* style each unit list header */
+#themes-info .side-unit-header {
+    color: lightyellow;
+    text-align: left;
+    font-family: OpenSans;
+    font-weight: 700;
+    font-size: 120%;
+}
+
+/* style unit lists inside side nav bar */
+.inner-nav-list {
+    list-style: none;
+    padding-bottom: 25px;
+}
+
+/* set font style for each list item inside side bar */
+.unit-overview li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 110%;
+}
+
+/* style items inside each course list in sidebar */
+aside li {
+    margin: 20px 20px 20px 0px;
+}
+
+
+/* end sidebar styling */
+
+/* change default style of blockquote inside main intro */
+.intro-section blockquote{
+    margin-top: 60px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+
+/* set color of paragraphs inside home page */
+.intro-section p{
+    color: rgb(29, 29, 29);
+}
+
+/* start of contact page styling */
+label{
+    width: 200px;
+    display:inline-block;
+    font-size: 20px;
+    border:none ;    
+
+}
+
+/* set margins for contact form */
+form{
+    margin: 20px 10px 20px 10px;
+}
+
+/* apply style for form's fieldsets */
+fieldset{
+    width:70% ;
+    margin: auto;
+    background-color: #d1d7e0;
+    margin-top: 50px;
+    -webkit-border-radius:20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}   
+
+/* style form's top legend */
+legend{
+    background-color: #ce4148;
+    color:whitesmoke;
+    padding: 8px 35px 8px 35px;
+    font-size: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* style labels and inputs so that space is added between them and proper alignment is set */
+label{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input{
+    width: 60%; 
+    padding-left: 10px;
+}
+
+/* override previous generic styles for specific input types */
+input[type=submit]{
+    text-align: center;
+    position: relative;
+    background:#ce4148;
+    border-radius: 25px;
+    padding: 10px;
+    color:whitesmoke;
+    font-size:25px;
+    width: 40%; 
+    margin-top:10px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 30%;
+}
+
+input[type=submit]:hover{
+    background-color: #4b112f;
+}
+
+input[type=text]{
+    border-radius: 40px;
+    font-size:20px;
+    height: 5vh;
+}
+
+input[type=email]{
+    border-radius: 40px;
+    font-size:20px;
+    height: 5vh;
+}
+
+#query{
+    height: 80px;
+}
+
+textarea{
+    padding-left: 15px;
+    border-radius: 25px;
+    width: 60%;
+    font-size: 20px;;
+}
+
+/* end contact styling */
+
+/* start style of About Us page */
+
+/* set general style for each cv section in aboutus page */
+.cv{
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    background-color: #d1d7e0;
+    border-radius: 5px 30px 30px 5px;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+/* make cv images float to the left so that text appears besides them */
+.cv img{
+    float: left;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.cv .author-header{
+    color: #c54b38;
+}
+
+/* set proper display for link below cvs (e.g github) as the image should appear next to the text */
+.cv p + div{
+    float: left;
+}
+
+.cv p + div a{
+    margin-top: 20px;
+    float: right;
+}
+
+/* end style of About us */
+
+/* start style units */
+
+/* main unit section (wrapper) style */
+.unit{
+    display: inline-block;
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0 1em 0 1em;
+    border-radius: 5vh;
+    background-color: #d1d7e0;
+    padding: 20px 50px 0px 50px;
+}
+
+/* apply uniform size for unit images */
+.unit-image{
+    width: 60px;
+    height: 60px;
+}
+
+/* display unit course-lists as table. 
+This enables each unit to be contained inside a 
+"cell" of the table and align itself on the same height
+as other lists */
+.unit ul {
+    display: table;
+    list-style-type: none;
+}
+
+/* style each unit header */
+.unit-header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 120%;
+    text-decoration: underline;
+    color: #bb5a4b;
+}
+
+/* style each individual course list inside the unit section */
+.unit li {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 105%;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #2d283e;
+    text-align: left;
+}
+
+/* apply transition animation and color to course links inside unit section */
+li .course-link{
+    text-decoration: none;
+    transition: all 0.20s ease-in 0s;
+    color: #af4076;
+}
+
+/* set color of visited course links */
+li .course-link:visited{
+    color: #cda34f;
+}
+
+/* set color on course link hover */
+li .course-link:hover{
+    color: #af4076;
+}
+
+/* end of unit styling */
+
+/*start of courses styling */
+
+/* set general styling for each course (margins, max width and color) */
+.course {
+    display: inline-block;
+    width: 88%;
+    margin-top: 1.5em;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-radius: 10vh;
+    padding: 20px 40px 20px 40px;
+    background-color: #d1d7e0;
+}
+
+/* set bottom margin only for the last section */
+.course:last-of-type{
+    margin-bottom: 25px;
+}
+
+/* set uniform dimensions for course images. 
+Making images float causes title to be displayed next to them */
+.course img{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+
+/* align course titles */
+.course-title{
+    color: #bb5a4b;
+    text-align: left;
+}
+
+/* set color for course description header */
+.course h4{
+    color: #2d2d2d;
+}
+
+/* clearing floats makes course description start below the course image/title */
+.course-section{
+    margin-top: 20px;
+    clear: both;
+    text-align: left;
+}
+
+/* end of courses styling */
+
+/* start of footer styling */
+
+/* clear any potential floats above the footer.
+    set color and top border to be displayed - same as header */
+footer {
+    position: absolute;
+    clear: both;
+    width: 100%;
+    background-color: #1f1f1f;
+    border-top: 4px solid #cda34f;
+}
+
+footer h4{
+    margin-left: 40px;
+}
+
+/* position follow-us section on the left of the footer */
+.footer-follow {
+    float: left;
+    margin-left: 2em;
+}
+
+/* position contact-us section on the right of the footer */
+.contact-footer {
+    float: right;
+    margin-right: 4em;
+}
+
+footer section h5{
+    font-size: 100%;
+    color: #cda34f;
+    font-weight: 700;
+    font-family: "OpenSans", sans-serif;
+}
+
+/* make text after above sections be displayed at the bottom */
+footer section + p{
+    color: whitesmoke;
+    padding: 8px;
+    margin-left: 2em;
+    clear: both;
+}
+
+/* float images in footer so that they appear next to their respective text */
+footer img{
+    float: left;
+    margin-right: 8px;
+    width: 25px;
+    height: 25px;
+}
+
+footer li{
+    margin: 15px;
+    color: whitesmoke;
+}
+

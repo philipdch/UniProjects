@@ -1,0 +1,11 @@
+Name, Power, Time, Grill, GrillPercentage
+5, 5:30, false, 0
+6, 03:00, false, 0
+7, 05:30, false, 0
+10,20:30, true, 1
+9, 15:00, true, 0.5
+6, 06:00, false, 0
+8, 12:00, true, 0.2
+5, 03:30, false, 0
+2, 02:30, false, 0
+4, 04:00, true, 1

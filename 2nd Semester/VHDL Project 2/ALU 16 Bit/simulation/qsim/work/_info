@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Satellite\Documents\ALU 16 Bit\simulation\qsim
+vALU_16_Bit
+Z1 !s100 92P4i0WAKOM7nl^o^DzEO1
+Z2 I>ELIEB5I^4mR@IdgSHEg80
+Z3 VN1Y:GV:4gEM;IXM6ZVYPk3
+Z4 dC:\Users\Satellite\Documents\3170045_3170049_3170080\ALU 16 Bit\simulation\qsim
+Z5 w1527442101
+Z6 8ALU_16_Bit.vo
+Z7 FALU_16_Bit.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|ALU_16_Bit.vo|
+Z10 o-work work -O0
+Z11 n@a@l@u_16_@bit
+!i10b 1
+!s85 0
+Z12 !s108 1527442102.468000
+Z13 !s107 ALU_16_Bit.vo|
+!s101 -O0
+vALU_16_Bit_vlg_check_tst
+!i10b 1
+Z14 !s100 _HJL1c^<B6OUbVj_PmiYa2
+Z15 I>l4STF3Qd@4?;]cALj[PD0
+Z16 VdobdHEgAO=5Ic`bV[jL2<2
+R4
+Z17 w1527442100
+Z18 8ALU_16_Bit.vt
+Z19 FALU_16_Bit.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z20 !s108 1527442102.674000
+Z21 !s107 ALU_16_Bit.vt|
+Z22 !s90 -work|work|ALU_16_Bit.vt|
+!s101 -O0
+R10
+Z23 n@a@l@u_16_@bit_vlg_check_tst
+vALU_16_Bit_vlg_sample_tst
+!i10b 1
+Z24 !s100 k8M2V<JjCDYLiX@8bIAO;0
+Z25 IzV2H=6EmU4;lOQOkeB``43
+Z26 VP4LE:5>4@jX2_854[566U0
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@a@l@u_16_@bit_vlg_sample_tst
+vALU_16_Bit_vlg_vec_tst
+!i10b 1
+!s100 lQO3TbX5PdT`[necFd93R2
+IVf]d>:K99G=HKO`f8ZjNE3
+Z28 VJY^H1YB>AVZcH_X;D<Rg`3
+R4
+R17
+R18
+R19
+Z29 L0 452
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@a@l@u_16_@bit_vlg_vec_tst

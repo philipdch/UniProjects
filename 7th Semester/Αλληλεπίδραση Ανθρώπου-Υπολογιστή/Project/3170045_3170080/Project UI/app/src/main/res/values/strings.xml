@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Microwave Remote</string>
+    <string name="plus">+1</string>
+    <string name="cos">-1</string>
+    <string name="cooking_timer">Cooking Timer</string>
+    <string name="desc">giving timer</string>
+    <string name="sec">30</string>
+    <string name="min">02</string>
+    <string name="plus_10">+10</string>
+    <string name="plus_5">+5  min</string>
+    <string name="cos_10">-10</string>
+    <string name="cos_5">-5  min</string>
+    <string name="next">Επόμενο   </string>
+    <string name="pause">Πάυση  </string>
+    <string name="start">Εκκίνηση</string>
+    <string name="back"> Πίσω</string>
+    <string name="minutes">Χρόνος</string>
+    <string name="plus1min">+1 Λεπτό</string>
+    <string name="stop">Έξοδος</string>
+    <string name="done">Τέλος!</string>
+    <string name="resume">Συνέχιση</string>
+    <string name="max30minutes">max30minutes</string>
+    <string name="help">"?"</string>
+    <string name="manual_cooking_help">Ορίστε χειροκίνητα την ένταση του φούρνου και το χρόνο λειτουργίας.</string>
+    <string name="user_menus_help">Επιλέξτε ένα προκαθορισμένο πρόγραμμα ψησίματος ή προσθέστε το δικό σας</string>
+    <string name="timer_help">Ορίστε ένα χρονόμετρο προς χρήση όταν ο φούρνος δεν βρίσκεται σε λειτουργία</string>
+    <string name="cleaning_help">Αυτόματη απομάκρυνση οσμών από τον φούρνο μικροκυμάτων</string>
+    <string name="grill">GRILL</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="helpmixgrill">Χρησιμοποιείστε την μπάρα για να καθορίσετε τον χρόνο στον οποίο το φαγητό θα μαγειρευτεί χρησιμοποιώντας το Grill.</string>>
+    <string name="second">SECONDS</string>>
+    <string name= "menu_button">menu selection button</string>
+    <string name="menu_add">Προσθήκη</string>
+
+</resources>

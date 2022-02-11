@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="CV contact">
+    <meta name="author" content="Filippos Dourachalis">
+    <title>My CV - Contact me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="topnav">
+            <ol>
+                <li class="navitem"><a href="index.html">Home</a></li>
+                <li class="navitem"><a href="skills.html">Portfolio</a></li>
+                <li class="navitem"><strong><a href="#">Επικοινωνήστε μαζί μου!</a></strong></li>
+            </ol>
+        </nav>
+    </header>
+    <hr>
+    <main id="contact-main">
+        <div id="message-heading">
+            <h3>Στείλτε μου ένα μήνυμα!</h3>
+            <img id="message-icon" src="resources/Circle-icons-mail.svg.png" width="35" height="35" alt="e-mail icon">
+        </div>
+        <form action="mailto:filippos.dourachalis@gmail.com">
+            <label for="fname">First name</label><br>
+            <input class="form-field" type="text" id="fname" name="fname" required><br>
+            <label for="lname">Last name</label><br>
+            <input class="form-field" type="text" id="lname" name="lname" required><br>
+            <label for="subject">Subject</label><br>
+            <input class="form-field" type="text" id="subject" name="subject" required><br>
+            <label for="body"></label>
+            <textarea class="form-text" name="body" placeholder="Your message here" required></textarea><br>
+            <input id="send-button" type="submit" value="Αποστολή">
+        </form>
+    </main>
+    <hr>
+    <footer>
+        <h4>Περισσότερες Πληροφορίες</h4>
+        <p>Ακολουθήστε με στα social media</p>
+        <ul>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+        </ul>
+        <p>Τα σήματα και οι επωνυμίες που αναφέρονται σε αυτή την ιστοσελίδα ανήκουν στους νόμιμους κατόχους τους.</p>
+    </footer>
+</body>
+
+</html>

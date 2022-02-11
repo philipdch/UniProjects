@@ -1,0 +1,6 @@
+Σπυριδούλα Κουτσούκου-3170080
+Φίλιππος Δουραχαλής-3170045
+Endpoint: p3170045db.c1iuxvisia1z.us-east-1.rds.amazonaws.com
+Username: Philip
+Password: p3171015
+Database: p3170045db (Σημείωση, στο terminal ως όνομα βάσης δίνουμε το "postgres")

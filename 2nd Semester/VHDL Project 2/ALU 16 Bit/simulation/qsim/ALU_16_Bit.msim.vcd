@@ -1,0 +1,346 @@
+$comment
+	File created using the following command:
+		vcd file ALU_16_Bit.msim.vcd -direction
+$end
+$date
+	Sun May 27 20:28:23 2018
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module ALU_16_Bit_vlg_vec_tst $end
+$var reg 16 ! A [15:0] $end
+$var reg 16 " B [15:0] $end
+$var reg 3 # OPCODE [2:0] $end
+$var wire 1 $ overflow $end
+$var wire 1 % result [15] $end
+$var wire 1 & result [14] $end
+$var wire 1 ' result [13] $end
+$var wire 1 ( result [12] $end
+$var wire 1 ) result [11] $end
+$var wire 1 * result [10] $end
+$var wire 1 + result [9] $end
+$var wire 1 , result [8] $end
+$var wire 1 - result [7] $end
+$var wire 1 . result [6] $end
+$var wire 1 / result [5] $end
+$var wire 1 0 result [4] $end
+$var wire 1 1 result [3] $end
+$var wire 1 2 result [2] $end
+$var wire 1 3 result [1] $end
+$var wire 1 4 result [0] $end
+$var wire 1 5 sampler $end
+$scope module i1 $end
+$var wire 1 6 gnd $end
+$var wire 1 7 vcc $end
+$var wire 1 8 unknown $end
+$var tri1 1 9 devclrn $end
+$var tri1 1 : devpor $end
+$var tri1 1 ; devoe $end
+$var wire 1 < Ainvert~0_combout $end
+$var wire 1 = lastALU|mux2|f~0_combout $end
+$var wire 1 > ALULoop:14:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 ? ALULoop:13:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 @ ALULoop:12:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 A ALULoop:11:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 B ALULoop:10:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 C ALULoop:9:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 D ALULoop:8:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 E ALULoop:7:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 F ALULoop:6:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 G ALULoop:5:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 H ALULoop:4:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 I ALULoop:3:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 J ALULoop:2:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 K ALULoop:1:alu_1_bit|mux2|f~0_combout $end
+$var wire 1 L ALULoop:0:alu_1_bit|fadder|carryOut~4_combout $end
+$var wire 1 M ALULoop:0:alu_1_bit|fadder|carryOut~5_combout $end
+$var wire 1 N ALULoop:1:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 O ALULoop:2:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 P ALULoop:3:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 Q ALULoop:4:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 R ALULoop:5:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 S ALULoop:6:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 T ALULoop:7:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 U ALULoop:8:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 V ALULoop:9:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 W ALULoop:10:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 X ALULoop:11:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 Y ALULoop:12:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 Z ALULoop:13:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 [ ALULoop:14:alu_1_bit|fadder|carryOut~0_combout $end
+$var wire 1 \ lastALU|fadder|carryOut~0_combout $end
+$var wire 1 ] Mux0~0_combout $end
+$var wire 1 ^ ALULoop:0:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 _ ALULoop:0:alu_1_bit|mux5to1|Mux0~3_combout $end
+$var wire 1 ` ALULoop:0:alu_1_bit|mux5to1|Mux0~4_combout $end
+$var wire 1 a Equal4~0_combout $end
+$var wire 1 b ALULoop:1:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 c operation[1]~0_combout $end
+$var wire 1 d ALULoop:1:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 e ALULoop:1:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 f ALULoop:1:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 g ALULoop:2:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 h operation[0]~1_combout $end
+$var wire 1 i ALULoop:2:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 j ALULoop:2:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 k ALULoop:2:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 l ALULoop:3:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 m ALULoop:3:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 n ALULoop:3:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 o ALULoop:3:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 p ALULoop:4:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 q ALULoop:4:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 r ALULoop:4:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 s ALULoop:4:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 t ALULoop:5:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 u ALULoop:5:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 v ALULoop:5:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 w ALULoop:5:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 x ALULoop:6:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 y ALULoop:6:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 z ALULoop:6:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 { ALULoop:6:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 | ALULoop:7:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 } ALULoop:7:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 ~ ALULoop:7:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 !! ALULoop:7:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 "! ALULoop:8:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 #! ALULoop:8:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 $! ALULoop:8:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 %! ALULoop:8:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 &! ALULoop:9:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 '! ALULoop:9:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 (! ALULoop:9:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 )! ALULoop:9:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 *! ALULoop:10:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 +! ALULoop:10:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 ,! ALULoop:10:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 -! ALULoop:10:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 .! ALULoop:11:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 /! ALULoop:11:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 0! ALULoop:11:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 1! ALULoop:11:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 2! ALULoop:12:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 3! ALULoop:12:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 4! ALULoop:12:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 5! ALULoop:12:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 6! ALULoop:13:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 7! ALULoop:13:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 8! ALULoop:13:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 9! ALULoop:13:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 :! ALULoop:14:alu_1_bit|fadder|sum~0_combout $end
+$var wire 1 ;! ALULoop:14:alu_1_bit|mux5to1|Mux0~0_combout $end
+$var wire 1 <! ALULoop:14:alu_1_bit|mux5to1|Mux0~1_combout $end
+$var wire 1 =! ALULoop:14:alu_1_bit|mux5to1|Mux0~2_combout $end
+$var wire 1 >! lastALU|fadder|sum~0_combout $end
+$var wire 1 ?! lastALU|mux5to1|Mux0~0_combout $end
+$var wire 1 @! lastALU|mux5to1|Mux0~1_combout $end
+$var wire 1 A! lastALU|mux5to1|Mux0~2_combout $end
+$var wire 1 B! B~combout [15] $end
+$var wire 1 C! B~combout [14] $end
+$var wire 1 D! B~combout [13] $end
+$var wire 1 E! B~combout [12] $end
+$var wire 1 F! B~combout [11] $end
+$var wire 1 G! B~combout [10] $end
+$var wire 1 H! B~combout [9] $end
+$var wire 1 I! B~combout [8] $end
+$var wire 1 J! B~combout [7] $end
+$var wire 1 K! B~combout [6] $end
+$var wire 1 L! B~combout [5] $end
+$var wire 1 M! B~combout [4] $end
+$var wire 1 N! B~combout [3] $end
+$var wire 1 O! B~combout [2] $end
+$var wire 1 P! B~combout [1] $end
+$var wire 1 Q! B~combout [0] $end
+$var wire 1 R! OPCODE~combout [2] $end
+$var wire 1 S! OPCODE~combout [1] $end
+$var wire 1 T! OPCODE~combout [0] $end
+$var wire 1 U! A~combout [15] $end
+$var wire 1 V! A~combout [14] $end
+$var wire 1 W! A~combout [13] $end
+$var wire 1 X! A~combout [12] $end
+$var wire 1 Y! A~combout [11] $end
+$var wire 1 Z! A~combout [10] $end
+$var wire 1 [! A~combout [9] $end
+$var wire 1 \! A~combout [8] $end
+$var wire 1 ]! A~combout [7] $end
+$var wire 1 ^! A~combout [6] $end
+$var wire 1 _! A~combout [5] $end
+$var wire 1 `! A~combout [4] $end
+$var wire 1 a! A~combout [3] $end
+$var wire 1 b! A~combout [2] $end
+$var wire 1 c! A~combout [1] $end
+$var wire 1 d! A~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b111100001111 !
+b1111111111111111 "
+b101 #
+0$
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+x5
+06
+17
+x8
+19
+1:
+1;
+1<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+1p
+0q
+0r
+0s
+1t
+0u
+0v
+0w
+1x
+0y
+0z
+0{
+1|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+12!
+03!
+04!
+05!
+16!
+07!
+08!
+09!
+1:!
+0;!
+0<!
+0=!
+1>!
+0?!
+0@!
+0A!
+1Q!
+1P!
+1O!
+1N!
+1M!
+1L!
+1K!
+1J!
+1I!
+1H!
+1G!
+1F!
+1E!
+1D!
+1C!
+1B!
+1T!
+0S!
+1R!
+1d!
+1c!
+1b!
+1a!
+0`!
+0_!
+0^!
+0]!
+1\!
+1[!
+1Z!
+1Y!
+0X!
+0W!
+0V!
+0U!
+$end
+#40000
