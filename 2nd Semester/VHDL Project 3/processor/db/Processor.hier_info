@@ -1,0 +1,2005 @@
+|Processor
+DIN[0] => Selector15.IN10
+DIN[1] => Selector14.IN10
+DIN[2] => Selector13.IN10
+DIN[3] => Selector12.IN10
+DIN[4] => Selector11.IN10
+DIN[5] => Selector10.IN10
+DIN[6] => Selector9.IN10
+DIN[7] => Selector8.IN10
+DIN[7] => regn:In_reg.R[0]
+DIN[8] => Selector7.IN10
+DIN[8] => regn:In_reg.R[1]
+DIN[9] => Selector6.IN10
+DIN[9] => regn:In_reg.R[2]
+DIN[10] => Selector5.IN10
+DIN[10] => regn:In_reg.R[3]
+DIN[11] => Selector4.IN10
+DIN[11] => regn:In_reg.R[4]
+DIN[12] => Selector3.IN10
+DIN[12] => regn:In_reg.R[5]
+DIN[13] => Selector2.IN10
+DIN[13] => regn:In_reg.R[6]
+DIN[14] => Selector1.IN10
+DIN[14] => regn:In_reg.R[7]
+DIN[15] => Selector0.IN10
+DIN[15] => regn:In_reg.R[8]
+Clock => upcount:Tstep.Clock
+Clock => regn:reg_0.Clock
+Clock => regn:reg_1.Clock
+Clock => regn:reg_2.Clock
+Clock => regn:reg_3.Clock
+Clock => regn:reg_4.Clock
+Clock => regn:reg_5.Clock
+Clock => regn:reg_6.Clock
+Clock => regn:reg_7.Clock
+Clock => regn:reg_A.Clock
+Clock => regn:In_reg.Clock
+Clock => regn:reg_G.Clock
+Run => Clear.IN1
+resetn <> resetn
+Done << Mux31.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[0] << Selector15.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[1] << Selector14.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[2] << Selector13.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[3] << Selector12.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[4] << Selector11.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[5] << Selector10.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[6] << Selector9.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[7] << Selector8.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[8] << Selector7.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[9] << Selector6.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[10] << Selector5.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[11] << Selector4.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[12] << Selector3.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[13] << Selector2.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[14] << Selector1.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[15] << Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|upcount:Tstep
+Clear => Count.OUTPUTSELECT
+Clear => Count.OUTPUTSELECT
+Clock => Count[0].CLK
+Clock => Count[1].CLK
+Q[0] <= Count[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Count[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|dec3to8:decX
+W[0] => Mux0.IN10
+W[0] => Mux1.IN10
+W[0] => Mux2.IN10
+W[0] => Mux3.IN10
+W[0] => Mux4.IN10
+W[0] => Mux5.IN10
+W[0] => Mux6.IN10
+W[0] => Mux7.IN10
+W[1] => Mux0.IN9
+W[1] => Mux1.IN9
+W[1] => Mux2.IN9
+W[1] => Mux3.IN9
+W[1] => Mux4.IN9
+W[1] => Mux5.IN9
+W[1] => Mux6.IN9
+W[1] => Mux7.IN9
+W[2] => Mux0.IN8
+W[2] => Mux1.IN8
+W[2] => Mux2.IN8
+W[2] => Mux3.IN8
+W[2] => Mux4.IN8
+W[2] => Mux5.IN8
+W[2] => Mux6.IN8
+W[2] => Mux7.IN8
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|dec3to8:decY
+W[0] => Mux0.IN10
+W[0] => Mux1.IN10
+W[0] => Mux2.IN10
+W[0] => Mux3.IN10
+W[0] => Mux4.IN10
+W[0] => Mux5.IN10
+W[0] => Mux6.IN10
+W[0] => Mux7.IN10
+W[1] => Mux0.IN9
+W[1] => Mux1.IN9
+W[1] => Mux2.IN9
+W[1] => Mux3.IN9
+W[1] => Mux4.IN9
+W[1] => Mux5.IN9
+W[1] => Mux6.IN9
+W[1] => Mux7.IN9
+W[2] => Mux0.IN8
+W[2] => Mux1.IN8
+W[2] => Mux2.IN8
+W[2] => Mux3.IN8
+W[2] => Mux4.IN8
+W[2] => Mux5.IN8
+W[2] => Mux6.IN8
+W[2] => Mux7.IN8
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+En => Y.OUTPUTSELECT
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|regn:reg_0
+R[0] => Q[0]~reg0.DATAIN
+R[1] => Q[1]~reg0.DATAIN
+R[2] => Q[2]~reg0.DATAIN
+R[3] => Q[3]~reg0.DATAIN
+R[4] => Q[4]~reg0.DATAIN
+R[5] => Q[5]~reg0.DATAIN
+R[6] => Q[6]~reg0.DATAIN
+R[7] => Q[7]~reg0.DATAIN
+R[8] => Q[8]~reg0.DATAIN
+R[9] => Q[9]~reg0.DATAIN
+R[10] => Q[10]~reg0.DATAIN
+R[11] => Q[11]~reg0.DATAIN
+R[12] => Q[12]~reg0.DATAIN
+R[13] => Q[13]~reg0.DATAIN
+R[14] => Q[14]~reg0.DATAIN
+R[15] => Q[15]~reg0.DATAIN
+Rin => Q[0]~reg0.ENA
+Rin => Q[1]~reg0.ENA
+Rin => Q[2]~reg0.ENA
+Rin => Q[3]~reg0.ENA
+Rin => Q[4]~reg0.ENA
+Rin => Q[5]~reg0.ENA
+Rin => Q[6]~reg0.ENA
+Rin => Q[7]~reg0.ENA
+Rin => Q[8]~reg0.ENA
+Rin => Q[9]~reg0.ENA
+Rin => Q[10]~reg0.ENA
+Rin => Q[11]~reg0.ENA
+Rin => Q[12]~reg0.ENA
+Rin => Q[13]~reg0.ENA
+Rin => Q[14]~reg0.ENA
+Rin => Q[15]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Clock => Q[9]~reg0.CLK
+Clock => Q[10]~reg0.CLK
+Clock => Q[11]~reg0.CLK
+Clock => Q[12]~reg0.CLK
+Clock => Q[13]~reg0.CLK
+Clock => Q[14]~reg0.CLK
+Clock => Q[15]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|regn:reg_1
+R[0] => Q[0]~reg0.DATAIN
+R[1] => Q[1]~reg0.DATAIN
+R[2] => Q[2]~reg0.DATAIN
+R[3] => Q[3]~reg0.DATAIN
+R[4] => Q[4]~reg0.DATAIN
+R[5] => Q[5]~reg0.DATAIN
+R[6] => Q[6]~reg0.DATAIN
+R[7] => Q[7]~reg0.DATAIN
+R[8] => Q[8]~reg0.DATAIN
+R[9] => Q[9]~reg0.DATAIN
+R[10] => Q[10]~reg0.DATAIN
+R[11] => Q[11]~reg0.DATAIN
+R[12] => Q[12]~reg0.DATAIN
+R[13] => Q[13]~reg0.DATAIN
+R[14] => Q[14]~reg0.DATAIN
+R[15] => Q[15]~reg0.DATAIN
+Rin => Q[0]~reg0.ENA
+Rin => Q[1]~reg0.ENA
+Rin => Q[2]~reg0.ENA
+Rin => Q[3]~reg0.ENA
+Rin => Q[4]~reg0.ENA
+Rin => Q[5]~reg0.ENA
+Rin => Q[6]~reg0.ENA
+Rin => Q[7]~reg0.ENA
+Rin => Q[8]~reg0.ENA
+Rin => Q[9]~reg0.ENA
+Rin => Q[10]~reg0.ENA
+Rin => Q[11]~reg0.ENA
+Rin => Q[12]~reg0.ENA
+Rin => Q[13]~reg0.ENA
+Rin => Q[14]~reg0.ENA
+Rin => Q[15]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Clock => Q[9]~reg0.CLK
+Clock => Q[10]~reg0.CLK
+Clock => Q[11]~reg0.CLK
+Clock => Q[12]~reg0.CLK
+Clock => Q[13]~reg0.CLK
+Clock => Q[14]~reg0.CLK
+Clock => Q[15]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|regn:reg_2
+R[0] => Q[0]~reg0.DATAIN
+R[1] => Q[1]~reg0.DATAIN
+R[2] => Q[2]~reg0.DATAIN
+R[3] => Q[3]~reg0.DATAIN
+R[4] => Q[4]~reg0.DATAIN
+R[5] => Q[5]~reg0.DATAIN
+R[6] => Q[6]~reg0.DATAIN
+R[7] => Q[7]~reg0.DATAIN
+R[8] => Q[8]~reg0.DATAIN
+R[9] => Q[9]~reg0.DATAIN
+R[10] => Q[10]~reg0.DATAIN
+R[11] => Q[11]~reg0.DATAIN
+R[12] => Q[12]~reg0.DATAIN
+R[13] => Q[13]~reg0.DATAIN
+R[14] => Q[14]~reg0.DATAIN
+R[15] => Q[15]~reg0.DATAIN
+Rin => Q[0]~reg0.ENA
+Rin => Q[1]~reg0.ENA
+Rin => Q[2]~reg0.ENA
+Rin => Q[3]~reg0.ENA
+Rin => Q[4]~reg0.ENA
+Rin => Q[5]~reg0.ENA
+Rin => Q[6]~reg0.ENA
+Rin => Q[7]~reg0.ENA
+Rin => Q[8]~reg0.ENA
+Rin => Q[9]~reg0.ENA
+Rin => Q[10]~reg0.ENA
+Rin => Q[11]~reg0.ENA
+Rin => Q[12]~reg0.ENA
+Rin => Q[13]~reg0.ENA
+Rin => Q[14]~reg0.ENA
+Rin => Q[15]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Clock => Q[9]~reg0.CLK
+Clock => Q[10]~reg0.CLK
+Clock => Q[11]~reg0.CLK
+Clock => Q[12]~reg0.CLK
+Clock => Q[13]~reg0.CLK
+Clock => Q[14]~reg0.CLK
+Clock => Q[15]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|regn:reg_3
+R[0] => Q[0]~reg0.DATAIN
+R[1] => Q[1]~reg0.DATAIN
+R[2] => Q[2]~reg0.DATAIN
+R[3] => Q[3]~reg0.DATAIN
+R[4] => Q[4]~reg0.DATAIN
+R[5] => Q[5]~reg0.DATAIN
+R[6] => Q[6]~reg0.DATAIN
+R[7] => Q[7]~reg0.DATAIN
+R[8] => Q[8]~reg0.DATAIN
+R[9] => Q[9]~reg0.DATAIN
+R[10] => Q[10]~reg0.DATAIN
+R[11] => Q[11]~reg0.DATAIN
+R[12] => Q[12]~reg0.DATAIN
+R[13] => Q[13]~reg0.DATAIN
+R[14] => Q[14]~reg0.DATAIN
+R[15] => Q[15]~reg0.DATAIN
+Rin => Q[0]~reg0.ENA
+Rin => Q[1]~reg0.ENA
+Rin => Q[2]~reg0.ENA
+Rin => Q[3]~reg0.ENA
+Rin => Q[4]~reg0.ENA
+Rin => Q[5]~reg0.ENA
+Rin => Q[6]~reg0.ENA
+Rin => Q[7]~reg0.ENA
+Rin => Q[8]~reg0.ENA
+Rin => Q[9]~reg0.ENA
+Rin => Q[10]~reg0.ENA
+Rin => Q[11]~reg0.ENA
+Rin => Q[12]~reg0.ENA
+Rin => Q[13]~reg0.ENA
+Rin => Q[14]~reg0.ENA
+Rin => Q[15]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Clock => Q[9]~reg0.CLK
+Clock => Q[10]~reg0.CLK
+Clock => Q[11]~reg0.CLK
+Clock => Q[12]~reg0.CLK
+Clock => Q[13]~reg0.CLK
+Clock => Q[14]~reg0.CLK
+Clock => Q[15]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|regn:reg_4
+R[0] => Q[0]~reg0.DATAIN
+R[1] => Q[1]~reg0.DATAIN
+R[2] => Q[2]~reg0.DATAIN
+R[3] => Q[3]~reg0.DATAIN
+R[4] => Q[4]~reg0.DATAIN
+R[5] => Q[5]~reg0.DATAIN
+R[6] => Q[6]~reg0.DATAIN
+R[7] => Q[7]~reg0.DATAIN
+R[8] => Q[8]~reg0.DATAIN
+R[9] => Q[9]~reg0.DATAIN
+R[10] => Q[10]~reg0.DATAIN
+R[11] => Q[11]~reg0.DATAIN
+R[12] => Q[12]~reg0.DATAIN
+R[13] => Q[13]~reg0.DATAIN
+R[14] => Q[14]~reg0.DATAIN
+R[15] => Q[15]~reg0.DATAIN
+Rin => Q[0]~reg0.ENA
+Rin => Q[1]~reg0.ENA
+Rin => Q[2]~reg0.ENA
+Rin => Q[3]~reg0.ENA
+Rin => Q[4]~reg0.ENA
+Rin => Q[5]~reg0.ENA
+Rin => Q[6]~reg0.ENA
+Rin => Q[7]~reg0.ENA
+Rin => Q[8]~reg0.ENA
+Rin => Q[9]~reg0.ENA
+Rin => Q[10]~reg0.ENA
+Rin => Q[11]~reg0.ENA
+Rin => Q[12]~reg0.ENA
+Rin => Q[13]~reg0.ENA
+Rin => Q[14]~reg0.ENA
+Rin => Q[15]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Clock => Q[9]~reg0.CLK
+Clock => Q[10]~reg0.CLK
+Clock => Q[11]~reg0.CLK
+Clock => Q[12]~reg0.CLK
+Clock => Q[13]~reg0.CLK
+Clock => Q[14]~reg0.CLK
+Clock => Q[15]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|regn:reg_5
+R[0] => Q[0]~reg0.DATAIN
+R[1] => Q[1]~reg0.DATAIN
+R[2] => Q[2]~reg0.DATAIN
+R[3] => Q[3]~reg0.DATAIN
+R[4] => Q[4]~reg0.DATAIN
+R[5] => Q[5]~reg0.DATAIN
+R[6] => Q[6]~reg0.DATAIN
+R[7] => Q[7]~reg0.DATAIN
+R[8] => Q[8]~reg0.DATAIN
+R[9] => Q[9]~reg0.DATAIN
+R[10] => Q[10]~reg0.DATAIN
+R[11] => Q[11]~reg0.DATAIN
+R[12] => Q[12]~reg0.DATAIN
+R[13] => Q[13]~reg0.DATAIN
+R[14] => Q[14]~reg0.DATAIN
+R[15] => Q[15]~reg0.DATAIN
+Rin => Q[0]~reg0.ENA
+Rin => Q[1]~reg0.ENA
+Rin => Q[2]~reg0.ENA
+Rin => Q[3]~reg0.ENA
+Rin => Q[4]~reg0.ENA
+Rin => Q[5]~reg0.ENA
+Rin => Q[6]~reg0.ENA
+Rin => Q[7]~reg0.ENA
+Rin => Q[8]~reg0.ENA
+Rin => Q[9]~reg0.ENA
+Rin => Q[10]~reg0.ENA
+Rin => Q[11]~reg0.ENA
+Rin => Q[12]~reg0.ENA
+Rin => Q[13]~reg0.ENA
+Rin => Q[14]~reg0.ENA
+Rin => Q[15]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Clock => Q[9]~reg0.CLK
+Clock => Q[10]~reg0.CLK
+Clock => Q[11]~reg0.CLK
+Clock => Q[12]~reg0.CLK
+Clock => Q[13]~reg0.CLK
+Clock => Q[14]~reg0.CLK
+Clock => Q[15]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|regn:reg_6
+R[0] => Q[0]~reg0.DATAIN
+R[1] => Q[1]~reg0.DATAIN
+R[2] => Q[2]~reg0.DATAIN
+R[3] => Q[3]~reg0.DATAIN
+R[4] => Q[4]~reg0.DATAIN
+R[5] => Q[5]~reg0.DATAIN
+R[6] => Q[6]~reg0.DATAIN
+R[7] => Q[7]~reg0.DATAIN
+R[8] => Q[8]~reg0.DATAIN
+R[9] => Q[9]~reg0.DATAIN
+R[10] => Q[10]~reg0.DATAIN
+R[11] => Q[11]~reg0.DATAIN
+R[12] => Q[12]~reg0.DATAIN
+R[13] => Q[13]~reg0.DATAIN
+R[14] => Q[14]~reg0.DATAIN
+R[15] => Q[15]~reg0.DATAIN
+Rin => Q[0]~reg0.ENA
+Rin => Q[1]~reg0.ENA
+Rin => Q[2]~reg0.ENA
+Rin => Q[3]~reg0.ENA
+Rin => Q[4]~reg0.ENA
+Rin => Q[5]~reg0.ENA
+Rin => Q[6]~reg0.ENA
+Rin => Q[7]~reg0.ENA
+Rin => Q[8]~reg0.ENA
+Rin => Q[9]~reg0.ENA
+Rin => Q[10]~reg0.ENA
+Rin => Q[11]~reg0.ENA
+Rin => Q[12]~reg0.ENA
+Rin => Q[13]~reg0.ENA
+Rin => Q[14]~reg0.ENA
+Rin => Q[15]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Clock => Q[9]~reg0.CLK
+Clock => Q[10]~reg0.CLK
+Clock => Q[11]~reg0.CLK
+Clock => Q[12]~reg0.CLK
+Clock => Q[13]~reg0.CLK
+Clock => Q[14]~reg0.CLK
+Clock => Q[15]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|regn:reg_7
+R[0] => Q[0]~reg0.DATAIN
+R[1] => Q[1]~reg0.DATAIN
+R[2] => Q[2]~reg0.DATAIN
+R[3] => Q[3]~reg0.DATAIN
+R[4] => Q[4]~reg0.DATAIN
+R[5] => Q[5]~reg0.DATAIN
+R[6] => Q[6]~reg0.DATAIN
+R[7] => Q[7]~reg0.DATAIN
+R[8] => Q[8]~reg0.DATAIN
+R[9] => Q[9]~reg0.DATAIN
+R[10] => Q[10]~reg0.DATAIN
+R[11] => Q[11]~reg0.DATAIN
+R[12] => Q[12]~reg0.DATAIN
+R[13] => Q[13]~reg0.DATAIN
+R[14] => Q[14]~reg0.DATAIN
+R[15] => Q[15]~reg0.DATAIN
+Rin => Q[0]~reg0.ENA
+Rin => Q[1]~reg0.ENA
+Rin => Q[2]~reg0.ENA
+Rin => Q[3]~reg0.ENA
+Rin => Q[4]~reg0.ENA
+Rin => Q[5]~reg0.ENA
+Rin => Q[6]~reg0.ENA
+Rin => Q[7]~reg0.ENA
+Rin => Q[8]~reg0.ENA
+Rin => Q[9]~reg0.ENA
+Rin => Q[10]~reg0.ENA
+Rin => Q[11]~reg0.ENA
+Rin => Q[12]~reg0.ENA
+Rin => Q[13]~reg0.ENA
+Rin => Q[14]~reg0.ENA
+Rin => Q[15]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Clock => Q[9]~reg0.CLK
+Clock => Q[10]~reg0.CLK
+Clock => Q[11]~reg0.CLK
+Clock => Q[12]~reg0.CLK
+Clock => Q[13]~reg0.CLK
+Clock => Q[14]~reg0.CLK
+Clock => Q[15]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|regn:reg_A
+R[0] => Q[0]~reg0.DATAIN
+R[1] => Q[1]~reg0.DATAIN
+R[2] => Q[2]~reg0.DATAIN
+R[3] => Q[3]~reg0.DATAIN
+R[4] => Q[4]~reg0.DATAIN
+R[5] => Q[5]~reg0.DATAIN
+R[6] => Q[6]~reg0.DATAIN
+R[7] => Q[7]~reg0.DATAIN
+R[8] => Q[8]~reg0.DATAIN
+R[9] => Q[9]~reg0.DATAIN
+R[10] => Q[10]~reg0.DATAIN
+R[11] => Q[11]~reg0.DATAIN
+R[12] => Q[12]~reg0.DATAIN
+R[13] => Q[13]~reg0.DATAIN
+R[14] => Q[14]~reg0.DATAIN
+R[15] => Q[15]~reg0.DATAIN
+Rin => Q[0]~reg0.ENA
+Rin => Q[1]~reg0.ENA
+Rin => Q[2]~reg0.ENA
+Rin => Q[3]~reg0.ENA
+Rin => Q[4]~reg0.ENA
+Rin => Q[5]~reg0.ENA
+Rin => Q[6]~reg0.ENA
+Rin => Q[7]~reg0.ENA
+Rin => Q[8]~reg0.ENA
+Rin => Q[9]~reg0.ENA
+Rin => Q[10]~reg0.ENA
+Rin => Q[11]~reg0.ENA
+Rin => Q[12]~reg0.ENA
+Rin => Q[13]~reg0.ENA
+Rin => Q[14]~reg0.ENA
+Rin => Q[15]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Clock => Q[9]~reg0.CLK
+Clock => Q[10]~reg0.CLK
+Clock => Q[11]~reg0.CLK
+Clock => Q[12]~reg0.CLK
+Clock => Q[13]~reg0.CLK
+Clock => Q[14]~reg0.CLK
+Clock => Q[15]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|regn:In_reg
+R[0] => Q[0]~reg0.DATAIN
+R[1] => Q[1]~reg0.DATAIN
+R[2] => Q[2]~reg0.DATAIN
+R[3] => Q[3]~reg0.DATAIN
+R[4] => Q[4]~reg0.DATAIN
+R[5] => Q[5]~reg0.DATAIN
+R[6] => Q[6]~reg0.DATAIN
+R[7] => Q[7]~reg0.DATAIN
+R[8] => Q[8]~reg0.DATAIN
+Rin => Q[0]~reg0.ENA
+Rin => Q[1]~reg0.ENA
+Rin => Q[2]~reg0.ENA
+Rin => Q[3]~reg0.ENA
+Rin => Q[4]~reg0.ENA
+Rin => Q[5]~reg0.ENA
+Rin => Q[6]~reg0.ENA
+Rin => Q[7]~reg0.ENA
+Rin => Q[8]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit
+A[0] => ALU:ALULoop:0:alu_1_bit.A
+A[1] => ALU:ALULoop:1:alu_1_bit.A
+A[2] => ALU:ALULoop:2:alu_1_bit.A
+A[3] => ALU:ALULoop:3:alu_1_bit.A
+A[4] => ALU:ALULoop:4:alu_1_bit.A
+A[5] => ALU:ALULoop:5:alu_1_bit.A
+A[6] => ALU:ALULoop:6:alu_1_bit.A
+A[7] => ALU:ALULoop:7:alu_1_bit.A
+A[8] => ALU:ALULoop:8:alu_1_bit.A
+A[9] => ALU:ALULoop:9:alu_1_bit.A
+A[10] => ALU:ALULoop:10:alu_1_bit.A
+A[11] => ALU:ALULoop:11:alu_1_bit.A
+A[12] => ALU:ALULoop:12:alu_1_bit.A
+A[13] => ALU:ALULoop:13:alu_1_bit.A
+A[14] => ALU:ALULoop:14:alu_1_bit.A
+A[15] => ALU:lastALU.A
+B[0] => ALU:ALULoop:0:alu_1_bit.B
+B[1] => ALU:ALULoop:1:alu_1_bit.B
+B[2] => ALU:ALULoop:2:alu_1_bit.B
+B[3] => ALU:ALULoop:3:alu_1_bit.B
+B[4] => ALU:ALULoop:4:alu_1_bit.B
+B[5] => ALU:ALULoop:5:alu_1_bit.B
+B[6] => ALU:ALULoop:6:alu_1_bit.B
+B[7] => ALU:ALULoop:7:alu_1_bit.B
+B[8] => ALU:ALULoop:8:alu_1_bit.B
+B[9] => ALU:ALULoop:9:alu_1_bit.B
+B[10] => ALU:ALULoop:10:alu_1_bit.B
+B[11] => ALU:ALULoop:11:alu_1_bit.B
+B[12] => ALU:ALULoop:12:alu_1_bit.B
+B[13] => ALU:ALULoop:13:alu_1_bit.B
+B[14] => ALU:ALULoop:14:alu_1_bit.B
+B[15] => ALU:lastALU.B
+OPCODE[0] => Equal0.IN2
+OPCODE[0] => Equal1.IN2
+OPCODE[0] => Equal2.IN1
+OPCODE[0] => Equal3.IN2
+OPCODE[0] => Equal4.IN1
+OPCODE[0] => Equal5.IN0
+OPCODE[1] => Equal0.IN1
+OPCODE[1] => Equal1.IN1
+OPCODE[1] => Equal2.IN2
+OPCODE[1] => Equal3.IN0
+OPCODE[1] => Equal4.IN0
+OPCODE[1] => Equal5.IN2
+OPCODE[2] => Equal0.IN0
+OPCODE[2] => Equal1.IN0
+OPCODE[2] => Equal2.IN0
+OPCODE[2] => Equal3.IN1
+OPCODE[2] => Equal4.IN2
+OPCODE[2] => Equal5.IN1
+overflow <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+result[0] <= ALU:ALULoop:0:alu_1_bit.result
+result[1] <= ALU:ALULoop:1:alu_1_bit.result
+result[2] <= ALU:ALULoop:2:alu_1_bit.result
+result[3] <= ALU:ALULoop:3:alu_1_bit.result
+result[4] <= ALU:ALULoop:4:alu_1_bit.result
+result[5] <= ALU:ALULoop:5:alu_1_bit.result
+result[6] <= ALU:ALULoop:6:alu_1_bit.result
+result[7] <= ALU:ALULoop:7:alu_1_bit.result
+result[8] <= ALU:ALULoop:8:alu_1_bit.result
+result[9] <= ALU:ALULoop:9:alu_1_bit.result
+result[10] <= ALU:ALULoop:10:alu_1_bit.result
+result[11] <= ALU:ALULoop:11:alu_1_bit.result
+result[12] <= ALU:ALULoop:12:alu_1_bit.result
+result[13] <= ALU:ALULoop:13:alu_1_bit.result
+result[14] <= ALU:ALULoop:14:alu_1_bit.result
+result[15] <= ALU:lastALU.result
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:0:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:0:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:0:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:0:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:0:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:1:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:1:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:1:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:1:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:1:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:2:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:2:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:2:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:2:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:2:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:3:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:3:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:3:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:3:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:3:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:4:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:4:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:4:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:4:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:4:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:5:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:5:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:5:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:5:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:5:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:6:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:6:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:6:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:6:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:6:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:7:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:7:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:7:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:7:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:7:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:8:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:8:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:8:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:8:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:8:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:9:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:9:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:9:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:9:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:9:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:10:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:10:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:10:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:10:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:10:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:11:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:11:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:11:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:11:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:11:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:12:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:12:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:12:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:12:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:12:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:13:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:13:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:13:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:13:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:13:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:14:alu_1_bit
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:14:alu_1_bit|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:14:alu_1_bit|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:14:alu_1_bit|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:\ALULoop:14:alu_1_bit|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:lastALU
+A => multiplexer2to1:mux1.inputA
+A => multiplexer2to1:mux1.inputB
+B => multiplexer2to1:mux2.inputA
+B => multiplexer2to1:mux2.inputB
+Ainvert => multiplexer2to1:mux1.s
+Binvert => multiplexer2to1:mux2.s
+carryIn => full_adder:fadder.carryIn
+operation[0] => multiplexer5to1:mux5to1.S[0]
+operation[1] => multiplexer5to1:mux5to1.S[1]
+operation[2] => multiplexer5to1:mux5to1.S[2]
+carryOut <= full_adder:fadder.carryOut
+result <= multiplexer5to1:mux5to1.F
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:lastALU|multiplexer2to1:mux1
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:lastALU|multiplexer2to1:mux2
+inputA => f.IN0
+inputB => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:lastALU|full_adder:fadder
+A => sum.IN0
+A => carryOut.IN0
+A => carryOut.IN0
+A => sum.IN0
+A => sum.IN0
+B => sum.IN1
+B => carryOut.IN0
+B => carryOut.IN1
+B => sum.IN1
+B => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|ALU_16_Bit:ALU_Unit|ALU:lastALU|multiplexer5to1:mux5to1
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+E => Mux0.IN4
+E => Mux0.IN5
+E => Mux0.IN6
+E => Mux0.IN7
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Processor|regn:reg_G
+R[0] => Q[0]~reg0.DATAIN
+R[1] => Q[1]~reg0.DATAIN
+R[2] => Q[2]~reg0.DATAIN
+R[3] => Q[3]~reg0.DATAIN
+R[4] => Q[4]~reg0.DATAIN
+R[5] => Q[5]~reg0.DATAIN
+R[6] => Q[6]~reg0.DATAIN
+R[7] => Q[7]~reg0.DATAIN
+R[8] => Q[8]~reg0.DATAIN
+R[9] => Q[9]~reg0.DATAIN
+R[10] => Q[10]~reg0.DATAIN
+R[11] => Q[11]~reg0.DATAIN
+R[12] => Q[12]~reg0.DATAIN
+R[13] => Q[13]~reg0.DATAIN
+R[14] => Q[14]~reg0.DATAIN
+R[15] => Q[15]~reg0.DATAIN
+Rin => Q[0]~reg0.ENA
+Rin => Q[1]~reg0.ENA
+Rin => Q[2]~reg0.ENA
+Rin => Q[3]~reg0.ENA
+Rin => Q[4]~reg0.ENA
+Rin => Q[5]~reg0.ENA
+Rin => Q[6]~reg0.ENA
+Rin => Q[7]~reg0.ENA
+Rin => Q[8]~reg0.ENA
+Rin => Q[9]~reg0.ENA
+Rin => Q[10]~reg0.ENA
+Rin => Q[11]~reg0.ENA
+Rin => Q[12]~reg0.ENA
+Rin => Q[13]~reg0.ENA
+Rin => Q[14]~reg0.ENA
+Rin => Q[15]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Clock => Q[9]~reg0.CLK
+Clock => Q[10]~reg0.CLK
+Clock => Q[11]~reg0.CLK
+Clock => Q[12]~reg0.CLK
+Clock => Q[13]~reg0.CLK
+Clock => Q[14]~reg0.CLK
+Clock => Q[15]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

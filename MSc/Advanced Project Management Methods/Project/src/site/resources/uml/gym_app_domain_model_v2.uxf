@@ -1,0 +1,122 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>8</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>400</x><y>112</y><w>256</w><h>136</h></coordinates><panel_attributes>/User/
+--
+-username: String
+-email: String
+-phoneNumber: String
+-password: byte[]
+-salt: byte[]
+
+--
+-checkPassword(givenPassword: String):boolean
+-validate(email: String):boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>504</y><w>400</w><h>256</h></coordinates><panel_attributes>SimpleUser
+--
+-gender: Gender
+-height: int
+-weight: double
+-dateOfBirth: LocalDate
+-physicalCondition: PhysicalCondition
+/age: int
+/bmi: float
+
+--
+-calculateAge():int
+-calculateBmi():float
+-subscribe(newProgram: Program):boolean
+-unsubscribe(removedProgram: Program):boolean
+-startExercice(exercise: Exercise):boolean
+-updateExercise(exProgress: ExerciseProgress):boolean
+-findPrograms():List&lt;Program&gt;
+-findTailoredPrograms():List&lt;Program&gt;
+-findExerciseProgress(exercise: Exercise, date: LocaldateTime):ExerciseProgress
+-isProgramCompleted(program: Program):boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>0</y><w>128</w><h>96</h></coordinates><panel_attributes>&lt;enumeration&gt;
+PhysicalCondition
+-
+Skinny
+Normal
+Fit
+Overweight</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>72</x><y>240</y><w>472</w><h>280</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>570;10;570;70;10;70;10;330</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>240</y><w>400</w><h>272</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70;480;70;480;320</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>336</y><w>168</w><h>120</h></coordinates><panel_attributes>Exercise
+--
+-name: String
+-category: Category
+-description: String
+-musclesTrained: Muscles[]
+-repetitions: int
+-timeRequired: int
+-difficulty: Difficulty</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>496</y><w>352</w><h>160</h></coordinates><panel_attributes>Trainer
+--
+-firstname: String
+-lastname: String
+-profilePicture: File
+-profileDescritpion: String
+-credentials: Credentials
+
+--
+-createProgram(program: Program)
+-calculateIncome(month: Month):BigDecimal
+-getCustomerProgress(simpleUser: SimpleUser): Set&lt;ExerciseProgress&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>456</x><y>688</y><w>272</w><h>192</h></coordinates><panel_attributes>Program
+--
+-name: String
+-goals: String
+-frequency: int
+-difficulty: Difficulty
+-aimedAt: List&lt;PhysicalCondition&gt;
+-ageMin: int
+-ageMax: int
+-cost: float
+
+--
+-canSubscribe(simpleUser: SimpleUser):boolean
+-addExercise(exercise: Exercise)
+-removeExercise(exercise: Exercise)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>256</x><y>0</y><w>128</w><h>160</h></coordinates><panel_attributes>&lt;enumeration&gt;
+Muscles
+-
+Chest
+Upper Back
+Lower Back
+Biceps
+Triceps
+Upper Abs
+Lower Abs
+Thighs
+Calves</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>592</x><y>448</y><w>40</w><h>256</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=*
+m2=1..*</panel_attributes><additional_attributes>10;300;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>192</x><y>336</y><w>152</w><h>80</h></coordinates><panel_attributes>ExerciseProgress
+--
+-repetitionsLeft: int
+-createdOn: LocalDateTime
+-weightOnCompletion: double
+
+--
+-isCompleted():boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>360</y><w>200</w><h>32</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*</panel_attributes><additional_attributes>230;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>648</y><w>200</w><h>136</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m1=*
+
+&lt; composes</panel_attributes><additional_attributes>10;140;230;140;230;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>192</x><y>880</y><w>112</w><h>56</h></coordinates><panel_attributes>Subscription
+--
+date: LocalDateTime</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>176</x><y>752</y><w>296</w><h>88</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=*
+subscribes &gt;</panel_attributes><additional_attributes>350;80;10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>808</y><w>24</w><h>88</h></coordinates><panel_attributes>lt=.
+</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>552</x><y>0</y><w>104</w><h>88</h></coordinates><panel_attributes>&lt;enumeration&gt;
+Difficulty
+--
+Begginer
+Intermediate 
+Advanced</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>0</y><w>112</w><h>88</h></coordinates><panel_attributes>&lt;enumeration&gt;
+Category
+-
+Endurance
+Strength
+Balance
+Flexibility</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>256</x><y>408</y><w>64</w><h>112</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+makes &gt;</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>136</x><y>0</y><w>104</w><h>72</h></coordinates><panel_attributes>Credentials
+-
+credentials: File[]
+
+-
+validate(): boolean</panel_attributes><additional_attributes></additional_attributes></element></diagram>
