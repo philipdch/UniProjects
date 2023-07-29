@@ -1,0 +1,41 @@
+# Nmap 7.93 scan initiated Fri Mar 17 11:32:16 2023 as: nmap -sUV -p30000-35000 -oN /home/kali/Downloads/win2k8_udp_scan_35000_v 192.168.56.102
+Nmap scan report for 192.168.56.102
+Host is up (0.00030s latency).
+Not shown: 5000 closed udp ports (port-unreach)
+PORT      STATE SERVICE VERSION
+33848/udp open  unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port33848-UDP:V=7.93%I=7%D=3/17%Time=64148F34%P=x86_64-pc-linux-gnu%r(R
+SF:PCCheck,7E,"<hudson><version>1\.637</version><server-id>fc878b571ac6fd0
+SF:967531930505b1b99</server-id><slave-port>49257</slave-port></hudson>")%
+SF:r(DNSVersionBindReq,7E,"<hudson><version>1\.637</version><server-id>fc8
+SF:78b571ac6fd0967531930505b1b99</server-id><slave-port>49257</slave-port>
+SF:</hudson>")%r(DNSStatusRequest,7E,"<hudson><version>1\.637</version><se
+SF:rver-id>fc878b571ac6fd0967531930505b1b99</server-id><slave-port>49257</
+SF:slave-port></hudson>")%r(NBTStat,7E,"<hudson><version>1\.637</version><
+SF:server-id>fc878b571ac6fd0967531930505b1b99</server-id><slave-port>49257
+SF:</slave-port></hudson>")%r(Help,7E,"<hudson><version>1\.637</version><s
+SF:erver-id>fc878b571ac6fd0967531930505b1b99</server-id><slave-port>49257<
+SF:/slave-port></hudson>")%r(SIPOptions,7E,"<hudson><version>1\.637</versi
+SF:on><server-id>fc878b571ac6fd0967531930505b1b99</server-id><slave-port>4
+SF:9257</slave-port></hudson>")%r(Sqlping,7E,"<hudson><version>1\.637</ver
+SF:sion><server-id>fc878b571ac6fd0967531930505b1b99</server-id><slave-port
+SF:>49257</slave-port></hudson>")%r(NTPRequest,7E,"<hudson><version>1\.637
+SF:</version><server-id>fc878b571ac6fd0967531930505b1b99</server-id><slave
+SF:-port>49257</slave-port></hudson>")%r(SNMPv1public,7E,"<hudson><version
+SF:>1\.637</version><server-id>fc878b571ac6fd0967531930505b1b99</server-id
+SF:><slave-port>49257</slave-port></hudson>")%r(SNMPv3GetRequest,7E,"<huds
+SF:on><version>1\.637</version><server-id>fc878b571ac6fd0967531930505b1b99
+SF:</server-id><slave-port>49257</slave-port></hudson>")%r(xdmcp,7E,"<huds
+SF:on><version>1\.637</version><server-id>fc878b571ac6fd0967531930505b1b99
+SF:</server-id><slave-port>49257</slave-port></hudson>")%r(AFSVersionReque
+SF:st,7E,"<hudson><version>1\.637</version><server-id>fc878b571ac6fd096753
+SF:1930505b1b99</server-id><slave-port>49257</slave-port></hudson>")%r(DNS
+SF:-SD,7E,"<hudson><version>1\.637</version><server-id>fc878b571ac6fd09675
+SF:31930505b1b99</server-id><slave-port>49257</slave-port></hudson>")%r(Ci
+SF:trix,7E,"<hudson><version>1\.637</version><server-id>fc878b571ac6fd0967
+SF:531930505b1b99</server-id><slave-port>49257</slave-port></hudson>");
+MAC Address: 08:00:27:04:3B:26 (Oracle VirtualBox virtual NIC)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Mar 17 12:04:34 2023 -- 1 IP address (1 host up) scanned in 1937.41 seconds

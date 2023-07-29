@@ -1,0 +1,8 @@
+# Nmap 7.93 scan initiated Thu Mar 16 17:53:56 2023 as: nmap -sU -p- -oN /home/kali/Documents/ub1404_udp_scan.txt 192.168.56.103
+Nmap scan report for 192.168.56.103
+Host is up (0.00029s latency).
+All 65535 scanned ports on 192.168.56.103 are in ignored states.
+Not shown: 65535 open|filtered udp ports (no-response)
+MAC Address: 08:00:27:42:51:79 (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Thu Mar 16 18:15:57 2023 -- 1 IP address (1 host up) scanned in 1321.90 seconds

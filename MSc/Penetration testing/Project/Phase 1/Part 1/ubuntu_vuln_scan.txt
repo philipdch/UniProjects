@@ -1,0 +1,584 @@
+# Nmap 7.93 scan initiated Sun Mar 19 10:44:49 2023 as: nmap -sV -p- --script vuln,exploit,auth,vulners -oN /home/kali/Documents/vuln_scan-%D.txt 192.168.56.103
+Nmap scan report for 192.168.56.103
+Host is up (0.00030s latency).
+Not shown: 65524 filtered tcp ports (no-response)
+PORT     STATE  SERVICE     VERSION
+21/tcp   open   ftp         ProFTPD 1.3.5
+| vulners: 
+|   cpe:/a:proftpd:proftpd:1.3.5: 
+|     	SAINT:FD1752E124A72FD3A26EEB9B315E8382	10.0	https://vulners.com/saint/SAINT:FD1752E124A72FD3A26EEB9B315E8382	*EXPLOIT*
+|     	SAINT:950EB68D408A40399926A4CCAD3CC62E	10.0	https://vulners.com/saint/SAINT:950EB68D408A40399926A4CCAD3CC62E	*EXPLOIT*
+|     	SAINT:63FB77B9136D48259E4F0D4CDA35E957	10.0	https://vulners.com/saint/SAINT:63FB77B9136D48259E4F0D4CDA35E957	*EXPLOIT*
+|     	SAINT:1B08F4664C428B180EEC9617B41D9A2C	10.0	https://vulners.com/saint/SAINT:1B08F4664C428B180EEC9617B41D9A2C	*EXPLOIT*
+|     	PROFTPD_MOD_COPY	10.0	https://vulners.com/canvas/PROFTPD_MOD_COPY	*EXPLOIT*
+|     	PACKETSTORM:162777	10.0	https://vulners.com/packetstorm/PACKETSTORM:162777	*EXPLOIT*
+|     	PACKETSTORM:132218	10.0	https://vulners.com/packetstorm/PACKETSTORM:132218	*EXPLOIT*
+|     	PACKETSTORM:131567	10.0	https://vulners.com/packetstorm/PACKETSTORM:131567	*EXPLOIT*
+|     	PACKETSTORM:131555	10.0	https://vulners.com/packetstorm/PACKETSTORM:131555	*EXPLOIT*
+|     	PACKETSTORM:131505	10.0	https://vulners.com/packetstorm/PACKETSTORM:131505	*EXPLOIT*
+|     	EDB-ID:49908	10.0	https://vulners.com/exploitdb/EDB-ID:49908	*EXPLOIT*
+|     	CVE-2015-3306	10.0	https://vulners.com/cve/CVE-2015-3306
+|     	1337DAY-ID-36298	10.0	https://vulners.com/zdt/1337DAY-ID-36298	*EXPLOIT*
+|     	1337DAY-ID-23720	10.0	https://vulners.com/zdt/1337DAY-ID-23720	*EXPLOIT*
+|     	1337DAY-ID-23544	10.0	https://vulners.com/zdt/1337DAY-ID-23544	*EXPLOIT*
+|     	SSV:61050	5.0	https://vulners.com/seebug/SSV:61050	*EXPLOIT*
+|     	CVE-2020-9272	5.0	https://vulners.com/cve/CVE-2020-9272
+|     	CVE-2019-19272	5.0	https://vulners.com/cve/CVE-2019-19272
+|     	CVE-2019-19271	5.0	https://vulners.com/cve/CVE-2019-19271
+|     	CVE-2019-19270	5.0	https://vulners.com/cve/CVE-2019-19270
+|     	CVE-2019-18217	5.0	https://vulners.com/cve/CVE-2019-18217
+|     	CVE-2016-3125	5.0	https://vulners.com/cve/CVE-2016-3125
+|     	CVE-2013-4359	5.0	https://vulners.com/cve/CVE-2013-4359
+|     	CVE-2017-7418	2.1	https://vulners.com/cve/CVE-2017-7418
+|_    	CVE-2021-46854	0.0	https://vulners.com/cve/CVE-2021-46854
+22/tcp   open   ssh         OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|     publickey
+|_    password
+| vulners: 
+|   cpe:/a:openbsd:openssh:6.6.1p1: 
+|     	CVE-2015-5600	8.5	https://vulners.com/cve/CVE-2015-5600
+|     	CVE-2015-6564	6.9	https://vulners.com/cve/CVE-2015-6564
+|     	CVE-2018-15919	5.0	https://vulners.com/cve/CVE-2018-15919
+|     	CVE-2021-41617	4.4	https://vulners.com/cve/CVE-2021-41617
+|     	CVE-2020-14145	4.3	https://vulners.com/cve/CVE-2020-14145
+|     	CVE-2015-5352	4.3	https://vulners.com/cve/CVE-2015-5352
+|_    	CVE-2015-6563	1.9	https://vulners.com/cve/CVE-2015-6563
+| ssh-publickey-acceptance: 
+|_  Accepted Public Keys: No public keys accepted
+80/tcp   open   http        Apache httpd 2.4.7
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.56.103
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.56.103:80/chat/
+|     Form id: name
+|     Form action: index.php
+|     
+|     Path: http://192.168.56.103:80/payroll_app.php
+|     Form id: 
+|     Form action: 
+|     
+|     Path: http://192.168.56.103:80/drupal/
+|     Form id: user-login-form
+|_    Form action: /drupal/?q=node&destination=node
+| http-enum: 
+|   /: Root directory w/ listing on 'apache/2.4.7 (ubuntu)'
+|   /phpmyadmin/: phpMyAdmin
+|_  /uploads/: Potentially interesting directory w/ listing on 'apache/2.4.7 (ubuntu)'
+| http-dombased-xss: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.56.103
+|   Found the following indications of potential DOM based XSS: 
+|     
+|     Source: eval("document.location.href = '"+b+"pos="+a.options[a.selectedIndex].value+"'")
+|_    Pages: http://192.168.56.103:80/phpmyadmin/js/functions.js?ts=1365422810
+| http-sql-injection: 
+|   Possible sqli for queries:
+|     http://192.168.56.103:80/?C=N%3BO%3DD%27%20OR%20sqlspider
+|     http://192.168.56.103:80/?C=D%3BO%3DA%27%20OR%20sqlspider
+|     http://192.168.56.103:80/?C=M%3BO%3DA%27%20OR%20sqlspider
+|_    http://192.168.56.103:80/?C=S%3BO%3DA%27%20OR%20sqlspider
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-fileupload-exploiter: 
+|   
+|_    Couldn't find a file-type field.
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.7: 
+|     	CVE-2022-31813	7.5	https://vulners.com/cve/CVE-2022-31813
+|     	CVE-2022-23943	7.5	https://vulners.com/cve/CVE-2022-23943
+|     	CVE-2022-22720	7.5	https://vulners.com/cve/CVE-2022-22720
+|     	CVE-2021-44790	7.5	https://vulners.com/cve/CVE-2021-44790
+|     	CVE-2021-39275	7.5	https://vulners.com/cve/CVE-2021-39275
+|     	CVE-2021-26691	7.5	https://vulners.com/cve/CVE-2021-26691
+|     	CVE-2017-7679	7.5	https://vulners.com/cve/CVE-2017-7679
+|     	CVE-2017-3167	7.5	https://vulners.com/cve/CVE-2017-3167
+|     	CNVD-2022-73123	7.5	https://vulners.com/cnvd/CNVD-2022-73123
+|     	CNVD-2022-03225	7.5	https://vulners.com/cnvd/CNVD-2022-03225
+|     	CNVD-2021-102386	7.5	https://vulners.com/cnvd/CNVD-2021-102386
+|     	PACKETSTORM:127546	6.8	https://vulners.com/packetstorm/PACKETSTORM:127546	*EXPLOIT*
+|     	FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	6.8	https://vulners.com/githubexploit/FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	*EXPLOIT*
+|     	CVE-2021-40438	6.8	https://vulners.com/cve/CVE-2021-40438
+|     	CVE-2020-35452	6.8	https://vulners.com/cve/CVE-2020-35452
+|     	CVE-2018-1312	6.8	https://vulners.com/cve/CVE-2018-1312
+|     	CVE-2017-15715	6.8	https://vulners.com/cve/CVE-2017-15715
+|     	CVE-2016-5387	6.8	https://vulners.com/cve/CVE-2016-5387
+|     	CVE-2014-0226	6.8	https://vulners.com/cve/CVE-2014-0226
+|     	CNVD-2022-03224	6.8	https://vulners.com/cnvd/CNVD-2022-03224
+|     	8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	6.8	https://vulners.com/githubexploit/8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	*EXPLOIT*
+|     	4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	6.8	https://vulners.com/githubexploit/4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	*EXPLOIT*
+|     	4373C92A-2755-5538-9C91-0469C995AA9B	6.8	https://vulners.com/githubexploit/4373C92A-2755-5538-9C91-0469C995AA9B	*EXPLOIT*
+|     	1337DAY-ID-22451	6.8	https://vulners.com/zdt/1337DAY-ID-22451	*EXPLOIT*
+|     	0095E929-7573-5E4A-A7FA-F6598A35E8DE	6.8	https://vulners.com/githubexploit/0095E929-7573-5E4A-A7FA-F6598A35E8DE	*EXPLOIT*
+|     	CVE-2022-28615	6.4	https://vulners.com/cve/CVE-2022-28615
+|     	CVE-2021-44224	6.4	https://vulners.com/cve/CVE-2021-44224
+|     	CVE-2017-9788	6.4	https://vulners.com/cve/CVE-2017-9788
+|     	CVE-2019-0217	6.0	https://vulners.com/cve/CVE-2019-0217
+|     	CVE-2022-22721	5.8	https://vulners.com/cve/CVE-2022-22721
+|     	CVE-2020-1927	5.8	https://vulners.com/cve/CVE-2020-1927
+|     	CVE-2019-10098	5.8	https://vulners.com/cve/CVE-2019-10098
+|     	1337DAY-ID-33577	5.8	https://vulners.com/zdt/1337DAY-ID-33577	*EXPLOIT*
+|     	SSV:96537	5.0	https://vulners.com/seebug/SSV:96537	*EXPLOIT*
+|     	SSV:62058	5.0	https://vulners.com/seebug/SSV:62058	*EXPLOIT*
+|     	SSV:61874	5.0	https://vulners.com/seebug/SSV:61874	*EXPLOIT*
+|     	EXPLOITPACK:DAED9B9E8D259B28BF72FC7FDC4755A7	5.0	https://vulners.com/exploitpack/EXPLOITPACK:DAED9B9E8D259B28BF72FC7FDC4755A7	*EXPLOIT*
+|     	EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D	5.0	https://vulners.com/exploitpack/EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D	*EXPLOIT*
+|     	EDB-ID:42745	5.0	https://vulners.com/exploitdb/EDB-ID:42745	*EXPLOIT*
+|     	CVE-2022-30556	5.0	https://vulners.com/cve/CVE-2022-30556
+|     	CVE-2022-29404	5.0	https://vulners.com/cve/CVE-2022-29404
+|     	CVE-2022-28614	5.0	https://vulners.com/cve/CVE-2022-28614
+|     	CVE-2022-26377	5.0	https://vulners.com/cve/CVE-2022-26377
+|     	CVE-2022-22719	5.0	https://vulners.com/cve/CVE-2022-22719
+|     	CVE-2021-34798	5.0	https://vulners.com/cve/CVE-2021-34798
+|     	CVE-2021-26690	5.0	https://vulners.com/cve/CVE-2021-26690
+|     	CVE-2020-1934	5.0	https://vulners.com/cve/CVE-2020-1934
+|     	CVE-2019-17567	5.0	https://vulners.com/cve/CVE-2019-17567
+|     	CVE-2019-0220	5.0	https://vulners.com/cve/CVE-2019-0220
+|     	CVE-2018-17199	5.0	https://vulners.com/cve/CVE-2018-17199
+|     	CVE-2018-1303	5.0	https://vulners.com/cve/CVE-2018-1303
+|     	CVE-2017-9798	5.0	https://vulners.com/cve/CVE-2017-9798
+|     	CVE-2017-15710	5.0	https://vulners.com/cve/CVE-2017-15710
+|     	CVE-2016-8743	5.0	https://vulners.com/cve/CVE-2016-8743
+|     	CVE-2016-2161	5.0	https://vulners.com/cve/CVE-2016-2161
+|     	CVE-2016-0736	5.0	https://vulners.com/cve/CVE-2016-0736
+|     	CVE-2015-3183	5.0	https://vulners.com/cve/CVE-2015-3183
+|     	CVE-2015-0228	5.0	https://vulners.com/cve/CVE-2015-0228
+|     	CVE-2014-3581	5.0	https://vulners.com/cve/CVE-2014-3581
+|     	CVE-2014-0231	5.0	https://vulners.com/cve/CVE-2014-0231
+|     	CVE-2014-0098	5.0	https://vulners.com/cve/CVE-2014-0098
+|     	CVE-2013-6438	5.0	https://vulners.com/cve/CVE-2013-6438
+|     	CVE-2013-5704	5.0	https://vulners.com/cve/CVE-2013-5704
+|     	CNVD-2022-73122	5.0	https://vulners.com/cnvd/CNVD-2022-73122
+|     	CNVD-2022-53584	5.0	https://vulners.com/cnvd/CNVD-2022-53584
+|     	CNVD-2022-53582	5.0	https://vulners.com/cnvd/CNVD-2022-53582
+|     	CNVD-2022-03223	5.0	https://vulners.com/cnvd/CNVD-2022-03223
+|     	1337DAY-ID-28573	5.0	https://vulners.com/zdt/1337DAY-ID-28573	*EXPLOIT*
+|     	1337DAY-ID-26574	5.0	https://vulners.com/zdt/1337DAY-ID-26574	*EXPLOIT*
+|     	SSV:87152	4.3	https://vulners.com/seebug/SSV:87152	*EXPLOIT*
+|     	PACKETSTORM:127563	4.3	https://vulners.com/packetstorm/PACKETSTORM:127563	*EXPLOIT*
+|     	CVE-2020-11985	4.3	https://vulners.com/cve/CVE-2020-11985
+|     	CVE-2019-10092	4.3	https://vulners.com/cve/CVE-2019-10092
+|     	CVE-2018-1302	4.3	https://vulners.com/cve/CVE-2018-1302
+|     	CVE-2018-1301	4.3	https://vulners.com/cve/CVE-2018-1301
+|     	CVE-2016-4975	4.3	https://vulners.com/cve/CVE-2016-4975
+|     	CVE-2015-3185	4.3	https://vulners.com/cve/CVE-2015-3185
+|     	CVE-2014-8109	4.3	https://vulners.com/cve/CVE-2014-8109
+|     	CVE-2014-0118	4.3	https://vulners.com/cve/CVE-2014-0118
+|     	CVE-2014-0117	4.3	https://vulners.com/cve/CVE-2014-0117
+|     	4013EC74-B3C1-5D95-938A-54197A58586D	4.3	https://vulners.com/githubexploit/4013EC74-B3C1-5D95-938A-54197A58586D	*EXPLOIT*
+|     	1337DAY-ID-33575	4.3	https://vulners.com/zdt/1337DAY-ID-33575	*EXPLOIT*
+|     	CVE-2018-1283	3.5	https://vulners.com/cve/CVE-2018-1283
+|     	CVE-2016-8612	3.3	https://vulners.com/cve/CVE-2016-8612
+|     	PACKETSTORM:140265	0.0	https://vulners.com/packetstorm/PACKETSTORM:140265	*EXPLOIT*
+|     	CVE-2023-25690	0.0	https://vulners.com/cve/CVE-2023-25690
+|     	CVE-2022-37436	0.0	https://vulners.com/cve/CVE-2022-37436
+|     	CVE-2022-36760	0.0	https://vulners.com/cve/CVE-2022-36760
+|_    	CVE-2006-20001	0.0	https://vulners.com/cve/CVE-2006-20001
+| http-slowloris-check: 
+|   VULNERABLE:
+|   Slowloris DOS attack
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2007-6750
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+|       the target web server and sending a partial request. By doing so, it starves
+|       the http server's resources causing Denial Of Service.
+|       
+|     Disclosure date: 2009-09-17
+|     References:
+|       http://ha.ckers.org/slowloris/
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+445/tcp  open   netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+631/tcp  open   ipp         CUPS 1.7
+|_http-server-header: CUPS/1.7 IPP/2.1
+| vulners: 
+|   cpe:/a:apple:cups:1.7: 
+|     	CVE-2012-5519	7.2	https://vulners.com/cve/CVE-2012-5519
+|     	SECURITYVULNS:VULN:13879	5.0	https://vulners.com/securityvulns/SECURITYVULNS:VULN:13879
+|     	CVE-2014-5031	5.0	https://vulners.com/cve/CVE-2014-5031
+|     	SECURITYVULNS:VULN:13707	4.3	https://vulners.com/securityvulns/SECURITYVULNS:VULN:13707
+|     	CVE-2014-2856	4.3	https://vulners.com/cve/CVE-2014-2856
+|     	CVE-2014-5030	1.9	https://vulners.com/cve/CVE-2014-5030
+|     	SECURITYVULNS:VULN:13530	1.2	https://vulners.com/securityvulns/SECURITYVULNS:VULN:13530
+|     	CVE-2014-3537	1.2	https://vulners.com/cve/CVE-2014-3537
+|     	CVE-2013-6891	1.2	https://vulners.com/cve/CVE-2013-6891
+|_    	OSV:CVE-2022-26691	0.0	https://vulners.com/osv/OSV:CVE-2022-26691
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+| http-enum: 
+|   /admin.php: Possible admin folder
+|   /admin/: Possible admin folder
+|   /admin/admin/: Possible admin folder
+|   /administrator/: Possible admin folder
+|   /adminarea/: Possible admin folder
+|   /adminLogin/: Possible admin folder
+|   /admin_area/: Possible admin folder
+|   /administratorlogin/: Possible admin folder
+|   /admin/account.php: Possible admin folder
+|   /admin/index.php: Possible admin folder
+|   /admin/login.php: Possible admin folder
+|   /admin/admin.php: Possible admin folder
+|   /admin_area/admin.php: Possible admin folder
+|   /admin_area/login.php: Possible admin folder
+|   /admin/index.html: Possible admin folder
+|   /admin/login.html: Possible admin folder
+|   /admin/admin.html: Possible admin folder
+|   /admin_area/index.php: Possible admin folder
+|   /admin/home.php: Possible admin folder
+|   /admin_area/login.html: Possible admin folder
+|   /admin_area/index.html: Possible admin folder
+|   /admin/controlpanel.php: Possible admin folder
+|   /admincp/: Possible admin folder
+|   /admincp/index.asp: Possible admin folder
+|   /admincp/index.html: Possible admin folder
+|   /admincp/login.php: Possible admin folder
+|   /admin/account.html: Possible admin folder
+|   /adminpanel.html: Possible admin folder
+|   /admin/admin_login.html: Possible admin folder
+|   /admin_login.html: Possible admin folder
+|   /admin/cp.php: Possible admin folder
+|   /administrator/index.php: Possible admin folder
+|   /administrator/login.php: Possible admin folder
+|   /admin/admin_login.php: Possible admin folder
+|   /admin_login.php: Possible admin folder
+|   /administrator/account.php: Possible admin folder
+|   /administrator.php: Possible admin folder
+|   /admin_area/admin.html: Possible admin folder
+|   /admin/admin-login.php: Possible admin folder
+|   /admin-login.php: Possible admin folder
+|   /admin/home.html: Possible admin folder
+|   /admin/admin-login.html: Possible admin folder
+|   /admin-login.html: Possible admin folder
+|   /admincontrol.php: Possible admin folder
+|   /admin/adminLogin.html: Possible admin folder
+|   /adminLogin.html: Possible admin folder
+|   /adminarea/index.html: Possible admin folder
+|   /adminarea/admin.html: Possible admin folder
+|   /admin/controlpanel.html: Possible admin folder
+|   /admin.html: Possible admin folder
+|   /admin/cp.html: Possible admin folder
+|   /adminpanel.php: Possible admin folder
+|   /administrator/index.html: Possible admin folder
+|   /administrator/login.html: Possible admin folder
+|   /administrator/account.html: Possible admin folder
+|   /administrator.html: Possible admin folder
+|   /adminarea/login.html: Possible admin folder
+|   /admincontrol/login.html: Possible admin folder
+|   /admincontrol.html: Possible admin folder
+|   /adminLogin.php: Possible admin folder
+|   /admin/adminLogin.php: Possible admin folder
+|   /adminarea/index.php: Possible admin folder
+|   /adminarea/admin.php: Possible admin folder
+|   /adminarea/login.php: Possible admin folder
+|   /admincontrol/login.php: Possible admin folder
+|   /admin2.php: Possible admin folder
+|   /admin2/login.php: Possible admin folder
+|   /admin2/index.php: Possible admin folder
+|   /administratorlogin.php: Possible admin folder
+|   /admin/account.cfm: Possible admin folder
+|   /admin/index.cfm: Possible admin folder
+|   /admin/login.cfm: Possible admin folder
+|   /admin/admin.cfm: Possible admin folder
+|   /admin.cfm: Possible admin folder
+|   /admin/admin_login.cfm: Possible admin folder
+|   /admin_login.cfm: Possible admin folder
+|   /adminpanel.cfm: Possible admin folder
+|   /admin/controlpanel.cfm: Possible admin folder
+|   /admincontrol.cfm: Possible admin folder
+|   /admin/cp.cfm: Possible admin folder
+|   /admincp/index.cfm: Possible admin folder
+|   /admincp/login.cfm: Possible admin folder
+|   /admin_area/admin.cfm: Possible admin folder
+|   /admin_area/login.cfm: Possible admin folder
+|   /administrator/login.cfm: Possible admin folder
+|   /administratorlogin.cfm: Possible admin folder
+|   /administrator.cfm: Possible admin folder
+|   /administrator/account.cfm: Possible admin folder
+|   /adminLogin.cfm: Possible admin folder
+|   /admin2/index.cfm: Possible admin folder
+|   /admin_area/index.cfm: Possible admin folder
+|   /admin2/login.cfm: Possible admin folder
+|   /admincontrol/login.cfm: Possible admin folder
+|   /administrator/index.cfm: Possible admin folder
+|   /adminarea/login.cfm: Possible admin folder
+|   /adminarea/admin.cfm: Possible admin folder
+|   /adminarea/index.cfm: Possible admin folder
+|   /admin/adminLogin.cfm: Possible admin folder
+|   /admin-login.cfm: Possible admin folder
+|   /admin/admin-login.cfm: Possible admin folder
+|   /admin/home.cfm: Possible admin folder
+|   /admin/account.asp: Possible admin folder
+|   /admin/index.asp: Possible admin folder
+|   /admin/login.asp: Possible admin folder
+|   /admin/admin.asp: Possible admin folder
+|   /admin_area/admin.asp: Possible admin folder
+|   /admin_area/login.asp: Possible admin folder
+|   /admin_area/index.asp: Possible admin folder
+|   /admin/home.asp: Possible admin folder
+|   /admin/controlpanel.asp: Possible admin folder
+|   /admin.asp: Possible admin folder
+|   /admin/admin-login.asp: Possible admin folder
+|   /admin-login.asp: Possible admin folder
+|   /admin/cp.asp: Possible admin folder
+|   /administrator/account.asp: Possible admin folder
+|   /administrator.asp: Possible admin folder
+|   /administrator/login.asp: Possible admin folder
+|   /admincp/login.asp: Possible admin folder
+|   /admincontrol.asp: Possible admin folder
+|   /adminpanel.asp: Possible admin folder
+|   /admin/admin_login.asp: Possible admin folder
+|   /admin_login.asp: Possible admin folder
+|   /adminLogin.asp: Possible admin folder
+|   /admin/adminLogin.asp: Possible admin folder
+|   /adminarea/index.asp: Possible admin folder
+|   /adminarea/admin.asp: Possible admin folder
+|   /adminarea/login.asp: Possible admin folder
+|   /administrator/index.asp: Possible admin folder
+|   /admincontrol/login.asp: Possible admin folder
+|   /admin2.asp: Possible admin folder
+|   /admin2/login.asp: Possible admin folder
+|   /admin2/index.asp: Possible admin folder
+|   /administratorlogin.asp: Possible admin folder
+|   /admin/account.aspx: Possible admin folder
+|   /admin/index.aspx: Possible admin folder
+|   /admin/login.aspx: Possible admin folder
+|   /admin/admin.aspx: Possible admin folder
+|   /admin_area/admin.aspx: Possible admin folder
+|   /admin_area/login.aspx: Possible admin folder
+|   /admin_area/index.aspx: Possible admin folder
+|   /admin/home.aspx: Possible admin folder
+|   /admin/controlpanel.aspx: Possible admin folder
+|   /admin.aspx: Possible admin folder
+|   /admin/admin-login.aspx: Possible admin folder
+|   /admin-login.aspx: Possible admin folder
+|   /admin/cp.aspx: Possible admin folder
+|   /administrator/account.aspx: Possible admin folder
+|   /administrator.aspx: Possible admin folder
+|   /administrator/login.aspx: Possible admin folder
+|   /admincp/index.aspx: Possible admin folder
+|   /admincp/login.aspx: Possible admin folder
+|   /admincontrol.aspx: Possible admin folder
+|   /adminpanel.aspx: Possible admin folder
+|   /admin/admin_login.aspx: Possible admin folder
+|   /admin_login.aspx: Possible admin folder
+|   /adminLogin.aspx: Possible admin folder
+|   /admin/adminLogin.aspx: Possible admin folder
+|   /adminarea/index.aspx: Possible admin folder
+|   /adminarea/admin.aspx: Possible admin folder
+|   /adminarea/login.aspx: Possible admin folder
+|   /administrator/index.aspx: Possible admin folder
+|   /admincontrol/login.aspx: Possible admin folder
+|   /admin2.aspx: Possible admin folder
+|   /admin2/login.aspx: Possible admin folder
+|   /admin2/index.aspx: Possible admin folder
+|   /administratorlogin.aspx: Possible admin folder
+|   /admin/index.jsp: Possible admin folder
+|   /admin/login.jsp: Possible admin folder
+|   /admin/admin.jsp: Possible admin folder
+|   /admin_area/admin.jsp: Possible admin folder
+|   /admin_area/login.jsp: Possible admin folder
+|   /admin_area/index.jsp: Possible admin folder
+|   /admin/home.jsp: Possible admin folder
+|   /admin/controlpanel.jsp: Possible admin folder
+|   /admin.jsp: Possible admin folder
+|   /admin/admin-login.jsp: Possible admin folder
+|   /admin-login.jsp: Possible admin folder
+|   /admin/cp.jsp: Possible admin folder
+|   /administrator/account.jsp: Possible admin folder
+|   /administrator.jsp: Possible admin folder
+|   /administrator/login.jsp: Possible admin folder
+|   /admincp/index.jsp: Possible admin folder
+|   /admincp/login.jsp: Possible admin folder
+|   /admincontrol.jsp: Possible admin folder
+|   /admin/account.jsp: Possible admin folder
+|   /adminpanel.jsp: Possible admin folder
+|   /admin/admin_login.jsp: Possible admin folder
+|   /admin_login.jsp: Possible admin folder
+|   /adminLogin.jsp: Possible admin folder
+|   /admin/adminLogin.jsp: Possible admin folder
+|   /adminarea/index.jsp: Possible admin folder
+|   /adminarea/admin.jsp: Possible admin folder
+|   /adminarea/login.jsp: Possible admin folder
+|   /administrator/index.jsp: Possible admin folder
+|   /admincontrol/login.jsp: Possible admin folder
+|   /admin2.jsp: Possible admin folder
+|   /admin2/login.jsp: Possible admin folder
+|   /admin2/index.jsp: Possible admin folder
+|   /administratorlogin.jsp: Possible admin folder
+|   /admin1.php: Possible admin folder
+|   /administr8.asp: Possible admin folder
+|   /administr8.php: Possible admin folder
+|   /administr8.jsp: Possible admin folder
+|   /administr8.aspx: Possible admin folder
+|   /administr8.cfm: Possible admin folder
+|   /administr8/: Possible admin folder
+|   /administer/: Possible admin folder
+|   /administracao.php: Possible admin folder
+|   /administracao.asp: Possible admin folder
+|   /administracao.aspx: Possible admin folder
+|   /administracao.cfm: Possible admin folder
+|   /administracao.jsp: Possible admin folder
+|   /administracion.php: Possible admin folder
+|   /administracion.asp: Possible admin folder
+|   /administracion.aspx: Possible admin folder
+|   /administracion.jsp: Possible admin folder
+|   /administracion.cfm: Possible admin folder
+|   /administrators/: Possible admin folder
+|   /adminpro/: Possible admin folder
+|   /admins/: Possible admin folder
+|   /admins.cfm: Possible admin folder
+|   /admins.php: Possible admin folder
+|   /admins.jsp: Possible admin folder
+|   /admins.asp: Possible admin folder
+|   /admins.aspx: Possible admin folder
+|   /administracion-sistema/: Possible admin folder
+|   /admin108/: Possible admin folder
+|   /admin_cp.asp: Possible admin folder
+|   /admin/backup/: Possible backup
+|   /admin/download/backup.sql: Possible database backup
+|   /robots.txt: Robots file
+|   /admin/upload.php: Admin File Upload
+|   /admin/CiscoAdmin.jhtml: Cisco Collaboration Server
+|   /admin-console/: JBoss Console
+|   /admin4.nsf: Lotus Domino
+|   /admin5.nsf: Lotus Domino
+|   /admin.nsf: Lotus Domino
+|   /administrator/wp-login.php: Wordpress login page.
+|   /admin/libraries/ajaxfilemanager/ajaxfilemanager.php: Log1 CMS
+|   /admin/view/javascript/fckeditor/editor/filemanager/connectors/test.html: OpenCart/FCKeditor File upload
+|   /admin/includes/tiny_mce/plugins/tinybrowser/upload.php: CompactCMS or B-Hind CMS/FCKeditor File upload
+|   /admin/includes/FCKeditor/editor/filemanager/upload/test.html: ASP Simple Blog / FCKeditor File Upload
+|   /admin/jscript/upload.php: Lizard Cart/Remote File upload
+|   /admin/jscript/upload.html: Lizard Cart/Remote File upload
+|   /admin/jscript/upload.pl: Lizard Cart/Remote File upload
+|   /admin/jscript/upload.asp: Lizard Cart/Remote File upload
+|   /admin/environment.xml: Moodle files
+|   /classes/: Potentially interesting folder
+|   /es/: Potentially interesting folder
+|   /helpdesk/: Potentially interesting folder
+|   /help/: Potentially interesting folder
+|_  /printers/: Potentially interesting folder
+3000/tcp closed ppp
+3306/tcp open   mysql       MySQL (unauthorized)
+|_mysql-empty-password: Host '192.168.56.101' is not allowed to connect to this MySQL server
+3500/tcp open   http        WEBrick httpd 1.3.1 (Ruby 2.3.8 (2018-10-18))
+|_http-server-header: WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
+| http-slowloris-check: 
+|   VULNERABLE:
+|   Slowloris DOS attack
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2007-6750
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+|       the target web server and sending a partial request. By doing so, it starves
+|       the http server's resources causing Denial Of Service.
+|       
+|     Disclosure date: 2009-09-17
+|     References:
+|       http://ha.ckers.org/slowloris/
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+| http-enum: 
+|   /robots.txt: Robots file
+|_  /readme.html: Interesting, a readme.
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+| vulners: 
+|   cpe:/a:ruby-lang:ruby:2.3.8: 
+|     	SMNTC-110992	0.0	https://vulners.com/symantec/SMNTC-110992
+|     	RUBY:RUBY-2018-8780	0.0	https://vulners.com/rubygems/RUBY:RUBY-2018-8780
+|     	RUBY:RUBY-2018-8779	0.0	https://vulners.com/rubygems/RUBY:RUBY-2018-8779
+|     	RUBY:RUBY-2018-8778	0.0	https://vulners.com/rubygems/RUBY:RUBY-2018-8778
+|     	RUBY:RUBY-2018-8777	0.0	https://vulners.com/rubygems/RUBY:RUBY-2018-8777
+|     	RUBY:RUBY-2018-6914	0.0	https://vulners.com/rubygems/RUBY:RUBY-2018-6914
+|     	RUBY:RUBY-2017-17742	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-17742
+|     	RUBY:RUBY-2017-17405	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-17405
+|     	RUBY:RUBY-2017-14064	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-14064
+|     	RUBY:RUBY-2017-14033	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-14033
+|     	RUBY:RUBY-2017-10784	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-10784
+|     	RUBY:RUBY-2017-0898	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-0898
+|_    	RUBY:RUBY-2015-7551	0.0	https://vulners.com/rubygems/RUBY:RUBY-2015-7551
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+6697/tcp open   irc         UnrealIRCd
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+| irc-botnet-channels: 
+|_  ERROR: Closing Link: [192.168.56.101] (Throttled: Reconnecting too fast) -Email admin@TestIRC.net for more information.
+8080/tcp open   http        Jetty 8.1.7.v20120910
+|_http-server-header: Jetty(8.1.7.v20120910)
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+| http-slowloris-check: 
+|   VULNERABLE:
+|   Slowloris DOS attack
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2007-6750
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+|       the target web server and sending a partial request. By doing so, it starves
+|       the http server's resources causing Denial Of Service.
+|       
+|     Disclosure date: 2009-09-17
+|     References:
+|       http://ha.ckers.org/slowloris/
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.56.103
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.56.103:8080/continuum/security/login.action;jsessionid=106zlaudcghubjtskegc67q7a
+|     Form id: loginform
+|     Form action: /continuum/security/login_submit.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     
+|     Path: http://192.168.56.103:8080/continuum/security/passwordReset.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     Form id: passwordresetform
+|     Form action: /continuum/security/passwordReset_submit.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     
+|     Path: http://192.168.56.103:8080/continuum/security/login.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     Form id: loginform
+|     Form action: /continuum/security/login_submit.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     
+|     Path: http://192.168.56.103:8080/continuum/security/login_submit.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     Form id: loginform
+|     Form action: /continuum/security/login_submit.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     
+|     Path: http://192.168.56.103:8080/continuum/security/register.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     Form id: registerform
+|     Form action: /continuum/security/register_submit.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     
+|     Path: http://192.168.56.103:8080/continuum/security/login.action;jsessionid=106zlaudcghubjtskegc67q7a
+|     Form id: loginform
+|     Form action: /continuum/security/login_submit.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     
+|     Path: http://192.168.56.103:8080/continuum/security/login.action;jsessionid=106zlaudcghubjtskegc67q7a
+|     Form id: loginform
+|     Form action: /continuum/security/login_submit.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     
+|     Path: http://192.168.56.103:8080/continuum/security/passwordReset_submit.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     Form id: passwordresetform
+|     Form action: /continuum/security/passwordReset_submit.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     
+|     Path: http://192.168.56.103:8080/continuum/security/register_submit.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|     Form id: registerform
+|_    Form action: /continuum/security/register_submit.action;jsessionid=1pl6e8wwftblf1upc3bhe8bsbk
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+8181/tcp closed intermapper
+MAC Address: 08:00:27:42:51:79 (Oracle VirtualBox virtual NIC)
+Service Info: Hosts: 127.0.0.1, METASPLOITABLE3-UB1404, irc.TestIRC.net; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_smb-vuln-ms10-054: false
+| smb-enum-users: 
+|_  Domain: METASPLOITABLE3-UB1404; Users: chewbacca, nobody
+| smb-vuln-regsvc-dos: 
+|   VULNERABLE:
+|   Service regsvc in Microsoft Windows systems vulnerable to denial of service
+|     State: VULNERABLE
+|       The service regsvc in Microsoft Windows 2000 systems is vulnerable to denial of service caused by a null deference
+|       pointer. This script will crash the service if it is vulnerable. This vulnerability was discovered by Ron Bowes
+|       while working on smb-enum-sessions.
+|_          
+|_smb-vuln-ms10-061: false
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Mar 19 10:52:32 2023 -- 1 IP address (1 host up) scanned in 462.35 seconds
